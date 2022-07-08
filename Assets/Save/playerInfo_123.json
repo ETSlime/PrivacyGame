@@ -1,0 +1,67 @@
+{
+    "userName": "123",
+    "points": 279000.0,
+    "finished": false,
+    "correct": 2,
+    "tips": 0,
+    "tipsBought": 8,
+    "smartphone": false,
+    "smartwatch": false,
+    "tablet": false,
+    "questionFinished": [
+        {
+            "questionId": "cs_1",
+            "answered": true
+        },
+        {
+            "questionId": "cs_2",
+            "answered": true
+        },
+        {
+            "questionId": "lb_1",
+            "answered": true
+        },
+        {
+            "questionId": "lb_2",
+            "answered": true
+        },
+        {
+            "questionId": "lb_3",
+            "answered": true
+        },
+        {
+            "questionId": "hm_2",
+            "answered": true
+        },
+        {
+            "questionId": "hm_1",
+            "answered": true
+        }
+    ],
+    "getCoins": [
+        {
+            "questionId": "cs_2.1",
+            "get": true
+        },
+        {
+            "questionId": "hm_1.1",
+            "get": true
+        }
+    ],
+    "tipStates": [
+        {
+            "quizID": "cs_2.1",
+            "tips": [
+                true,
+                false
+            ]
+        },
+        {
+            "quizID": "cs_2.1",
+            "tips": [
+                false,
+                true
+            ]
+        }
+    ]
+}

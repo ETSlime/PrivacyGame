@@ -1,0 +1,35 @@
+{
+    "userName": "456",
+    "points": 424000.0,
+    "finished": false,
+    "correct": 0,
+    "tips": 2,
+    "tipsBought": 3,
+    "smartphone": false,
+    "smartwatch": false,
+    "tablet": false,
+    "questionFinished": [
+        {
+            "questionId": "cs_1",
+            "answered": true
+        },
+        {
+            "questionId": "cs_2",
+            "answered": true
+        },
+        {
+            "questionId": "cs_3",
+            "answered": true
+        }
+    ],
+    "getCoins": [],
+    "tipStates": [
+        {
+            "quizID": "cs_2.1",
+            "tips": [
+                true,
+                false
+            ]
+        }
+    ]
+}

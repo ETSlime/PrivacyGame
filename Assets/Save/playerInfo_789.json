@@ -1,0 +1,14 @@
+{
+    "userName": "789",
+    "points": 0.0,
+    "finished": false,
+    "correct": 0,
+    "tips": 0,
+    "tipsBought": 0,
+    "smartphone": false,
+    "smartwatch": false,
+    "tablet": false,
+    "questionFinished": [],
+    "getCoins": [],
+    "tipStates": []
+}
