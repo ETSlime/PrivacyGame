@@ -225,7 +225,7 @@ public class MainTextContent
     };
 
     public static string[] lb_ID_13 =
-{
+    {
         "While you are study, another kind of IoT device in the <color=red>library</color> is keeping track of your <color=green>presence</color>.",
 
         "Now you know that this shop uses <color=blue>presence sensor</color> to detect whether someone is <color=green>present</color>. " +
@@ -276,7 +276,7 @@ public class MainTextContent
     {
         "Your living room has another kind of IoT device that will monitor the whole room and collect data that is being recorded.",
 
-        "Your living romm has <color=blue>camera</color>  that is recording <color=green>video</color>  of the entire room you're in. " +
+        "Your living romm has <color=blue>camera</color> that is recording <color=green>video</color>  of the entire room you're in. " +
             "The video is shared with law enforcement to <color=grey>improve public safety</color>. ",
 
         "You are <color=purple>not told how long the data will be kept</color>. How would you feel about the data collection in this scenario?"
@@ -308,5 +308,61 @@ public class MainTextContent
 
         "You are <color=grey>not told what the data is used for</color>. " +
             "How would you feel about the data collection in this scenario?"
+    };
+
+    public static string[] fh_ID_1 =
+    {
+        "It is used to <color=grey>determine when to switch on and off the lights to reduce costs and save energy</color>. " +
+            "This data will be kept <color=purple>until the room is no longer occupied</color>."
+    };
+
+    public static string[] fh_ID_2 =
+    {
+        "Based on the previous scenario, what if the data will be kept <color=purple>for one year</color>? " +
+        "How would you feel about the data collection in this scenario?"
+    };
+
+    public static string[] fh_ID_3 =
+    {
+        "When you look around, you find that there's one more IoT device, a <color=blue>camera</color> installed on the wall.",
+
+        "The <color=blue>camera</color> is recording <color=green>video</color> of the entire room you're in. " +
+            "The video is shared with law enforcement to <color=grey>improve public safety</color> and they will keep it <color=purple>for one week</color>."
+    };
+
+    public static string[] fh_ID_4 =
+    {
+        "Based on the previous scenario, what if you are <color=purple>not told how long the data will be kept</color>? " +
+        "How would you feel about the data collection in this scenario?"
+    };
+
+    public static string[] fh_ID_5 =
+    {
+        "When you enter your <color=red>friend's bedroom</color>, you feel cool and pleasant, contrary to the hot weather outside. " +
+            "You are wondering that did your friend keep the air conditioner on all day.",
+            
+        "Your friend told you that the air conditioner is controlled by an automated system. " +
+            "An IoT device which is sensitive to <color=green>ambient temperature</color> is required in the control system in order to control the air conditoiner accordingly,",
+
+        "Now you know that there is a <color=blue>temperature sensor</color> in your <color=red>friend's bedroom</color>. " +
+            "This device will collect <color=green>temperature information</color> inside the room and the data is managed by its security company.",
+
+        "You are <color=grey>not told what the data is used for</color> or <color=purple>how long it will be kept</color>. " +
+            "How would you feel about the data collection in this scenario?"
+    };
+
+    public static string[] fh_ID_6 =
+    {
+        "Let's change the scenario a little bit. This time, the data collected from <color=blue>temperature sensor</color> " +
+            "is managed by its security company in order to <color=grey>check for abnormal temperatures, which indicate potential hazards, e.g., fire</color>,",
+
+        "but you still are <color=purple>not told how long the data will be kept</color>. " +
+            "How would you feel about the data collection in this scenario?"
+    };
+
+    public static string[] fh_ID_7 =
+    {
+        "Based on the previous scenario, what if the data will be kept by the security company <color=purple>for one year</color>? " +
+        "How would you feel about the data collection in this scenario?"
     };
 }

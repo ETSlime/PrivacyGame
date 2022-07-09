@@ -122,35 +122,103 @@ public class Tips : MonoBehaviour
     {
         // show tips by its id and level
         GameObject tipTextGO;
+        tipTextGO = SetTipText();
         switch (quizID)
         {
             case "cs_2.1":
                 switch(tipsLevel)
                 {
                     case 0:
-                        tipTextGO = SetTipText();
                         tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "Considering that the function of this IoT device is collecting facial information, " +
                             "it mush have sensors in order to detect customer's faces.";
                         break;
                     case 1:
                     case 2:
-                        tipTextGO = SetTipText();
-                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "The correct answer is <color=red>facial recognition</color>.";
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "The correct answer is <color=blue>facial recognition</color>.";
                         break;
                 }
                 break;
+
             case "cs_3.4":
                 switch (tipsLevel)
                 {
                     case 0:
-                        tipTextGO = SetTipText();
                         tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "Considering that this IoT device aims to determine whether there is someone presenting, " +
                             "it mush have sensors in order to detect the presence of people.";
                         break;
                     case 1:
                     case 2:
-                        tipTextGO = SetTipText();
-                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "The correct answer is <color=red>presence sensor</color>.";
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "The correct answer is <color=blue>presence sensor</color>.";
+                        break;
+                }
+                break;
+
+            case "lb_2.3":
+                switch (tipsLevel)
+                {
+                    case 0:
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "Think about what kind of device is requiring you to touch it, " +
+                            "and you usually use what to touch the device";
+                        break;
+                    case 1:
+                    case 2:
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "The correct answer is <color=blue>fingerprint scanner</color>.";
+                        break;
+                }
+                break;
+
+            case "lb_3.3":
+                switch (tipsLevel)
+                {
+                    case 0:
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "Notice that your <color=green>presence</color> will be detected," +
+                            "it is obvious that it has a kind of sensor to detect people.";
+                        break;
+                    case 1:
+                    case 2:
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "The correct answer is <color=blue>presence sensor</color>.";
+                        break;
+                }
+                break;
+
+            case "hm_1.1":
+                switch (tipsLevel)
+                {
+                    case 0:
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "Think about how does this device know that you are in the room and turn on the " +
+                            "lights for you. It can definitely detects your presence.";
+                        break;
+                    case 1:
+                    case 2:
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "The correct answer is <color=blue>presence sensor</color>.";
+                        break;
+                }
+                break;
+
+            case "hm_1.4":
+                switch (tipsLevel)
+                {
+                    case 0:
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "Remember that it can monitor the room and take record. " +
+                            "Think about what kind of data does it collect? (video)";
+                        break;
+                    case 1:
+                    case 2:
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "The correct answer is <color=blue>camera</color>.";
+                        break;
+                }
+                break;
+
+            case "fh_2.1":
+                switch (tipsLevel)
+                {
+                    case 0:
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "Think about what kind of device is sensitive to temperature. " +
+                            "What characteristic is required to determine whether to turn on the air condioner?";
+                        break;
+                    case 1:
+                    case 2:
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "The correct answer is <color=blue>temperature sensor</color>.";
                         break;
                 }
                 break;
@@ -187,6 +255,11 @@ public class Tips : MonoBehaviour
 
         warningText.transform.GetChild(1).GetComponent<MyButton>().onClick.AddListener(() => GameObject.Destroy(warningText.gameObject));
         return warningText;
+    }
+
+    public void ResetLevel()
+    {
+        tipsLevel = 0;
     }
 
 }

@@ -150,6 +150,31 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
         hm_2_3_1 = 125,
         hm_2_3_2 = 126,
         hm_2_3_3 = 127,
+        fh_1_1_1 = 128,
+        fh_1_1_2 = 129,
+        fh_1_1_3 = 130,
+        fh_1_1_4 = 131,
+        fh_1_2_1 = 132,
+        fh_1_2_2 = 133,
+        fh_1_3_1 = 134,
+        fh_1_3_2 = 135,
+        fh_1_3_3 = 136,
+        fh_1_3_4 = 137,
+        fh_1_4_1 = 138,
+        fh_1_4_2 = 139,
+        fh_2_1_1 = 140,
+        fh_2_1_2 = 141,
+        fh_2_1_3 = 142,
+        fh_2_1_4 = 143,
+        fh_2_1_5 = 144,
+        fh_2_1_6 = 145,
+        fh_2_1_7 = 146,
+        fh_2_1_8 = 147,
+        fh_2_2_1 = 148,
+        fh_2_2_2 = 149,
+        fh_2_2_3 = 150,
+        fh_2_3_1 = 151,
+        fh_2_3_2 = 152,
     }
     // text base root
     private GameObject root;
@@ -336,6 +361,36 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                             break;
                         case "hm_2.3.1":
                             curTextIndex = TextAttribute.hm_2_3_1;
+                            break;
+                        case "fh_1.1.1":
+                            curTextIndex = TextAttribute.fh_1_1_1;
+                            break;
+                        case "fh_1.1.2":
+                            curTextIndex = TextAttribute.fh_1_1_2;
+                            break;
+                        case "fh_1.3.1":
+                            curTextIndex = TextAttribute.fh_1_3_1;
+                            break;
+                        case "fh_1.3.2":
+                            curTextIndex = TextAttribute.fh_1_3_2;
+                            break;
+                        case "fh_2.1.1":
+                            curTextIndex = TextAttribute.fh_2_1_1;
+                            break;
+                        case "fh_2.1.2":
+                            curTextIndex = TextAttribute.fh_2_1_2;
+                            break;
+                        case "fh_2.1.3":
+                            curTextIndex = TextAttribute.fh_2_1_3;
+                            break;
+                        case "fh_2.1.5":
+                            curTextIndex = TextAttribute.fh_2_1_5;
+                            break;
+                        case "fh_2.1.6":
+                            curTextIndex = TextAttribute.fh_2_1_6;
+                            break;
+                        case "fh_2.2.1":
+                            curTextIndex = TextAttribute.fh_2_2_1;
                             break;
                     }
                     return;
@@ -1036,7 +1091,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
             case TextAttribute.lb_3_3_1:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Your answer", "None", "None");
                 ChangeText("lb_3.3.2", MainTextContent.select);
-                SelectIcon("fingerprint scanner", TextAttribute.lb_3_3_2);
+                SelectIcon("presence sensor", TextAttribute.lb_3_3_2);
                 ShowTips(true, "lb_3.3");
                 break;
 
@@ -1131,6 +1186,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 }
                 ChangeText("hm_1.1.4", textContent);
                 ShowTips(false);
+                ResetTip();
                 break;
 
             case TextAttribute.hm_1_1_4:
@@ -1143,7 +1199,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
             case TextAttribute.hm_1_1_5:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor",
                 "One week", "Determine when to switch on and off the lights to reduce costs and save energy");
-                ChangeText("cs_2.1.6", MainTextContent.hm_ID_1[2]);
+                ChangeText("hm_1.1.6", MainTextContent.hm_ID_1[2]);
                 CheckComfortableLevel(TextAttribute.hm_1_1_6);
                 break;
 
@@ -1279,6 +1335,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                     "One week", "None");
                 ChangeText("hm_2.3.1", MainTextContent.hm_ID_8[0]);
                 break;
+
             case TextAttribute.hm_2_3_1:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Room temperature", "Temperature sensor",
                 "One week", "You are not told what the data is uesd for");
@@ -1296,6 +1353,170 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 finished = true;
                 root.transform.parent.parent.Find("InitArrow").GetChild(0).gameObject.SetActive(true);
                 AddQuestionState("hm_2");
+                Save.SaveByJSON();
+                break;
+
+            case TextAttribute.fh_1_1_1:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor",
+                "Until the room is no longer occupied", "Determine when to switch on and off the lights to reduce costs and save energy");
+                ChangeText("fh_1.1.2", MainTextContent.fh_ID_1[0]);
+                // fade in
+                fade(true);
+                break;
+
+            case TextAttribute.fh_1_1_2:
+                ChangeText("fh_1.1.3", MainTextContent.comfortable);
+                // fade out
+                fade(false);
+                CheckComfortableLevel(TextAttribute.fh_1_1_3);
+                break;
+
+            case TextAttribute.fh_1_1_3:
+                ChangeText("fh_1_1_4", MainTextContent.allow);
+                CheckDecision(TextAttribute.fh_1_1_4);
+                break;
+
+            case TextAttribute.fh_1_1_4:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor",
+                "One year");
+                ChangeText("fh_1.2.1", MainTextContent.fh_ID_2[0]);
+                CheckComfortableLevel(TextAttribute.fh_1_2_1);
+                break;
+
+            case TextAttribute.fh_1_2_1:
+                ChangeText("fh_1_2_2", MainTextContent.allow);
+                CheckDecision(TextAttribute.fh_1_2_2);
+                break;
+
+            case TextAttribute.fh_1_2_2:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "None", "Camera",
+                    "None", "None");
+                ChangeText("fh_1.3.1", MainTextContent.fh_ID_3[0]);
+                // second fade in
+                fade(true, true);
+                break;
+
+            case TextAttribute.fh_1_3_1:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera",
+                    "One week", "Improve public safety");
+                ChangeText("fh_1.3.2", MainTextContent.fh_ID_3[1]);
+                // second fade out
+                fade(false, true);
+                break;
+
+            case TextAttribute.fh_1_3_2:
+                ChangeText("fh_1.3.3", MainTextContent.comfortable);
+                CheckComfortableLevel(TextAttribute.fh_1_3_3);
+                break;
+
+            case TextAttribute.fh_1_3_3:
+                ChangeText("fh_1.3.4", MainTextContent.allow);
+                CheckDecision(TextAttribute.fh_1_3_4);
+                break;
+
+            case TextAttribute.fh_1_3_4:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera",
+                "Not told");
+                ChangeText("fh_1.4.1", MainTextContent.fh_ID_4[0]);
+                CheckComfortableLevel(TextAttribute.fh_1_4_1);
+                break;
+
+            case TextAttribute.fh_1_4_1:
+                ChangeText("fh_1.4.2", MainTextContent.allow);
+                CheckDecision(TextAttribute.fh_1_4_2);
+                break;
+
+            case TextAttribute.fh_1_4_2:
+                ChangeText("fh_1.5.0", MainTextContent.finishScene);
+                finished = true;
+                AddQuestionState("fh_1");
+                Save.SaveByJSON();
+                root.transform.parent.parent.Find("InitArrow").GetChild(0).gameObject.SetActive(true);
+                break;
+
+            case TextAttribute.fh_2_1_1:
+                ChangeText("fh_2.1.2", MainTextContent.fh_ID_5[0]);
+                break;
+
+            case TextAttribute.fh_2_1_2:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor");
+                ChangeText("fh_2.1.3", MainTextContent.fh_ID_5[1]);
+                break;
+
+            case TextAttribute.fh_2_1_3:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Your answer", "None", "None");
+                ChangeText("fh_2.1.4", MainTextContent.select);
+                SelectIcon("temperature sensor", TextAttribute.fh_2_1_4);
+                ShowTips(true, "fh_2.1");
+                break;
+
+            case TextAttribute.fh_2_1_4:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor");
+                if (answerCorrect)
+                {
+                    AddAnswer("hm_1.4");
+                    textContent = MainTextContent.correct + "<color=green>temperature sensor</color>.";
+                }
+                else
+                {
+                    textContent = MainTextContent.wrong + "<color=green>temperature sensor</color>.";
+                }
+                ChangeText("fh_2.1.5", textContent);
+                ShowTips(false);
+                break;
+
+            case TextAttribute.fh_2_1_5:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor", "None", "None");
+                ChangeText("fh_2.1.6", MainTextContent.fh_ID_5[2]);
+                break;
+
+            case TextAttribute.fh_2_1_6:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor", 
+                    "Not told", "You are not told what the data is uesd for");
+                ChangeText("fh_2.1.7", MainTextContent.fh_ID_5[3]);
+                CheckComfortableLevel(TextAttribute.fh_2_1_7);
+                break;
+
+            case TextAttribute.fh_2_1_7:
+                ChangeText("fh_2.1.8", MainTextContent.allow);
+                CheckDecision(TextAttribute.fh_2_1_8);
+                break;
+
+            case TextAttribute.fh_2_1_8:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor",
+                    "None", "Check for abnormal temperatures, which indicate potential hazards, e.g., fire");
+                ChangeText("fh_2.2.1", MainTextContent.fh_ID_6[0]);
+                break;
+
+            case TextAttribute.fh_2_2_1:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor",
+                    "Not told");
+                ChangeText("fh_2.2.2", MainTextContent.fh_ID_6[1]);
+                CheckComfortableLevel(TextAttribute.fh_2_2_2);
+                break;
+
+            case TextAttribute.fh_2_2_2:
+                ChangeText("fh_2.2.3", MainTextContent.allow);
+                CheckDecision(TextAttribute.fh_2_2_3);
+                break;
+
+            case TextAttribute.fh_2_2_3:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor",
+                    "One year", "Check for abnormal temperatures, which indicate potential hazards, e.g., fire");
+                ChangeText("fh_2.3.1", MainTextContent.fh_ID_7[0]);
+                CheckComfortableLevel(TextAttribute.fh_2_3_1);
+                break;
+
+            case TextAttribute.fh_2_3_1:
+                ChangeText("fh_2.3.2", MainTextContent.allow);
+                CheckDecision(TextAttribute.fh_2_3_2);
+                break;
+
+            case TextAttribute.fh_2_3_2:
+                ChangeText("fh_2.4.0", MainTextContent.finishLocation);
+                finished = true;
+                root.transform.parent.parent.Find("InitArrow").GetChild(0).gameObject.SetActive(true);
+                AddQuestionState("fh_2");
                 Save.SaveByJSON();
                 break;
         }
@@ -1335,23 +1556,28 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
         if (tobeDestroyed) GameObject.Destroy(tobeDestroyed.gameObject);
     }
 
-    private void fade(bool fadeIn)
+    private void fade(bool fadeIn, bool second = false)
     {
         GameObject circle;
         Image circleImg;
         GameObject arrow;
         Image arrowImg;
-        if(fadeIn)
+
+        // if true, find the second one
+        if (second) circle = root.transform.parent.parent.Find("Circle2").gameObject;
+        else circle = root.transform.parent.parent.Find("Circle").gameObject;
+        if (second) arrow = root.transform.parent.parent.Find("Pointer2").gameObject;
+        else arrow = root.transform.parent.parent.Find("Pointer").gameObject;
+
+        if (fadeIn)
         {
-            circle = root.transform.parent.parent.Find("Circle").gameObject;
-            if(!circle.GetComponent<AudioSource>()) circle.AddComponent<AudioSource>();
+            if (!circle.GetComponent<AudioSource>()) circle.AddComponent<AudioSource>();
             circle.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("SE/flush");
             circle.SetActive(true);
             circleImg = circle.GetComponent<Image>();
             circleImg.canvasRenderer.SetAlpha(0.0f);
             circleImg.CrossFadeAlpha(1.0f, 1.0f, false);
 
-            arrow = root.transform.parent.parent.Find("Pointer").gameObject;
             if (!arrow.GetComponent<AudioSource>()) arrow.AddComponent<AudioSource>();
             arrow.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("SE/flush");
             arrow.SetActive(true);
@@ -1361,11 +1587,9 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
         }
         else
         {
-            circle = root.transform.parent.parent.Find("Circle").gameObject;
             circleImg = circle.GetComponent<Image>();
             circleImg.CrossFadeAlpha(0.0f, 1.0f, false);
 
-            arrow = root.transform.parent.parent.Find("Pointer").gameObject;
             arrowImg = arrow.GetComponent<Image>();
             arrowImg.CrossFadeAlpha(0.0f, 1.0f, false);
         }
@@ -1621,6 +1845,14 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
             }
             else tipsTF.gameObject.SetActive(false);
         }
-        
+    }
+
+    private void ResetTip()
+    {
+        Transform tipsTF = root.transform.parent.parent.Find("Tips");
+        if (tipsTF)
+        {
+            tipsTF.GetComponent<Tips>().ResetLevel();
+        }
     }
 }

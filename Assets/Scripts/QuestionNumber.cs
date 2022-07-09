@@ -29,21 +29,22 @@ public class QuestionNumber : MonoBehaviour
         {
             if(curText.gameObject.activeInHierarchy && curText.name != "Text_Base")
             {
+                string sceneName = SceneManager.GetActiveScene().name;
                 int questionNumber = int.Parse(curText.name.Substring(curText.name.Length - 3, 1));
                 int sceneNumber = int.Parse(curText.name.Substring(curText.name.Length - 5, 1));
-                int curNumber = (sceneNumber - 1) * 5 + questionNumber;
-                string sceneName = SceneManager.GetActiveScene().name;
+                int curNumber;
+                // only 4 questions in each scene in friend's home
+                if (sceneName == "Friend's home") curNumber = (sceneNumber - 1) * 4 + questionNumber;
+                else curNumber = (sceneNumber - 1) * 5 + questionNumber;
 
                 if (questionNumber <= number)
                 {
                     if (sceneName == "Home") text.text = "Question: " + curNumber + "/8";
                     else if (sceneName == "Friend's home") text.text = "Question: " + curNumber + "/7";
                     else text.text = "Question: " + curNumber + "/15";
-
                 }
                 break;
             }
-            
         }
     }
 }
