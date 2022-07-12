@@ -63,6 +63,8 @@ public class JumpSceneBtn : GeneralIconButton
             case "RightArrow_lb_1":
             case "RightArrow_hm_1":
             case "RightArrow_fh_1":
+            case "RightArrow_wk_1":
+            case "RightArrow_pr_1":
                 imageGO = root.Find("Image2").gameObject;
                 imageGO.SetActive(true);
                 break;
@@ -70,16 +72,22 @@ public class JumpSceneBtn : GeneralIconButton
             case "LeftArrow_lb_2":
             case "LeftArrow_hm_2":
             case "LeftArrow_fh_2":
+            case "LeftArrow_wk_2":
+            case "LeftArrow_pr_2":
                 imageGO = root.Find("Image1").gameObject;
                 imageGO.SetActive(true);
                 break;
             case "RightArrow_cs_2":
             case "RightArrow_lb_2":
+            case "RightArrow_wk_2":
+            case "RightArrow_pr_2":
                 imageGO = root.Find("Image3").gameObject;
                 imageGO.SetActive(true);
                 break;
             case "LeftArrow_cs_3":
             case "LeftArrow_lb_3":
+            case "LeftArrow_wk_3":
+            case "LeftArrow_pr_3":
                 imageGO = root.Find("Image2").gameObject;
                 imageGO.SetActive(true);
                 break;
@@ -95,10 +103,14 @@ public class JumpSceneBtn : GeneralIconButton
             curImage.gameObject.SetActive(false);
             Transform circleTF = imageGO.transform.Find("Circle");
             Transform pointerTF = imageGO.transform.Find("Pointer");
+            Transform circleTF2 = imageGO.transform.Find("Circle2");
+            Transform pointerTF2 = imageGO.transform.Find("Pointer2");
             Transform coinTF = imageGO.transform.Find("Coin");
             Transform tipsTF = imageGO.transform.Find("Tips");
             if (circleTF) circleTF.gameObject.SetActive(false);
             if (pointerTF) pointerTF.gameObject.SetActive(false);
+            if (circleTF2) circleTF.gameObject.SetActive(false);
+            if (pointerTF2) pointerTF.gameObject.SetActive(false);
             if (coinTF) coinTF.gameObject.SetActive(false);
             if (tipsTF) tipsTF.gameObject.SetActive(false);
 

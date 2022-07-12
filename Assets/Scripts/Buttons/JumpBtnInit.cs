@@ -38,6 +38,22 @@ public class JumpBtnInit : MonoBehaviour
                     if (Player.questionFinished.Exists(questionState => questionState.questionId == "fh_1"))
                         this.transform.GetChild(0).gameObject.SetActive(true);
                     break;
+                case "RightArrow_wk_1":
+                    if (Player.questionFinished.Exists(questionState => questionState.questionId == "wk_1"))
+                        this.transform.GetChild(0).gameObject.SetActive(true);
+                    break;
+                case "RightArrow_wk_2":
+                    if (Player.questionFinished.Exists(questionState => questionState.questionId == "wk_2"))
+                        this.transform.GetChild(0).gameObject.SetActive(true);
+                    break;
+                case "RightArrow_pr_1":
+                    if (Player.questionFinished.Exists(questionState => questionState.questionId == "pr_1"))
+                        this.transform.GetChild(0).gameObject.SetActive(true);
+                    break;
+                case "RightArrow_pr_2":
+                    if (Player.questionFinished.Exists(questionState => questionState.questionId == "pr_2"))
+                        this.transform.GetChild(0).gameObject.SetActive(true);
+                    break;
                 case "BackArrow":
                     switch (SceneManager.GetActiveScene().name)
                     {

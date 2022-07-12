@@ -2,7 +2,7 @@
     "userName": "123",
     "points": 15000.0,
     "finished": false,
-    "correct": 4,
+    "correct": 5,
     "tips": 0,
     "tipsBought": 16,
     "smartphone": false,
@@ -44,6 +44,30 @@
         {
             "questionId": "fh_2",
             "answered": true
+        },
+        {
+            "questionId": "wk_1",
+            "answered": true
+        },
+        {
+            "questionId": "wk_2",
+            "answered": true
+        },
+        {
+            "questionId": "wk_3",
+            "answered": true
+        },
+        {
+            "questionId": "pr_1",
+            "answered": true
+        },
+        {
+            "questionId": "pr_2",
+            "answered": true
+        },
+        {
+            "questionId": "pr_3",
+            "answered": true
         }
     ],
     "getCoins": [
@@ -61,6 +85,10 @@
         },
         {
             "questionId": "lb_2.3",
+            "get": true
+        },
+        {
+            "questionId": "wk_2.4",
             "get": true
         }
     ],

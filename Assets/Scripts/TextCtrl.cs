@@ -175,6 +175,105 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
         fh_2_2_3 = 150,
         fh_2_3_1 = 151,
         fh_2_3_2 = 152,
+        wk_1_1_1 = 153,
+        wk_1_1_2 = 154,
+        wk_1_1_3 = 155,
+        wk_1_1_4 = 156,
+        wk_1_1_5 = 157,
+        wk_1_2_1 = 158,
+        wk_1_2_2 = 159,
+        wk_1_3_1 = 160,
+        wk_1_3_2 = 161,
+        wk_1_3_3 = 162,
+        wk_1_3_4 = 163,
+        wk_1_4_1 = 164,
+        wk_1_4_2 = 165,
+        wk_1_5_1 = 166,
+        wk_1_5_2 = 167,
+        wk_1_5_3 = 168,
+        wk_2_1_1 = 169,
+        wk_2_1_2 = 170,
+        wk_2_1_3 = 171,
+        wk_2_1_4 = 172,
+        wk_2_2_1 = 173,
+        wk_2_2_2 = 174,
+        wk_2_3_1 = 175,
+        wk_2_3_2 = 176,
+        wk_2_3_3 = 177,
+        wk_2_4_1 = 178,
+        wk_2_4_2 = 179,
+        wk_2_4_3 = 180,
+        wk_2_4_4 = 181,
+        wk_2_4_5 = 182,
+        wk_2_4_6 = 183,
+        wk_2_4_7 = 184,
+        wk_2_5_1 = 185,
+        wk_2_5_2 = 186,
+        wk_3_1_1 = 187,
+        wk_3_1_2 = 188,
+        wk_3_1_3 = 189,
+        wk_3_1_4 = 190,
+        wk_3_2_1 = 191,
+        wk_3_2_2 = 192,
+        wk_3_2_3 = 193,
+        wk_3_3_1 = 194,
+        wk_3_3_2 = 195,
+        wk_3_4_1 = 196,
+        wk_3_4_2 = 197,
+        wk_3_4_3 = 198,
+        wk_3_4_4 = 199,
+        wk_3_4_5 = 200,
+        wk_3_4_6 = 201,
+        wk_3_4_7 = 202,
+        wk_3_5_1 = 203,
+        wk_3_5_2 = 204,
+        lb_1_1_6 = 205,
+        lb_1_1_5 = 206,
+        lb_1_1_7 = 207,
+        lb_1_4_4 = 208,
+        pr_1_1_1 = 209,
+        pr_1_1_2 = 210,
+        pr_1_1_3 = 211,
+        pr_1_1_4 = 212,
+        pr_1_2_1 = 213,
+        pr_1_2_2 = 214,
+        pr_1_2_3 = 215,
+        pr_1_3_1 = 216,
+        pr_1_3_2 = 217,
+        pr_1_3_3 = 218,
+        pr_1_4_1 = 219,
+        pr_1_4_2 = 220,
+        pr_1_4_3 = 221,
+        pr_1_5_1 = 222,
+        pr_1_5_2 = 223,
+        pr_2_1_1 = 224,
+        pr_2_1_2 = 225,
+        pr_2_1_3 = 226,
+        pr_2_1_4 = 227,
+        pr_2_2_1 = 228,
+        pr_2_2_2 = 229,
+        pr_2_3_1 = 230,
+        pr_2_3_2 = 231,
+        pr_2_3_3 = 232,
+        pr_2_4_1 = 233,
+        pr_2_4_2 = 234,
+        pr_2_4_3 = 235,
+        pr_2_5_1 = 236,
+        pr_2_5_2 = 237,
+        pr_3_1_1 = 238,
+        pr_3_1_2 = 239,
+        pr_3_1_3 = 240,
+        pr_3_1_4 = 241,
+        pr_3_2_1 = 242,
+        pr_3_2_2 = 243,
+        pr_3_3_1 = 244,
+        pr_3_3_2 = 245,
+        pr_3_3_3 = 246,
+        pr_3_4_1 = 247,
+        pr_3_4_2 = 248,
+        pr_3_4_3 = 249,
+        pr_3_5_1 = 250,
+        pr_3_5_2 = 251,
     }
     // text base root
     private GameObject root;
@@ -293,11 +392,17 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                         case "lb_1.1.2":
                             curTextIndex = TextAttribute.lb_1_1_2;
                             break;
-                        case "lb_1.3.1":
-                            curTextIndex = TextAttribute.lb_1_3_1;
+                        case "lb_1.1.4":
+                            curTextIndex = TextAttribute.lb_1_1_4;
+                            break;
+                        case "lb_1.1.5":
+                            curTextIndex = TextAttribute.lb_1_1_5;
                             break;
                         case "lb_1.4.1":
                             curTextIndex = TextAttribute.lb_1_4_1;
+                            break;
+                        case "lb_1.4.2":
+                            curTextIndex = TextAttribute.lb_1_4_2;
                             break;
                         case "lb_2.1.1":
                             curTextIndex = TextAttribute.lb_2_1_1;
@@ -391,6 +496,105 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                             break;
                         case "fh_2.2.1":
                             curTextIndex = TextAttribute.fh_2_2_1;
+                            break;
+                        case "wk_1.1.1":
+                            curTextIndex = TextAttribute.wk_1_1_1;
+                            break;
+                        case "wk_1.1.2":
+                            curTextIndex = TextAttribute.wk_1_1_2;
+                            break;
+                        case "wk_1.1.3":
+                            curTextIndex = TextAttribute.wk_1_1_3;
+                            break;
+                        case "wk_1.3.1":
+                            curTextIndex = TextAttribute.wk_1_3_1;
+                            break;
+                        case "wk_1.3.2":
+                            curTextIndex = TextAttribute.wk_1_3_2;
+                            break;
+                        case "wk_1.5.1":
+                            curTextIndex = TextAttribute.wk_1_5_1;
+                            break;
+                        case "wk_2.1.1":
+                            curTextIndex = TextAttribute.wk_2_1_1;
+                            break;
+                        case "wk_2.1.2":
+                            curTextIndex = TextAttribute.wk_2_1_2;
+                            break;
+                        case "wk_2.3.1":
+                            curTextIndex = TextAttribute.wk_2_3_1;
+                            break;
+                        case "wk_2.4.1":
+                            curTextIndex = TextAttribute.wk_2_4_1;
+                            break;
+                        case "wk_2.4.3":
+                            curTextIndex = TextAttribute.wk_2_4_3;
+                            break;
+                        case "wk_2.4.4":
+                            curTextIndex = TextAttribute.wk_2_4_4;
+                            break;
+                        case "wk_2.4.5":
+                            curTextIndex = TextAttribute.wk_2_4_5;
+                            break;
+                        case "wk_3.1.1":
+                            curTextIndex = TextAttribute.wk_3_1_1;
+                            break;
+                        case "wk_3.1.2":
+                            curTextIndex = TextAttribute.wk_3_1_2;
+                            break;
+                        case "wk_3.2.1":
+                            curTextIndex = TextAttribute.wk_3_2_1;
+                            break;
+                        case "wk_3.4.1":
+                            curTextIndex = TextAttribute.wk_3_4_1;
+                            break;
+                        case "wk_3.4.2":
+                            curTextIndex = TextAttribute.wk_3_4_2;
+                            break;
+                        case "wk_3.4.4":
+                            curTextIndex = TextAttribute.wk_3_4_4;
+                            break;
+                        case "wk_3.4.5":
+                            curTextIndex = TextAttribute.wk_3_4_5;
+                            break;
+                        case "pr_1.1.1":
+                            curTextIndex = TextAttribute.pr_1_1_1;
+                            break;
+                        case "pr_1.1.2":
+                            curTextIndex = TextAttribute.pr_1_1_2;
+                            break;
+                        case "pr_1.2.1":
+                            curTextIndex = TextAttribute.pr_1_2_1;
+                            break;
+                        case "pr_1.3.1":
+                            curTextIndex = TextAttribute.pr_1_3_1;
+                            break;
+                        case "pr_1.4.1":
+                            curTextIndex = TextAttribute.pr_1_4_1;
+                            break;
+                        case "pr_2.1.1":
+                            curTextIndex = TextAttribute.pr_2_1_1;
+                            break;
+                        case "pr_2.1.2":
+                            curTextIndex = TextAttribute.pr_2_1_2;
+                            break;
+                        case "pr_2.3.1":
+                            curTextIndex = TextAttribute.pr_2_3_1;
+                            break;
+                        case "pr_2.4.1":
+                            curTextIndex = TextAttribute.pr_2_4_1;
+                            break;
+                        case "pr_3.1.1":
+                            curTextIndex = TextAttribute.pr_3_1_1;
+                            break;
+                        case "pr_3.1.2":
+                            curTextIndex = TextAttribute.pr_3_1_2;
+                            break;
+                        case "pr_3.3.1":
+                            curTextIndex = TextAttribute.pr_3_3_1;
+                            break;
+                        case "pr_3.4.1":
+                            curTextIndex = TextAttribute.pr_3_4_1;
                             break;
                     }
                     return;
@@ -858,23 +1062,52 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
             // this is the start of text for library
             case TextAttribute.lb_1_1_1:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "None", "Determine possible escape routes");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Biometric data");
                 ChangeText("lb_1.1.2", MainTextContent.lb_ID_1[0]);
                 break;
 
             case TextAttribute.lb_1_1_2:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "Until you leave");
-                ChangeText("lb_1.1.3", MainTextContent.lb_ID_1[1]);
-                CheckComfortableLevel(TextAttribute.lb_1_1_3);
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Biometric data", "Your answer");
+                ChangeText("lb_1.1.3", MainTextContent.select);
+                SelectIcon("iris scanner", TextAttribute.lb_1_1_3);
+                ShowTips(true, "lb_1.1");
                 break;
 
             case TextAttribute.lb_1_1_3:
-                ChangeText("lb_1.1.4", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_1_1_4);
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Biometric data", "Iris scanner");
+                if (answerCorrect)
+                {
+                    AddAnswer("lb_1.1");
+                    textContent = MainTextContent.correct + "<color=green>iris scanner</color>.";
+                }
+                else
+                {
+                    textContent = MainTextContent.wrong + "<color=green>iris scanner</color>.";
+                }
+                ChangeText("lb_1.1.4", textContent);
+                ShowTips(false);
                 break;
 
             case TextAttribute.lb_1_1_4:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "One week");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Iris scan", "Iris scanner",
+                    "None", "Keep track of your visits and make suggestions based on your habits regardless of whether you are a registered library user or not");
+                DestroyCorrectWrongGO();
+                ChangeText("lb_1.1.5", MainTextContent.lb_ID_1[1]);
+                break;
+
+            case TextAttribute.lb_1_1_5:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Iris scan", "Iris scanner", "Not told");
+                ChangeText("lb_1.1.6", MainTextContent.lb_ID_1[2]);
+                CheckComfortableLevel(TextAttribute.lb_1_1_6);
+                break;
+
+            case TextAttribute.lb_1_1_6:
+                ChangeText("lb_1.1.7", MainTextContent.allow);
+                CheckDecision(TextAttribute.lb_1_1_7);
+                break;
+
+            case TextAttribute.lb_1_1_7:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Iris scan", "Iris scanner", "Not deleted");
                 ChangeText("lb_1.2.1", MainTextContent.lb_ID_2[0]);
                 CheckComfortableLevel(TextAttribute.lb_1_2_1);
                 break;
@@ -885,42 +1118,44 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.lb_1_2_2:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch",
-                    "One week", "You are not told what the data is uesd for");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Iris scan", "Iris scanner", "Until door is closed again");
                 ChangeText("lb_1.3.1", MainTextContent.lb_ID_3[0]);
+                CheckComfortableLevel(TextAttribute.lb_1_3_1);
                 break;
 
             case TextAttribute.lb_1_3_1:
-                ChangeText("lb_1.3.2", MainTextContent.comfortable);
-                CheckComfortableLevel(TextAttribute.lb_1_3_2);
+                ChangeText("lb_1.3.2", MainTextContent.allow);
+                CheckDecision(TextAttribute.lb_1_3_2);
                 break;
 
             case TextAttribute.lb_1_3_2:
-                ChangeText("lb_1.3.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_1_3_3);
-                break;
-
-            case TextAttribute.lb_1_3_3:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone",
-                    "None", "Determine possible escape routes");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Your picture of face", "Facial recognition", "None", "None");
                 ChangeText("lb_1.4.1", MainTextContent.lb_ID_4[0]);
+                // fade in
+                fade(true);
                 break;
 
             case TextAttribute.lb_1_4_1:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone",
-                    "Until you leave", "Determine possible escape routes");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Your picture of face", "Facial recognition",
+                    "None", "Keep track of your visits and make suggestions based on your habits regardless of whether you are a registered library user or not");
                 ChangeText("lb_1.4.2", MainTextContent.lb_ID_4[1]);
-                CheckComfortableLevel(TextAttribute.lb_1_4_2);
+                // fade out
+                fade(false);
                 break;
 
             case TextAttribute.lb_1_4_2:
-                ChangeText("lb_1.4.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_1_4_3);
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Your picture of face", "Facial recognition", "Until door is closed again");
+                ChangeText("lb_1.4.3", MainTextContent.lb_ID_4[2]);
+                CheckComfortableLevel(TextAttribute.lb_1_4_3);
                 break;
 
             case TextAttribute.lb_1_4_3:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone",
-                    "Cannot be deleted", "Determine possible escape routes");
+                ChangeText("lb_1.4.4", MainTextContent.allow);
+                CheckDecision(TextAttribute.lb_1_4_4);
+                break;
+
+            case TextAttribute.lb_1_4_4:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Your picture of face", "Facial recognition", "Not deleted");
                 ChangeText("lb_1.5.1", MainTextContent.lb_ID_5[0]);
                 CheckComfortableLevel(TextAttribute.lb_1_5_1);
                 break;
@@ -1142,8 +1377,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.lb_3_4_2:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor",
-                "One year");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "One year");
                 ChangeText("lb_3.5.1", MainTextContent.lb_ID_15[0]);
                 CheckComfortableLevel(TextAttribute.lb_3_5_1);
                 break;
@@ -1209,8 +1443,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.hm_1_1_7:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor",
-                "One year");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "One year");
                 ChangeText("hm_1.2.1", MainTextContent.hm_ID_2[0]);
                 CheckComfortableLevel(TextAttribute.hm_1_2_1);
                 break;
@@ -1221,8 +1454,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.hm_1_2_2:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor",
-                "Not told");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "Not told");
                 ChangeText("hm_1.3.1", MainTextContent.hm_ID_3[0]);
                 CheckComfortableLevel(TextAttribute.hm_1_3_1);
                 break;
@@ -1260,15 +1492,13 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.hm_1_4_3:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera",
-                    "None", "Improve public safety");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "None", "Improve public safety");
                 DestroyCorrectWrongGO();
                 ChangeText("hm_1.4.4", MainTextContent.hm_ID_4[1]);
                 break;
 
             case TextAttribute.hm_1_4_4:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera",
-                    "Not told", "Improve public safety");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not told", "Improve public safety");
                 ChangeText("hm_1.4.5", MainTextContent.hm_ID_4[2]);
                 CheckComfortableLevel(TextAttribute.hm_1_4_5);
                 break;
@@ -1279,8 +1509,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.hm_1_4_6:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera",
-                    "One week", "Improve public safety");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "One week", "Improve public safety");
                 ChangeText("hm_1.5.1", MainTextContent.hm_ID_5[0]);
                 CheckComfortableLevel(TextAttribute.hm_1_5_1);
                 break;
@@ -1319,8 +1548,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.hm_2_1_4:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Room temperature", "Temperature sensor",
-                    "Not deleted");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Room temperature", "Temperature sensor", "Not deleted");
                 ChangeText("hm_2.2.1", MainTextContent.hm_ID_7[0]);
                 CheckComfortableLevel(TextAttribute.hm_2_2_1);
                 break;
@@ -1331,8 +1559,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.hm_2_2_2:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Room temperature", "Temperature sensor",
-                    "One week", "None");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Room temperature", "Temperature sensor", "One week", "None");
                 ChangeText("hm_2.3.1", MainTextContent.hm_ID_8[0]);
                 break;
 
@@ -1349,7 +1576,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.hm_2_3_3:
-                ChangeText("hm_2.4.0", MainTextContent.finishLocation);
+                ChangeText("hm_2.6.0", MainTextContent.finishLocation);
                 finished = true;
                 root.transform.parent.parent.Find("InitArrow").GetChild(0).gameObject.SetActive(true);
                 AddQuestionState("hm_2");
@@ -1377,8 +1604,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.fh_1_1_4:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor",
-                "One year");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "One year");
                 ChangeText("fh_1.2.1", MainTextContent.fh_ID_2[0]);
                 CheckComfortableLevel(TextAttribute.fh_1_2_1);
                 break;
@@ -1389,16 +1615,14 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.fh_1_2_2:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "None", "Camera",
-                    "None", "None");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "None", "Camera", "None", "None");
                 ChangeText("fh_1.3.1", MainTextContent.fh_ID_3[0]);
                 // second fade in
                 fade(true, true);
                 break;
 
             case TextAttribute.fh_1_3_1:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera",
-                    "One week", "Improve public safety");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "One week", "Improve public safety");
                 ChangeText("fh_1.3.2", MainTextContent.fh_ID_3[1]);
                 // second fade out
                 fade(false, true);
@@ -1415,8 +1639,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.fh_1_3_4:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera",
-                "Not told");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not told");
                 ChangeText("fh_1.4.1", MainTextContent.fh_ID_4[0]);
                 CheckComfortableLevel(TextAttribute.fh_1_4_1);
                 break;
@@ -1427,7 +1650,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.fh_1_4_2:
-                ChangeText("fh_1.5.0", MainTextContent.finishScene);
+                ChangeText("fh_1.6.0", MainTextContent.finishScene);
                 finished = true;
                 AddQuestionState("fh_1");
                 Save.SaveByJSON();
@@ -1489,8 +1712,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.fh_2_2_1:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor",
-                    "Not told");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor", "Not told");
                 ChangeText("fh_2.2.2", MainTextContent.fh_ID_6[1]);
                 CheckComfortableLevel(TextAttribute.fh_2_2_2);
                 break;
@@ -1513,11 +1735,586 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.fh_2_3_2:
-                ChangeText("fh_2.4.0", MainTextContent.finishLocation);
+                ChangeText("fh_2.6.0", MainTextContent.finishLocation);
                 finished = true;
                 root.transform.parent.parent.Find("InitArrow").GetChild(0).gameObject.SetActive(true);
                 AddQuestionState("fh_2");
                 Save.SaveByJSON();
+                break;
+
+            // this is the start of the text for work
+            case TextAttribute.wk_1_1_1:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch");
+                ChangeText("wk_1.1.2", MainTextContent.wk_ID_1[0]);
+                break;
+
+            case TextAttribute.wk_1_1_2:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "None", "Determine possible escape routes");
+                ChangeText("wk_1.1.3", MainTextContent.wk_ID_1[1]);
+                break;
+
+            case TextAttribute.wk_1_1_3:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "One week", "Determine possible escape routes");
+                ChangeText("wk_1.1.4", MainTextContent.wk_ID_1[2]);
+                CheckComfortableLevel(TextAttribute.wk_1_1_4);
+                break;
+
+            case TextAttribute.wk_1_1_4:
+                ChangeText("wk_1.1.5", MainTextContent.allow);
+                CheckDecision(TextAttribute.wk_1_1_5);
+                break;
+
+            case TextAttribute.wk_1_1_5:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "Not deleted");
+                ChangeText("wk_1.2.1", MainTextContent.wk_ID_2[0]);
+                CheckComfortableLevel(TextAttribute.wk_1_2_1);
+                break;
+
+            case TextAttribute.wk_1_2_1:
+                ChangeText("wk_1.2.2", MainTextContent.allow);
+                CheckDecision(TextAttribute.wk_1_2_2);
+                break;
+
+            case TextAttribute.wk_1_2_2:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera");
+                ChangeText("wk_1.3.1", MainTextContent.wk_ID_3[0]);
+                break;
+
+            case TextAttribute.wk_1_3_1:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", 
+                    "One year", "Optimize heating and cooling to reduce energy costs");
+                ChangeText("wk_1.3.2", MainTextContent.wk_ID_3[1]);
+                break;
+
+            case TextAttribute.wk_1_3_2:
+                ChangeText("wk_1.3.3", MainTextContent.comfortable);
+                CheckComfortableLevel(TextAttribute.wk_1_3_3);
+                break;
+
+            case TextAttribute.wk_1_3_3:
+                ChangeText("wk_1.3.4", MainTextContent.allow);
+                CheckDecision(TextAttribute.wk_1_3_4);
+                break;
+
+            case TextAttribute.wk_1_3_4:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not told");
+                ChangeText("wk_1.4.1", MainTextContent.wk_ID_4[0]);
+                CheckComfortableLevel(TextAttribute.wk_1_4_1);
+                break;
+
+            case TextAttribute.wk_1_4_1:
+                ChangeText("wk_1.4.2", MainTextContent.allow);
+                CheckDecision(TextAttribute.wk_1_4_2);
+                break;
+
+            case TextAttribute.wk_1_4_2:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "One year", "Improve public safety");
+                ChangeText("wk_1.5.1", MainTextContent.wk_ID_5[0]);
+                break;
+
+            case TextAttribute.wk_1_5_1:
+                ChangeText("wk_1.5.2", MainTextContent.comfortable);
+                CheckComfortableLevel(TextAttribute.wk_1_5_2);
+                break;
+
+            case TextAttribute.wk_1_5_2:
+                ChangeText("wk_1.5.3", MainTextContent.allow);
+                CheckDecision(TextAttribute.wk_1_5_3);
+                break;
+
+            case TextAttribute.wk_1_5_3:
+                ChangeText("wk_1.6.0", MainTextContent.finishScene);
+                finished = true;
+                AddQuestionState("wk_1");
+                Save.SaveByJSON();
+                root.transform.parent.parent.Find("InitArrow").GetChild(0).gameObject.SetActive(true);
+                break;
+
+            case TextAttribute.wk_2_1_1:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", 
+                    "None", "Optimize heating and cooling to make the employees most comfortable");
+                ChangeText("wk_2.1.2", MainTextContent.wk_ID_6[0]);
+                // fade in
+                fade(true);
+                break;
+
+            case TextAttribute.wk_2_1_2:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor",
+                    "Not told");
+                ChangeText("wk_2.1.3", MainTextContent.wk_ID_6[1]);
+                // fade out
+                fade(false);
+                CheckComfortableLevel(TextAttribute.wk_2_1_3);
+                break;
+
+            case TextAttribute.wk_2_1_3:
+                ChangeText("wk_2.1.4", MainTextContent.allow);
+                CheckDecision(TextAttribute.wk_2_1_4);
+                break;
+
+            case TextAttribute.wk_2_1_4:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "One year");
+                ChangeText("wk_2.2.1", MainTextContent.wk_ID_7[0]);
+                CheckComfortableLevel(TextAttribute.wk_2_2_1);
+                break;
+
+            case TextAttribute.wk_2_2_1:
+                ChangeText("wk_2.2.2", MainTextContent.allow);
+                CheckDecision(TextAttribute.wk_2_2_2);
+                break;
+
+            case TextAttribute.wk_2_2_2:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", 
+                    "One year", "Determine when to switch on and off the lights in each room to reduce costs and save energy");
+                ChangeText("wk_2.3.1", MainTextContent.wk_ID_8[0]);
+                break;
+
+            case TextAttribute.wk_2_3_1:
+                ChangeText("wk_2.3.2", MainTextContent.comfortable);
+                CheckComfortableLevel(TextAttribute.wk_2_3_2);
+                break;
+
+            case TextAttribute.wk_2_3_2:
+                ChangeText("wk_2.3.3", MainTextContent.allow);
+                CheckDecision(TextAttribute.wk_2_3_3);
+                break;
+
+            case TextAttribute.wk_2_3_3:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "None", "None", "None", "None");
+                ChangeText("wk_2.4.1", MainTextContent.wk_ID_9[0]);
+                break;
+
+            case TextAttribute.wk_2_4_1:
+                ChangeText("wk_2.4.2", MainTextContent.select);
+                SelectIcon("smartphone", TextAttribute.wk_2_4_2);
+                ShowTips(true, "wk_2.4");
+                break;
+
+            case TextAttribute.wk_2_4_2:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "None", "Smartphone");
+                if (answerCorrect)
+                {
+                    AddAnswer("wk_2.4");
+                    textContent = MainTextContent.correct + "<color=green>smartphone</color>.";
+                }
+                else
+                {
+                    textContent = MainTextContent.wrong + "<color=green>smartphone</color>.";
+                }
+                ChangeText("wk_2.4.3", textContent);
+                ShowTips(false);
+                break;
+
+            case TextAttribute.wk_2_4_3:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone");
+                ChangeText("wk_2.4.4", MainTextContent.wk_ID_9[1]);
+                break;
+
+            case TextAttribute.wk_2_4_4:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone",
+                    "One year", "You are not told what the data is used for");
+                ChangeText("wk_2.4.5", MainTextContent.wk_ID_9[2]);
+                break;
+
+            case TextAttribute.wk_2_4_5:
+                ChangeText("wk_2.4.6", MainTextContent.comfortable);
+                CheckComfortableLevel(TextAttribute.wk_2_4_6);
+                break;
+
+            case TextAttribute.wk_2_4_6:
+                ChangeText("wk_2.4.7", MainTextContent.allow);
+                CheckDecision(TextAttribute.wk_2_4_7);
+                break;
+
+            case TextAttribute.wk_2_4_7:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone",
+                    "One year", "Determine possible escape routes in the case of an emergency or a hazard");
+                ChangeText("wk_2.5.1", MainTextContent.wk_ID_10[0]);
+                CheckComfortableLevel(TextAttribute.wk_2_5_1);
+                break;
+
+            case TextAttribute.wk_2_5_1:
+                ChangeText("wk_2.5.2", MainTextContent.allow);
+                CheckDecision(TextAttribute.wk_2_5_2);
+                break;
+
+            case TextAttribute.wk_2_5_2:
+                ChangeText("wk_2.6.0", MainTextContent.finishScene);
+                finished = true;
+                AddQuestionState("wk_2");
+                Save.SaveByJSON();
+                root.transform.parent.parent.Find("InitArrow").GetChild(0).gameObject.SetActive(true);
+                break;
+
+            case TextAttribute.wk_3_1_1:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient Temperature", "Temperature sensor",
+                    "Not told", "You are not told what the data is used for");
+                ChangeText("wk_3.1.2", MainTextContent.wk_ID_11[0]);
+                // fade in
+                fade(true);
+                break;
+
+            case TextAttribute.wk_3_1_2:
+                ChangeText("wk_3.1.3", MainTextContent.comfortable);
+                // fade out
+                fade(false);
+                CheckComfortableLevel(TextAttribute.wk_3_1_3);
+                break;
+
+            case TextAttribute.wk_3_1_3:
+                ChangeText("wk_3.1.4", MainTextContent.allow);
+                CheckDecision(TextAttribute.wk_3_1_4);
+                break;
+
+            case TextAttribute.wk_3_1_4:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient Temperature", "Temperature sensor",
+                    "Not told", "Check for abnormal temperatures, which indicate potential hazards, e.g., fire");
+                ChangeText("wk_3.2.1", MainTextContent.wk_ID_12[0]);
+                break;
+
+            case TextAttribute.wk_3_2_1:
+                ChangeText("wk_3.2.2", MainTextContent.wk_ID_12[1]);
+                CheckComfortableLevel(TextAttribute.wk_3_2_2);
+                break;
+
+            case TextAttribute.wk_3_2_2:
+                ChangeText("wk_3.2.3", MainTextContent.allow);
+                CheckDecision(TextAttribute.wk_3_2_3);
+                break;
+
+            case TextAttribute.wk_3_2_3:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient Temperature", "Temperature sensor", "One week");
+                ChangeText("wk_3.3.1", MainTextContent.wk_ID_13[0]);
+                CheckComfortableLevel(TextAttribute.wk_3_3_1);
+                break;
+
+            case TextAttribute.wk_3_3_1:
+                ChangeText("wk_3.3.2", MainTextContent.allow);
+                CheckDecision(TextAttribute.wk_3_3_2);
+                break;
+
+            case TextAttribute.wk_3_3_2:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Biometric data", "None", "None", "None");
+                ChangeText("wk_3.4.1", MainTextContent.wk_ID_14[0]);
+                break;
+
+            case TextAttribute.wk_3_4_1:
+                ChangeText("wk_3.4.2", MainTextContent.wk_ID_14[1]);
+                break;
+
+            case TextAttribute.wk_3_4_2:
+                ChangeText("wk_3.4.3", MainTextContent.select);
+                SelectIcon("fingerprint scanner", TextAttribute.wk_3_4_3);
+                ShowTips(true, "wk_3.4");
+                break;
+
+            case TextAttribute.wk_3_4_3:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Biometric data", "Fingerprint scanner");
+                if (answerCorrect)
+                {
+                    AddAnswer("wk_2.4");
+                    textContent = MainTextContent.correct + "<color=green>fingerprint scanner</color>.";
+                }
+                else
+                {
+                    textContent = MainTextContent.wrong + "<color=green>fingerprint scanner</color>.";
+                }
+                ChangeText("wk_3.4.4", textContent);
+                ShowTips(false);
+                break;
+
+            case TextAttribute.wk_3_4_4:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Biometric data", "Fingerprint scanner", 
+                    "None", "Unlock certain rooms, like the supply closet or the kitchen");
+                ChangeText("wk_3.4.5", MainTextContent.wk_ID_14[2]);
+                break;
+
+            case TextAttribute.wk_3_4_5:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Fingerprint", "Fingerprint scanner",
+                    "Until you no longer work for this company", "Unlock certain rooms, like the supply closet or the kitchen");
+                ChangeText("wk_3.4.6", MainTextContent.wk_ID_14[3]);
+                CheckComfortableLevel(TextAttribute.wk_3_4_6);
+                break;
+
+            case TextAttribute.wk_3_4_6:
+                ChangeText("wk_3.4.7", MainTextContent.allow);
+                CheckDecision(TextAttribute.wk_3_4_7);
+                break;
+
+            case TextAttribute.wk_3_4_7:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Fingerprint", "Fingerprint scanner", "Not deleted");
+                ChangeText("wk_3.5.1", MainTextContent.wk_ID_15[0]);
+                CheckComfortableLevel(TextAttribute.wk_3_5_1);
+                break;
+
+            case TextAttribute.wk_3_5_1:
+                ChangeText("wk_3.5.2", MainTextContent.allow);
+                CheckDecision(TextAttribute.wk_3_5_2);
+                break;
+
+            case TextAttribute.wk_3_5_2:
+                ChangeText("wk_3.6.0", MainTextContent.finishLocation);
+                finished = true;
+                root.transform.parent.parent.Find("InitArrow").GetChild(0).gameObject.SetActive(true);
+                AddQuestionState("wk_3");
+                Save.SaveByJSON();
+                break;
+
+            // this is the start of text for public restroom
+            case TextAttribute.pr_1_1_1:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not told", "You are not told what the data is uesd for");
+                ChangeText("pr_1.1.2", MainTextContent.pr_ID_1[0]);
+                // fade in
+                fade(true);
+                break;
+
+            case TextAttribute.pr_1_1_2:
+                ChangeText("pr_1.1.3", MainTextContent.comfortable);
+                // fade out
+                fade(false);
+                CheckComfortableLevel(TextAttribute.pr_1_1_3);
+                break;
+
+            case TextAttribute.pr_1_1_3:
+                ChangeText("pr_1.1.4", MainTextContent.allow);
+                CheckDecision(TextAttribute.pr_1_1_4);
+                break;
+
+            case TextAttribute.pr_1_1_4:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not told", "Improve public safety");
+                ChangeText("pr_1.2.1", MainTextContent.pr_ID_2[0]);
+                break;
+
+            case TextAttribute.pr_1_2_1:
+                ChangeText("pr_1.2.2", MainTextContent.comfortable);
+                CheckComfortableLevel(TextAttribute.pr_1_2_2);
+                break;
+
+            case TextAttribute.pr_1_2_2:
+                ChangeText("pr_1.2.3", MainTextContent.allow);
+                CheckDecision(TextAttribute.pr_1_2_3);
+                break;
+
+            case TextAttribute.pr_1_2_3:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not deleted", "Improve public safety");
+                ChangeText("pr_1.3.1", MainTextContent.pr_ID_3[0]);
+                break;
+
+            case TextAttribute.pr_1_3_1:
+                ChangeText("pr_1.3.2", MainTextContent.comfortable);
+                CheckComfortableLevel(TextAttribute.pr_1_3_2);
+                break;
+
+            case TextAttribute.pr_1_3_2:
+                ChangeText("pr_1.3.3", MainTextContent.allow);
+                CheckDecision(TextAttribute.pr_1_3_3);
+                break;
+
+            case TextAttribute.pr_1_3_3:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor",
+                    "None", "Determine when to switch on and off the lights to reduce costs and save energy");
+                ChangeText("pr_1.4.1", MainTextContent.pr_ID_4[0]);
+                // second fade in
+                fade(true, true);
+                break;
+
+            case TextAttribute.pr_1_4_1:
+                ChangeText("pr_1.4.2", MainTextContent.pr_ID_4[1]);
+                CheckComfortableLevel(TextAttribute.pr_1_4_2);
+                // second fade out
+                fade(false, true);
+                break;
+
+            case TextAttribute.pr_1_4_2:
+                ChangeText("pr_1.4.3", MainTextContent.allow);
+                CheckDecision(TextAttribute.pr_1_4_3);
+                break;
+
+            case TextAttribute.pr_1_4_3:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "Not deleted");
+                ChangeText("pr_1.5.1", MainTextContent.pr_ID_5[0]);
+                CheckComfortableLevel(TextAttribute.pr_1_5_1);
+                break;
+
+            case TextAttribute.pr_1_5_1:
+                ChangeText("pr_1.5.2", MainTextContent.allow);
+                CheckDecision(TextAttribute.pr_1_5_2);
+                break;
+
+            case TextAttribute.pr_1_5_2:
+                ChangeText("pr_1.6.0", MainTextContent.finishScene);
+                finished = true;
+                AddQuestionState("pr_1");
+                Save.SaveByJSON();
+                root.transform.parent.parent.Find("InitArrow").GetChild(0).gameObject.SetActive(true);
+                break;
+
+            case TextAttribute.pr_2_1_1:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "None", "Improve public safety");
+                ChangeText("pr_2.1.2", MainTextContent.pr_ID_6[0]);
+                // fade in
+                fade(true);
+                break;
+
+            case TextAttribute.pr_2_1_2:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "Not told", "Improve public safety");
+                ChangeText("pr_2.1.3", MainTextContent.pr_ID_6[1]);
+                // fade out
+                fade(false);
+                CheckComfortableLevel(TextAttribute.pr_2_1_3);
+                break;
+
+            case TextAttribute.pr_2_1_3:
+                ChangeText("pr_2.1.4", MainTextContent.allow);
+                CheckDecision(TextAttribute.pr_2_1_4);
+                break;
+
+            case TextAttribute.pr_2_1_4:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "One week", "Improve public safety");
+                ChangeText("pr_2.2.1", MainTextContent.pr_ID_7[0]);
+                CheckComfortableLevel(TextAttribute.pr_2_2_1);
+                break;
+
+            case TextAttribute.pr_2_2_1:
+                ChangeText("pr_2.2.2", MainTextContent.allow);
+                CheckDecision(TextAttribute.pr_2_2_2);
+                break;
+
+            case TextAttribute.pr_2_2_2:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor",
+                    "Not told", "You are not told what the data is uesd for");
+                ChangeText("pr_2.3.1", MainTextContent.pr_ID_8[0]);
+                // second fade in
+                fade(true, true);
+                break;
+
+            case TextAttribute.pr_2_3_1:
+                ChangeText("pr_2.3.2", MainTextContent.comfortable);
+                CheckComfortableLevel(TextAttribute.pr_2_3_2);
+                // second fade out
+                fade(false, true);
+                break;
+
+            case TextAttribute.pr_2_3_2:
+                ChangeText("pr_2.3.3", MainTextContent.allow);
+                CheckDecision(TextAttribute.pr_2_3_3);
+                break;
+
+            case TextAttribute.pr_2_3_3:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor",
+                    "Not deleted", "You are not told what the data is uesd for");
+                ChangeText("pr_2.4.1", MainTextContent.pr_ID_9[0]);
+                break;
+
+            case TextAttribute.pr_2_4_1:
+                ChangeText("pr_2.4.2", MainTextContent.comfortable);
+                CheckComfortableLevel(TextAttribute.pr_2_4_2);
+                break;
+
+            case TextAttribute.pr_2_4_2:
+                ChangeText("pr_2.4.3", MainTextContent.allow);
+                CheckDecision(TextAttribute.pr_2_4_3);
+                break;
+
+            case TextAttribute.pr_2_4_3:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor",
+                     "Not deleted", "Check for abnormal temperatures, which indicate potential hazards, e.g., fire");
+                ChangeText("pr_2.5.1", MainTextContent.pr_ID_10[0]);
+                CheckComfortableLevel(TextAttribute.pr_2_5_1);
+                break;
+
+            case TextAttribute.pr_2_5_1:
+                ChangeText("pr_2.5.2", MainTextContent.allow);
+                CheckDecision(TextAttribute.pr_2_5_2);
+                break;
+
+            case TextAttribute.pr_2_5_2:
+                ChangeText("pr_2.6.0", MainTextContent.finishScene);
+                finished = true;
+                AddQuestionState("pr_2");
+                Save.SaveByJSON();
+                root.transform.parent.parent.Find("InitArrow").GetChild(0).gameObject.SetActive(true);
+                break;
+
+            case TextAttribute.pr_3_1_1:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "None", "Determine possible escape routes");
+                ChangeText("pr_3.1.2", MainTextContent.pr_ID_11[0]);
+                break;
+
+            case TextAttribute.pr_3_1_2:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "Until you leave");
+                ChangeText("pr_3.1.3", MainTextContent.pr_ID_11[1]);
+                CheckComfortableLevel(TextAttribute.pr_3_1_3);
+                break;
+
+            case TextAttribute.pr_3_1_3:
+                ChangeText("pr_3.1.4", MainTextContent.allow);
+                CheckDecision(TextAttribute.pr_3_1_4);
+                break;
+
+            case TextAttribute.pr_3_1_4:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "One week");
+                ChangeText("pr_3.2.1", MainTextContent.pr_ID_12[0]);
+                CheckComfortableLevel(TextAttribute.pr_3_2_1);
+                break;
+
+            case TextAttribute.pr_3_2_1:
+                ChangeText("pr_3.2.2", MainTextContent.allow);
+                CheckDecision(TextAttribute.pr_3_2_2);
+                break;
+
+            case TextAttribute.pr_3_2_2:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch",
+                    "One week", "You are not told what the data is uesd for");
+                ChangeText("pr_3.3.1", MainTextContent.pr_ID_13[0]);
+                break;
+
+            case TextAttribute.pr_3_3_1:
+                ChangeText("pr_3.3.2", MainTextContent.comfortable);
+                CheckComfortableLevel(TextAttribute.pr_3_3_2);
+                break;
+
+            case TextAttribute.pr_3_3_2:
+                ChangeText("pr_3.3.3", MainTextContent.allow);
+                CheckDecision(TextAttribute.pr_3_3_3);
+                break;
+
+            case TextAttribute.pr_3_3_3:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone",
+                    "None", "Determine possible escape routes");
+                ChangeText("pr_3.4.1", MainTextContent.pr_ID_14[0]);
+                break;
+
+            case TextAttribute.pr_3_4_1:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone",
+                    "Until you leave", "Determine possible escape routes");
+                ChangeText("lb_1.4.2", MainTextContent.pr_ID_14[1]);
+                CheckComfortableLevel(TextAttribute.pr_3_4_2);
+                break;
+
+            case TextAttribute.pr_3_4_2:
+                ChangeText("pr_3.4.3", MainTextContent.allow);
+                CheckDecision(TextAttribute.pr_3_4_3);
+                break;
+
+            case TextAttribute.pr_3_4_3:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone",
+                    "Cannot be deleted", "Determine possible escape routes");
+                ChangeText("pr_3.5.1", MainTextContent.pr_ID_15[0]);
+                CheckComfortableLevel(TextAttribute.pr_3_5_1);
+                break;
+
+            case TextAttribute.pr_3_5_1:
+                ChangeText("pr_3.5.2", MainTextContent.allow);
+                CheckDecision(TextAttribute.pr_3_5_2);
+                break;
+
+            case TextAttribute.pr_3_5_2:
+                ChangeText("pr_3.6.0", MainTextContent.finishScene);
+                finished = true;
+                AddQuestionState("pr_3");
+                Save.SaveByJSON();
+                root.transform.parent.parent.Find("InitArrow").GetChild(0).gameObject.SetActive(true);
                 break;
         }
     }

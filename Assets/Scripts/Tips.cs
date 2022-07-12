@@ -153,6 +153,20 @@ public class Tips : MonoBehaviour
                 }
                 break;
 
+            case "lb_1.1":
+                switch (tipsLevel)
+                {
+                    case 0:
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "Notice that this device will scan an organ of your face, not your whole face. " +
+                            "What is the crucial organ on your face that contains your biometric data?";
+                        break;
+                    case 1:
+                    case 2:
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "The correct answer is <color=blue>iris scanner</color>.";
+                        break;
+                }
+                break;
+
             case "lb_2.3":
                 switch (tipsLevel)
                 {
@@ -200,7 +214,7 @@ public class Tips : MonoBehaviour
                 {
                     case 0:
                         tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "Remember that it can monitor the room and take record. " +
-                            "Think about what kind of data does it collect? (video)";
+                            "Think about what kind of data does it collect? (It's video)";
                         break;
                     case 1:
                     case 2:
@@ -219,6 +233,34 @@ public class Tips : MonoBehaviour
                     case 1:
                     case 2:
                         tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "The correct answer is <color=blue>temperature sensor</color>.";
+                        break;
+                }
+                break;
+
+            case "wk_2.4":
+                switch (tipsLevel)
+                {
+                    case 0:
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "Firstly, this IoT device is small and flexible so that you can carry it with. " +
+                            "Secondly, think about what device can be used to make a calling.";
+                        break;
+                    case 1:
+                    case 2:
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "The correct answer is <color=blue>smartphone</color>.";
+                        break;
+                }
+                break;
+
+            case "wk_3.4":
+                switch (tipsLevel)
+                {
+                    case 0:
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "Think about how does this device collect your biometric data. " +
+                            "Remember that you are using hands to interact with it.";
+                        break;
+                    case 1:
+                    case 2:
+                        tipTextGO.transform.GetChild(0).GetComponent<Text>().text = "The correct answer is <color=blue>fingerprint scanner</color>.";
                         break;
                 }
                 break;
