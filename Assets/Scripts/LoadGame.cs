@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEditor;
 
 
 
@@ -40,7 +41,9 @@ public class LoadGame : MonoBehaviour
 
     public void EndGame()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
+    #if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+    #endif
         Application.Quit();
     }
 }

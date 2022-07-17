@@ -18,8 +18,8 @@ public class MainTextContent
     
     public static string[] cs_ID_1 =  
     {
-        "Your <color=blue>smartwatch</color> is keeping track of your <color=green>specific position</color> in the <color=red>department store</color>. " +
-        "Your <color=green>position</color> is used by the device to <color=grey>determine possible escape routes</color> in the case of an emergency or a hazard.",
+        "Your <color=blue>smartphone</color> is keeping track of your <color=green>specific position</color> in the <color=red>department store</color>. " +
+        "Your position is used by the device to <color=grey>determine possible escape routes in the case of an emergency or a hazard</color>.",
 
         "This data will be kept on your watch <color=purple>until you leave</color>. " +
         "How would you feel about the data collection in the scenario described above?"
@@ -27,31 +27,33 @@ public class MainTextContent
 
     public static string[] cs_ID_2 =
     {
-        "Based on the previous scenario, what if the data will be kept on your watch <color=purple>for one week</color>? " +
+        "Based on the previous scenario, what if the data will be kept on your phone and <color=purple>cannot be deleted</color>? " +
         "How would you feel about the data collection in this scenario?"
     };
 
     public static string[] cs_ID_3 =
     {
-        "Let's change the scenario a little bit. This time, the data collected by your watch will be kept <color=purple>for one week</color>," +
-        "but you are <color=grey>not told what the data is uesd for</color>. Other factors remain the same."
+        "Your <color=blue>smartwatch</color>, another IoT device you usually carry with, " +
+        "is keeping track of your <color=green>specific position</color> in the <color=red>department store</color>. ",
+
+        "Your position is <color=magenta>shared with the device manufacturer</color>, and you are <color=grey>not told what the data is used for</color> or <color=purple>how long it will be kept</color>. " +
+        "How would you feel about the data collection in this scenario?"
     };
 
     public static string[] cs_ID_4 =
     {
-        "Your <color=blue>smartphone</color>, another IoT device you usually carry with, " +
-        "is keeping track of your <color=green>specific position</color> in the <color=red>department store</color>. " +
-        "Your position is used by the device to <color=grey>determine possible escape routes</color> in the case of an emergency or a hazard.",
-
-        "This data will be kept on your phone <color=purple>until you leave the shop</color>. " +
-        "How would you feel about the data collection in this scenario?"
+        "Based on the previous scenario, what if you are told that data will be kept by the manufacturer <color=purple>for one week</color>? " +
+        "You are still <color=grey>not told what the data is uesd for</color>"
     };
 
     public static string[] cs_ID_5 =
     {
-        "Based on the previous scenario, what if the data will be kept on your phone and <color=purple>cannot be deleted</color>? " +
-        "How would you feel about the data collection in this scenario?"
+        "Let's change the scenario a little bit. This time, you are told that the device manufacturer will use the data to " +
+            "<color=grey>determine possible escape routes in the case of an emergency or a hazard</color>.",
+
+        "The manufacturer will keep the data <color=purple>until you leave the shop</color>. Other factors remain the same."
     };
+
 
     public static string[] cs_ID_6 =
     {
@@ -60,8 +62,12 @@ public class MainTextContent
                     "as they enter the shop in order to remotely identify returning customers.",
 
         "This method is to <color=grey>keep track of your orders and make suggestions</color> " +
-                    "based on your purchasing habits regardless of whether you are a member of their frequent shoppers program or not. " +
-                    "Your picture will be kept <color=purple>for one week</color>."
+                    "based on your purchasing habits regardless of whether you are a member of their frequent shoppers program or not. ",
+
+         "Your picture will be kept <color=purple>for one week</color>. " +
+            "How would you feel about the data collection in this scenario?"
+
+
     };
 
     public static string[] cs_ID_7 =
@@ -175,13 +181,15 @@ public class MainTextContent
     public static string[] lb_ID_6 =
     {
         "The book shelf is equipped with <color=blue>temperature sensors</color> to check for abnormal <color=green>temperatures</color>, " +
-            "which <color=grey>indicate potential hazards, e.g., fire.</color>" +
-            "This data will be kept <color=purple>for one week</color>"
+            "which <color=grey>indicate potential hazards, e.g., fire.</color>",
+
+            "You are <color=purple>not told how long the data will be kept</color>. " +
+            "How would you feel about the data collection in this scenario?"
     };
 
     public static string[] lb_ID_7 =
     {
-        "Based on the previous scenario, what if you are <color=purple>not told how long the data will be kept</color>? " +
+        "Based on the previous scenario, what if this data will be kept <color=purple>for one week</color>? " +
         "How would you feel about the data collection in this scenario?"
     };
 
@@ -193,22 +201,26 @@ public class MainTextContent
             "This is a touchable device and you need to touch it in order to identify yourself.",
 
          "Now you know that this library uses <color=blue>fingerprint scanner</color> to collect your <color=green>fingerprint</color>. " +
-             "This biometric data is used to <color=grey>identify patrons and allow them to check out books without presenting their library card</color>.",
+             "However, you are <color=grey>not told what the data is uesd for</color>.",
 
-         "Your fingerprint will be kept <color=purple>until your library card expires</color>. " +
+         "The data collected by the scanner will <color=purple>not be deleted</color>. " +
             "How would you feel about the data collection in the scenario described above?"
+
     };
 
     public static string[] lb_ID_9 =
     {
-        "Based on the previous scenario, what if the data will <color=purple>not be deleted</color>? " +
+        "Based on the previous scenario, what if you are told that your biometric data is used to " +
+            "<color=grey>identify patrons and allow them to check out books without presenting their library card</color>?",
+
+        "The data will also <color=purple>not be deleted</color>. " +
         "How would you feel about the data collection in this scenario?"
     };
 
-    public static string[] lb_ID_10 =
+    public static string[] lb_ID_10 =   
     {
-        "Let's change the scenario a little bit. This time, the data collected by the scanner will <color=purple>not be deleted</color>," +
-        "and you are <color=grey>not told what the data is uesd for</color>. Other factors remain the same."
+        "Let's change the scenario a little bit. This time, your fingerprint will be kept <color=purple>until your library card expires</color>. " +
+            "Other factors remain the same."
     };
 
     public static string[] lb_ID_11 =
@@ -259,19 +271,19 @@ public class MainTextContent
         "Your living room has <color=blue>presence sensor</color> to detect whether someone is <color=green>present</color>. " +
                     "The data will be used to <color=grey>determine when to switch on and off the lights to reduce costs and save energy</color>. ",
 
-            "This data will be kept <color=purple>for one week</color>. " +
+            "You are <color=purple>not told how long the data will be kept</color>. " +
             "How would you feel about the data collection in this scenario?"
     };
 
     public static string[] hm_ID_2 =
     {
-        "Based on the previous scenario, what if the data will be kept <color=purple>for one year</color>? " +
+        "Based on the previous scenario, what if you are told that the data will be kept <color=purple>for one week</color>? " +
         "How would you feel about the data collection in this scenario?"
     };
 
     public static string[] hm_ID_3 =
     {
-        "Based on the previous scenario, what if you are <color=purple>not told how long the data will be kept</color>? " +
+        "Let's change the scenario a little bit. This time, the data collected by the presence sensor will be kept <color=purple>for one year</color>. " +
         "How would you feel about the data collection in this scenario?"
     };
 
@@ -280,7 +292,7 @@ public class MainTextContent
         "Your living room has another kind of IoT device that will monitor the whole room and collect data that is being recorded.",
 
         "Your living romm has <color=blue>camera</color> that is recording <color=green>video</color>  of the entire room you're in. " +
-            "The video is shared with law enforcement to <color=grey>improve public safety</color>. ",
+            "The video is <color=magenta>shared with law enforcement</color> to <color=grey>improve public safety</color>. ",
 
         "You are <color=purple>not told how long the data will be kept</color>. How would you feel about the data collection in this scenario?"
     };
@@ -293,24 +305,22 @@ public class MainTextContent
 
     public static string[] hm_ID_6 =
     {
-        "This <color=blue>temperature sensor</color> records <color=green>room temperature</color> in order to " +
-            "<color=grey>check for abnormal temperatures, which indicate potential hazards, e.g., fire</color>. " +
-            "This data is managed by your security company and will be kept <color=purple>for one year</color>."
+        "This <color=blue>temperature sensor</color> records <color=green>room temperature</color> and the data is managed by your <color=magenta>security company</color>. ",
+
+            "You are <color=grey>not told what the data is used for</color> and the security company will keep your data <color=purple>for one year</color>."
     };
 
     public static string[] hm_ID_7 =
     {
-        "Based on the previous scenario, what if the data kept by them will <color=purple>not be deleted</color>? " +
+        "Based on the previous scenario, what if you are told that the data is used to <color=grey>check for abnormal temperatures, which indicate potential hazards, e.g., fire</color>?",
+
+        "Additionally, the data will be kept <color=purple>for one year</color>. " + 
         "How would you feel about the data collection in this scenario?"
     };
 
     public static string[] hm_ID_8 =
     {
-        "Let's change the scenario a little bit. This time, the data collected from <color=blue>temperature sensor</color> " +
-            "is managed by your security company and will be kept <color=purple>for one week</color>.",
-
-        "You are <color=grey>not told what the data is used for</color>. " +
-            "How would you feel about the data collection in this scenario?"
+        "Let's change the scenario a little bit. This time, the data managed by your security company will <color=purple>not delete</color> your data."
     };
 
     public static string[] fh_ID_1 =
@@ -330,12 +340,12 @@ public class MainTextContent
         "When you look around, you find that there's one more IoT device, a <color=blue>camera</color> installed on the wall.",
 
         "The <color=blue>camera</color> is recording <color=green>video</color> of the entire room you're in. " +
-            "The video is shared with law enforcement to <color=grey>improve public safety</color> and they will keep it <color=purple>for one week</color>."
+            "The video is <color=magenta>shared with law enforcement</color> to <color=grey>improve public safety</color> but you are <color=purple>not told how long the data will be kept</color>."
     };
 
     public static string[] fh_ID_4 =
     {
-        "Based on the previous scenario, what if you are <color=purple>not told how long the data will be kept</color>? " +
+        "Based on the previous scenario, what if you are told that the law enfocement will keep you data <color=purple>for one week</color>? " +
         "How would you feel about the data collection in this scenario?"
     };
 
@@ -348,7 +358,7 @@ public class MainTextContent
             "An IoT device which is sensitive to <color=green>ambient temperature</color> is required in the control system in order to control the air conditoiner accordingly,",
 
         "Now you know that there is a <color=blue>temperature sensor</color> in your <color=red>friend's bedroom</color>. " +
-            "This device will collect <color=green>temperature information</color> inside the room and the data is managed by its security company.",
+            "This device will collect <color=green>temperature information</color> inside the room and the data is managed by its <color=magenta>security company</color>.",
 
         "You are <color=grey>not told what the data is used for</color> or <color=purple>how long it will be kept</color>. " +
             "How would you feel about the data collection in this scenario?"
@@ -357,7 +367,7 @@ public class MainTextContent
     public static string[] fh_ID_6 =
     {
         "Let's change the scenario a little bit. This time, the data collected from <color=blue>temperature sensor</color> " +
-            "is managed by its security company in order to <color=grey>check for abnormal temperatures, which indicate potential hazards, e.g., fire</color>,",
+            "is managed by its <color=magenta>security company</color> in order to <color=grey>check for abnormal temperatures, which indicate potential hazards, e.g., fire</color>,",
 
         "but you still are <color=purple>not told how long the data will be kept</color>. " +
             "How would you feel about the data collection in this scenario?"
@@ -373,7 +383,7 @@ public class MainTextContent
     {
         "Your <color=blue>smartwatch</color> can record <color=green>your position</color> and time corresponding to that position to prove that you are not late. ",
 
-            "However, <color=green>your position</color> is also shared with the device manufacturer to <color=grey>determine possible escape routes in the case of an emergency or a hazard</color>.",
+            "However, <color=green>your position</color> is also <color=magenta>shared with the device manufacturer</color> to <color=grey>determine possible escape routes in the case of an emergency or a hazard</color>.",
 
             "This data will be kept by your manufacturer <color=purple>for one week</color>. " +
             "How would you feel about the data collection in this scenario?"
@@ -390,20 +400,20 @@ public class MainTextContent
         "You also notice that there are <color=blue>cameras</color> in this building. " +
             "These cameras are recording <color=green>video</color> of the entire building. ",
 
-            "The <color=green>video</color> will be used to monitor how busy it is in order to <color=grey>optimize heating and cooling to reduce energy costs</color>. " +
-            "This data will be kept <color=purple>for one year</color>."
+            "The video will be used to monitor how busy it is in order to <color=grey>optimize heating and cooling to reduce energy costs</color>. " +
+            "You are <color=purple>not told how long the data will be kept</color>."
     };
 
     public static string[] wk_ID_4 =
     {
-        "Based on the previous scenario, what if you are <color=purple>not told how long the data will be kept</color>? " +
+        "Based on the previous scenario, what if you are told that this data will be kept <color=purple>for one year</color>? " +
         "How would you feel about the data collection in this scenario?"
     };
 
     public static string[] wk_ID_5 =
     {
         "Let's change the scenario a little bit. This time, the data collected from the <color=blue>camera</color> " +
-            "is shared with law enforcement to <color=grey>improve public safety</color> and they will keep it <color=purple>for one year</color>."
+            "is <color=magenta>shared with law enforcement</color> to <color=grey>improve public safety</color> and they will also keep it <color=purple>for one year</color>."
     };
 
     public static string[] wk_ID_6 =
@@ -487,18 +497,19 @@ public class MainTextContent
     public static string[] pr_ID_1 =
     {
         "This <color=red>restroom</color> has <color=blue>cameras</color> that are recording <color=green>video</color> of the entire room. " +
-            "The <color=green>video</color> is shared with law enforcement. You are <color=grey>not told what the data is used for</color> or <color=purple>how long it will be kept</color>."
+            "The video is <color=magenta>shared with law enforcement</color>. " +
+            "You are <color=grey>not told what the data is used for</color> or <color=purple>how long it will be kept</color>."
     };
 
     public static string[] pr_ID_2 =
     {
-        "Based on the previous scenario, what if you are told that the <color=green>video</color> is shared with law enforcement to <color=grey>improve public safety</color>, " +
+        "Based on the previous scenario, what if you are told that the video is <color=magenta>shared with law enforcement</color> to <color=grey>improve public safety</color>, " +
             "but you still don't know that <color=purple>how long the data will be kept</color>?"
     };
 
     public static string[] pr_ID_3 =
     {
-        "Based on the previous scenario, what if you are told that the <color=green>video</color> is shared with law enforcement to <color=grey>improve public safety</color>, " +
+        "Based on the previous scenario, what if you are told that the video is <color=magenta>shared with law enforcement</color> to <color=grey>improve public safety</color>, " +
             "and they will <color=purple>not delete it</color>?"
     };
 
@@ -520,7 +531,7 @@ public class MainTextContent
     public static string[] pr_ID_6 =
     {
         "Coincidentally, this <color=red>restroom</color> also has <color=blue>presence sensors</color> that are collecting your <color=green>presence information</color>. " +
-            "This time, the data is shared with law enforcement to <color=grey>improve public safety</color>.",
+            "This time, the data is <color=magenta>shared with law enforcement</color> to <color=grey>improve public safety</color>.",
 
         "You are <color=purple>not told how long the data will be kept</color>. " +
             "How would you feel about the data collection in this scenario?"
@@ -552,39 +563,41 @@ public class MainTextContent
 
     public static string[] pr_ID_11 =
     {
-        "However, you found that your <color=blue>smartwatch</color> is keeping track of your <color=green>specific position</color> in the <color=red>public restroom</color>. " +
-        "Your <color=green>position</color> is used by the device to <color=grey>determine possible escape routes</color> in the case of an emergency or a hazard.",
+        "However, you found that your <color=blue>smartphone</color> is keeping track of your <color=green>specific location</color> in the <color=red>public restroom</color>. " +
+        "Your location is used by the device to <color=grey>determine possible escape routes in the case of an emergency or a hazard</color>.",
 
-        "This data will be kept on your watch <color=purple>until you leave the restroom</color>. " +
+        "This data will be kept on your phone <color=purple>until you leave the restroom</color>. " +
         "How would you feel about the data collection in the scenario described above?"
     };
 
     public static string[] pr_ID_12 =
     {
-        "Based on the previous scenario, what if the data will be kept on your watch <color=purple>for one week</color>? " +
+        "Based on the previous scenario, what if the data kept on your phone will <color=purple>not be deleted</color>? " +
         "How would you feel about the data collection in this scenario?"
     };
 
     public static string[] pr_ID_13 =
     {
-        "Let's change the scenario a little bit. This time, the data collected by your watch will be kept <color=purple>for one week</color>, " +
-        "but you are <color=grey>not told what the data is uesd for</color>. Other factors remain the same."
+        "Your <color=blue>smartwatch</color>, another IoT device you usually carry with, " +
+        "is keeping track of your <color=green>specific location</color> in the <color=red>public restroom</color>. " +
+        "Your location is <color=magenta>shared with the device manufacturer</color>, but you are <color=grey>not told what the data is uesd for</color>",
+
+        "This data will be kept by the manufacturer <color=purple>for one week</color>. " +
+        "How would you feel about the data collection in this scenario?"
     };
 
     public static string[] pr_ID_14 =
     {
-        "Your <color=blue>smartphone</color>, another IoT device you usually carry with, " +
-        "is keeping track of your <color=green>specific position</color> in the <color=red>public restroom</color>. " +
-        "Your position is used by the device to <color=grey>determine possible escape routes</color> in the case of an emergency or a hazard.",
+        "Based on the previous scenario, what if you are told that the device manufacturer will use your data to " +
+            "<color=grey>determine possible escape routes in the case of an emergency or a hazard</color>?",
 
-        "This data will be kept on your phone <color=purple>until you leave the restroom</color>. " +
+        "This data will be kept by the manufacturer <color=purple>for one week</color>. " + 
         "How would you feel about the data collection in this scenario?"
     };
 
     public static string[] pr_ID_15 =
     {
-        "Based on the previous scenario, what if the data will be kept on your phone and <color=purple>cannot be deleted</color>? " +
-        "How would you feel about the data collection in this scenario?"
+        "Let's change the scenario a little bit. This time, the data collected by your watch will be kept by the manufacturer <color=purple>for one year</color>. " +
+            "Other factors remain the same."
     };
-
 }

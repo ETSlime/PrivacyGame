@@ -158,5 +158,10 @@ public class BtnBehavior : MonoBehaviour
         LoadGame.LoadScene("Game");
     }
 
-
+    public void save()
+    {
+        Save.SaveByJSON();
+        Text text = this.transform.parent.GetChild(1).GetComponent<Text>();
+        text.text = Player.results.ToString();
+    }
 }

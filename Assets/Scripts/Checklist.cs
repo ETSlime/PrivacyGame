@@ -24,7 +24,7 @@ public class Checklist : MonoBehaviour
         dataType.text = "Data type: " + "\n<color=green>" + "None" + "</color>";
         deviceType.text = "Device type: " + "\n<color=blue>" + "None" + "</color>";
         retentionTime.text = "Retention time: " + "\n<color=purple>" + "None" + "</color>";
-        purpose.text = "Purpose: " + "\n<color=grey>" + "\nNone" + "</color>";
+        purpose.text = "Purpose: " + "\n<color=grey>" + "None" + "</color>" +  "\n\nShared with:" + "\n<color=magenta>" + "None" + "</color>";
     }
 
 
@@ -41,6 +41,7 @@ public class Checklist : MonoBehaviour
         if (args.Length >= 1) dataType.text = "Data type: " + "\n<color=green>" + (string)args[0] + "</color>";
         if (args.Length >= 2) deviceType.text = "Device type: " + "\n<color=blue>" + (string)args[1] + "</color>";
         if (args.Length >= 3) retentionTime.text = "Retention time: " + "\n<color=purple>" + (string)args[2] + "</color>";
-        if (args.Length >= 4) purpose.text = "Purpose: " + "\n<color=grey>\n" + (string)args[3] + "</color>";
+        if (args.Length >= 4) purpose.text = "Purpose: " + "\n<color=grey>" + (string)args[3] + "</color>" + "\n\nShared with:" + "\n<color=magenta>" + "None" + "</color>";
+        if (args.Length >= 5) purpose.text = "Purpose: " + "\n<color=grey>" + (string)args[3] + "</color>" + "\n\nShared with:" + "\n<color=magenta>" + (string)args[4] + "</color>";
     }
 }

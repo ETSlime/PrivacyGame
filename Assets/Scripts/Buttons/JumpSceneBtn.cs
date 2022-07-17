@@ -109,8 +109,8 @@ public class JumpSceneBtn : GeneralIconButton
             Transform tipsTF = imageGO.transform.Find("Tips");
             if (circleTF) circleTF.gameObject.SetActive(false);
             if (pointerTF) pointerTF.gameObject.SetActive(false);
-            if (circleTF2) circleTF.gameObject.SetActive(false);
-            if (pointerTF2) pointerTF.gameObject.SetActive(false);
+            if (circleTF2) circleTF2.gameObject.SetActive(false);
+            if (pointerTF2) pointerTF2.gameObject.SetActive(false);
             if (coinTF) coinTF.gameObject.SetActive(false);
             if (tipsTF) tipsTF.gameObject.SetActive(false);
 

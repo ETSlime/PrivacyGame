@@ -124,8 +124,6 @@ public class GameInit : MonoBehaviour
         tabletBtn.interactable = false;
         tabletBtn.GetComponent<Image>().fillAmount = 0;
 
-        Debug.Log(smartphone.GetComponent<Image>().fillAmount);
-
         InvokeRepeating("UpdateGauge", 0, repeatRate);
         InvokeRepeating("TabletEnable", 0, repeatRate);
 

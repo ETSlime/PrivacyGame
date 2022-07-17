@@ -274,6 +274,8 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
         pr_3_4_3 = 249,
         pr_3_5_1 = 250,
         pr_3_5_2 = 251,
+        cs_1_5_3 = 252,
+        hm_2_2_3 = 253,
     }
     // text base root
     private GameObject root;
@@ -346,6 +348,9 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                             break;
                         case "cs_1.4.1":
                             curTextIndex = TextAttribute.cs_1_4_1;
+                            break;
+                        case "cs_1.5.1":
+                            curTextIndex = TextAttribute.cs_1_5_1;
                             break;
                         case "cs_2.1.1":
                             curTextIndex = TextAttribute.cs_2_1_1;
@@ -463,6 +468,9 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                             break;
                         case "hm_2.1.2":
                             curTextIndex = TextAttribute.hm_2_1_2;
+                            break;
+                        case "hm_2.2.1":
+                            curTextIndex = TextAttribute.hm_2_2_1;
                             break;
                         case "hm_2.3.1":
                             curTextIndex = TextAttribute.hm_2_3_1;
@@ -673,6 +681,15 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
             ChangeTextNew("Text2", "Text1");
         }
 
+        //Player.userName = name;
+        //GameObject text = root.transform.Find("Text2").gameObject;
+        //Text tex = text.GetComponent<Text>();
+        //tex.text = "Nice to meet you, " + name + "! Welcom to the world of <color=red>Privacy Context Game</color>. " +
+        //    "Throughout the game, you will explore some of the IoT devices that we usually used in our daily life " +
+        //    ",as well as the potential privacy issues they bring to us.";
+
+        //ChangeTextNew("Text2", "Text1");
+
     }
 
     private void WarningText(string warningName)
@@ -754,79 +771,84 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
             // this is the start of text for department store
             case TextAttribute.cs_1_1_1:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "None" ,"Determine possible escape routes");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone", "None" ,"Determine possible escape routes");
                 ChangeText("cs_1.1.2", MainTextContent.cs_ID_1[0]);
                 break;
 
             case TextAttribute.cs_1_1_2:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "Until you leave");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone", "Until you leave");
                 ChangeText("cs_1.1.3", MainTextContent.cs_ID_1[1]);
-                CheckComfortableLevel(TextAttribute.cs_1_1_3);
+                CheckComfortableLevel(TextAttribute.cs_1_1_3, ScenarioCode.cs_ID_1);
                 break;
 
             case TextAttribute.cs_1_1_3:
                 ChangeText("cs_1.1.4", MainTextContent.allow);
-                CheckDecision(TextAttribute.cs_1_1_4);
+                CheckDecision(TextAttribute.cs_1_1_4, ScenarioCode.cs_ID_1);
                 break;
 
             case TextAttribute.cs_1_1_4:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "One week");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone", "Not deleted");
                 ChangeText("cs_1.2.1", MainTextContent.cs_ID_2[0]);
-                CheckComfortableLevel(TextAttribute.cs_1_2_1);
+                CheckComfortableLevel(TextAttribute.cs_1_2_1, ScenarioCode.cs_ID_2);
                 break;
 
             case TextAttribute.cs_1_2_1:
                 ChangeText("cs_1.2.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.cs_1_2_2);
+                CheckDecision(TextAttribute.cs_1_2_2, ScenarioCode.cs_ID_2);
                 break;
 
             case TextAttribute.cs_1_2_2:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", 
-                    "One week", "You are not told what the data is uesd for");
+                    "None", "None");
                 ChangeText("cs_1.3.1", MainTextContent.cs_ID_3[0]);
                 break;
 
             case TextAttribute.cs_1_3_1:
-                ChangeText("cs_1.3.2", MainTextContent.comfortable);
-                CheckComfortableLevel(TextAttribute.cs_1_3_2);
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch",
+                    "Not told", "You are not told what the data is uesd for", "Device manufacturer");
+                ChangeText("cs_1.3.2", MainTextContent.cs_ID_3[1]);
+                CheckComfortableLevel(TextAttribute.cs_1_3_2, ScenarioCode.cs_ID_3);
                 break;
 
             case TextAttribute.cs_1_3_2:
                 ChangeText("cs_1.3.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.cs_1_3_3);
+                CheckDecision(TextAttribute.cs_1_3_3, ScenarioCode.cs_ID_3);
                 break;
 
             case TextAttribute.cs_1_3_3:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone", 
-                    "None", "Determine possible escape routes");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", 
+                    "One week", "You are not told what the data is uesd for", "Device manufacturer");
                 ChangeText("cs_1.4.1", MainTextContent.cs_ID_4[0]);
                 break;
 
             case TextAttribute.cs_1_4_1:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone", 
-                    "Until you leave", "Determine possible escape routes");
-                ChangeText("cs_1.4.2", MainTextContent.cs_ID_4[1]);
-                CheckComfortableLevel(TextAttribute.cs_1_4_2);
+                ChangeText("cs_1.4.2", MainTextContent.comfortable);
+                CheckComfortableLevel(TextAttribute.cs_1_4_2, ScenarioCode.cs_ID_4);
                 break;
 
             case TextAttribute.cs_1_4_2:
                 ChangeText("cs_1.4.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.cs_1_4_3);
+                CheckDecision(TextAttribute.cs_1_4_3, ScenarioCode.cs_ID_4);
                 break;
 
             case TextAttribute.cs_1_4_3:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone", 
-                    "Cannot be deleted", "Determine possible escape routes");
+                    "None", "Determine possible escape routes", "Device manufacturer");
                 ChangeText("cs_1.5.1", MainTextContent.cs_ID_5[0]);
-                CheckComfortableLevel(TextAttribute.cs_1_5_1);
                 break;
 
             case TextAttribute.cs_1_5_1:
-                ChangeText("cs_1.5.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.cs_1_5_2);
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone", "Until you leave");
+                ChangeText("cs_1.5.2", MainTextContent.cs_ID_5[1]);
+                CheckComfortableLevel(TextAttribute.cs_1_5_2, ScenarioCode.cs_ID_5);
                 break;
 
             case TextAttribute.cs_1_5_2:
+                ChangeText("cs_1.5.3", MainTextContent.allow);
+                CheckDecision(TextAttribute.cs_1_5_3, ScenarioCode.cs_ID_5);
+                break;
+
+            case TextAttribute.cs_1_5_3:
                 ChangeText("cs_1.6.0", MainTextContent.finishScene);
                 finished = true;
                 AddQuestionState("cs_1");
@@ -864,41 +886,42 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
             case TextAttribute.cs_2_1_4:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Customers' faces", "Facial recognition system", 
-                    "One week", "Keep track of your orders and make suggestions");
+                    "None", "Keep track of your orders and make suggestions");
                 ChangeText("cs_2.1.5", MainTextContent.cs_ID_6[1]);
                 break;
 
             case TextAttribute.cs_2_1_5:
-                ChangeText("cs_2.1.6", MainTextContent.comfortable);
-                CheckComfortableLevel(TextAttribute.cs_2_1_6);
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Customers' faces", "Facial recognition system", "One week");
+                ChangeText("cs_2.1.6", MainTextContent.cs_ID_6[2]);
+                CheckComfortableLevel(TextAttribute.cs_2_1_6, ScenarioCode.cs_ID_6);
                 break;
 
             case TextAttribute.cs_2_1_6:
                 ChangeText("cs_2.1.7", MainTextContent.allow);
-                CheckDecision(TextAttribute.cs_2_1_7);
+                CheckDecision(TextAttribute.cs_2_1_7, ScenarioCode.cs_ID_6);
                 break;
 
             case TextAttribute.cs_2_1_7:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Customers' faces", "Facial recognition system", "Never deleted");
                 ChangeText("cs_2.2.1", MainTextContent.cs_ID_7[0]);
-                CheckComfortableLevel(TextAttribute.cs_2_2_1);
+                CheckComfortableLevel(TextAttribute.cs_2_2_1, ScenarioCode.cs_ID_7);
                 break;
 
             case TextAttribute.cs_2_2_1:
                 ChangeText("cs_2.2.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.cs_2_2_2);
+                CheckDecision(TextAttribute.cs_2_2_2, ScenarioCode.cs_ID_7);
                 break;
 
             case TextAttribute.cs_2_2_2:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Customers' faces", "Facial recognition system", 
                     "One week", "You are not told what the data is uesd for");
                 ChangeText("cs_2.3.1", MainTextContent.cs_ID_8[0]);
-                CheckComfortableLevel(TextAttribute.cs_2_3_1);
+                CheckComfortableLevel(TextAttribute.cs_2_3_1, ScenarioCode.cs_ID_8);
                 break;
 
             case TextAttribute.cs_2_3_1:
                 ChangeText("cs_2.3.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.cs_2_3_2);
+                CheckDecision(TextAttribute.cs_2_3_2, ScenarioCode.cs_ID_8);
                 break;
 
 
@@ -914,24 +937,24 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 ChangeText("cs_2.4.2", MainTextContent.comfortable);
                 // fade out
                 fade(false);
-                CheckComfortableLevel(TextAttribute.cs_2_4_2);
+                CheckComfortableLevel(TextAttribute.cs_2_4_2, ScenarioCode.cs_ID_9);
                 break;
 
             case TextAttribute.cs_2_4_2:
                 ChangeText("cs_2.4.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.cs_2_4_3);
+                CheckDecision(TextAttribute.cs_2_4_3, ScenarioCode.cs_ID_9);
                 break;
 
             case TextAttribute.cs_2_4_3:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor", 
                     "Not deleted", "Indicate potential hazards, e.g., fire");
                 ChangeText("cs_2.5.1", MainTextContent.cs_ID_10[0]);
-                CheckComfortableLevel(TextAttribute.cs_2_5_1);
+                CheckComfortableLevel(TextAttribute.cs_2_5_1, ScenarioCode.cs_ID_10);
                 break;
 
             case TextAttribute.cs_2_5_1:
                 ChangeText("cs_2.5.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.cs_2_5_2);
+                CheckDecision(TextAttribute.cs_2_5_2, ScenarioCode.cs_ID_10);
                 break;
 
             case TextAttribute.cs_2_5_2:
@@ -956,23 +979,23 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 ChangeText("cs_3.1.3", MainTextContent.cs_ID_11[1]);
                 // fade out
                 fade(false);
-                CheckComfortableLevel(TextAttribute.cs_3_1_3);
+                CheckComfortableLevel(TextAttribute.cs_3_1_3, ScenarioCode.cs_ID_11);
                 break;
 
             case TextAttribute.cs_3_1_3:
                 ChangeText("cs_3.1.4", MainTextContent.allow);
-                CheckDecision(TextAttribute.cs_3_1_4);
+                CheckDecision(TextAttribute.cs_3_1_4, ScenarioCode.cs_ID_11);
                 break;
 
             case TextAttribute.cs_3_1_4:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Recording video", "Camera", "One year");
                 ChangeText("cs_3.2.1", MainTextContent.cs_ID_12[0]);
-                CheckComfortableLevel(TextAttribute.cs_3_2_1);
+                CheckComfortableLevel(TextAttribute.cs_3_2_1, ScenarioCode.cs_ID_12);
                 break;
 
             case TextAttribute.cs_3_2_1:
                 ChangeText("cs_3.2.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.cs_3_2_2);
+                CheckDecision(TextAttribute.cs_3_2_2, ScenarioCode.cs_ID_12);
                 break;
 
             case TextAttribute.cs_3_2_2:
@@ -983,12 +1006,12 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
             case TextAttribute.cs_3_3_1:
                 ChangeText("cs_3.3.2", MainTextContent.comfortable);
-                CheckComfortableLevel(TextAttribute.cs_3_3_2);
+                CheckComfortableLevel(TextAttribute.cs_3_3_2, ScenarioCode.cs_ID_13);
                 break;
 
             case TextAttribute.cs_3_3_2:
                 ChangeText("cs_3.3.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.cs_3_3_3);
+                CheckDecision(TextAttribute.cs_3_3_3, ScenarioCode.cs_ID_13);
                 break;
 
             case TextAttribute.cs_3_3_3:
@@ -1028,12 +1051,12 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Whether someone is present", "Presence sensor", 
                     "Until it is reviewed at the end of the shift", "Determine whether they can reduce the number of staff at these times");
                 ChangeText("cs_3.4.5", MainTextContent.cs_ID_14[2]);
-                CheckComfortableLevel(TextAttribute.cs_3_4_5);
+                CheckComfortableLevel(TextAttribute.cs_3_4_5, ScenarioCode.cs_ID_14);
                 break;
 
             case TextAttribute.cs_3_4_5:
                 ChangeText("cs_3.4.6", MainTextContent.allow);
-                CheckDecision(TextAttribute.cs_3_4_6);
+                CheckDecision(TextAttribute.cs_3_4_6, ScenarioCode.cs_ID_14);
                 break;
 
             case TextAttribute.cs_3_4_6:
@@ -1044,12 +1067,12 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
             case TextAttribute.cs_3_5_1:
                 ChangeText("cs_3.5.2", MainTextContent.comfortable);
-                CheckComfortableLevel(TextAttribute.cs_3_5_2);
+                CheckComfortableLevel(TextAttribute.cs_3_5_2, ScenarioCode.cs_ID_15);
                 break;
 
             case TextAttribute.cs_3_5_2:
                 ChangeText("cs_3.5.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.cs_3_5_3);
+                CheckDecision(TextAttribute.cs_3_5_3, ScenarioCode.cs_ID_15);
                 break;
 
             case TextAttribute.cs_3_5_3:
@@ -1098,34 +1121,34 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
             case TextAttribute.lb_1_1_5:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Iris scan", "Iris scanner", "Not told");
                 ChangeText("lb_1.1.6", MainTextContent.lb_ID_1[2]);
-                CheckComfortableLevel(TextAttribute.lb_1_1_6);
+                CheckComfortableLevel(TextAttribute.lb_1_1_6, ScenarioCode.lb_ID_1);
                 break;
 
             case TextAttribute.lb_1_1_6:
                 ChangeText("lb_1.1.7", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_1_1_7);
+                CheckDecision(TextAttribute.lb_1_1_7, ScenarioCode.lb_ID_1);
                 break;
 
             case TextAttribute.lb_1_1_7:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Iris scan", "Iris scanner", "Not deleted");
                 ChangeText("lb_1.2.1", MainTextContent.lb_ID_2[0]);
-                CheckComfortableLevel(TextAttribute.lb_1_2_1);
+                CheckComfortableLevel(TextAttribute.lb_1_2_1, ScenarioCode.lb_ID_2);
                 break;
 
             case TextAttribute.lb_1_2_1:
                 ChangeText("lb_1.2.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_1_2_2);
+                CheckDecision(TextAttribute.lb_1_2_2, ScenarioCode.lb_ID_2);
                 break;
 
             case TextAttribute.lb_1_2_2:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Iris scan", "Iris scanner", "Until door is closed again");
                 ChangeText("lb_1.3.1", MainTextContent.lb_ID_3[0]);
-                CheckComfortableLevel(TextAttribute.lb_1_3_1);
+                CheckComfortableLevel(TextAttribute.lb_1_3_1, ScenarioCode.lb_ID_3);
                 break;
 
             case TextAttribute.lb_1_3_1:
                 ChangeText("lb_1.3.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_1_3_2);
+                CheckDecision(TextAttribute.lb_1_3_2, ScenarioCode.lb_ID_3);
                 break;
 
             case TextAttribute.lb_1_3_2:
@@ -1146,23 +1169,23 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
             case TextAttribute.lb_1_4_2:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Your picture of face", "Facial recognition", "Until door is closed again");
                 ChangeText("lb_1.4.3", MainTextContent.lb_ID_4[2]);
-                CheckComfortableLevel(TextAttribute.lb_1_4_3);
+                CheckComfortableLevel(TextAttribute.lb_1_4_3, ScenarioCode.lb_ID_4);
                 break;
 
             case TextAttribute.lb_1_4_3:
                 ChangeText("lb_1.4.4", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_1_4_4);
+                CheckDecision(TextAttribute.lb_1_4_4, ScenarioCode.lb_ID_4);
                 break;
 
             case TextAttribute.lb_1_4_4:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Your picture of face", "Facial recognition", "Not deleted");
                 ChangeText("lb_1.5.1", MainTextContent.lb_ID_5[0]);
-                CheckComfortableLevel(TextAttribute.lb_1_5_1);
+                CheckComfortableLevel(TextAttribute.lb_1_5_1, ScenarioCode.lb_ID_5);
                 break;
 
             case TextAttribute.lb_1_5_1:
                 ChangeText("lb_1.5.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_1_5_2);
+                CheckDecision(TextAttribute.lb_1_5_2, ScenarioCode.lb_ID_5);
                 break;
 
             case TextAttribute.lb_1_5_2:
@@ -1175,33 +1198,34 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
             case TextAttribute.lb_2_1_1:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor",
-                    "One week", "Indicate potential hazards, e.g., fire");
+                    "None", "Indicate potential hazards, e.g., fire");
                 ChangeText("lb_2.1.2", MainTextContent.lb_ID_6[0]);
                 // fade in
                 fade(true);
                 break;
 
             case TextAttribute.lb_2_1_2:
-                ChangeText("lb_2.1.3", MainTextContent.comfortable);
-                CheckComfortableLevel(TextAttribute.lb_2_1_3);
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor", "Not told");
+                ChangeText("lb_2.1.3", MainTextContent.lb_ID_6[1]);
+                CheckComfortableLevel(TextAttribute.lb_2_1_3, ScenarioCode.lb_ID_6);
                 // fade out
                 fade(false);
                 break;
 
             case TextAttribute.lb_2_1_3:
                 ChangeText("lb_2.1.4", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_2_1_4);
+                CheckDecision(TextAttribute.lb_2_1_4, ScenarioCode.lb_ID_6);
                 break;
 
             case TextAttribute.lb_2_1_4:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor", "Not told");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor", "One week");
                 ChangeText("lb_2.2.1", MainTextContent.lb_ID_7[0]);
-                CheckComfortableLevel(TextAttribute.lb_2_2_1);
+                CheckComfortableLevel(TextAttribute.lb_2_2_1, ScenarioCode.lb_ID_7);
                 break;
 
             case TextAttribute.lb_2_2_1:
                 ChangeText("lb_2.2.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_2_2_2);
+                CheckDecision(TextAttribute.lb_2_2_2, ScenarioCode.lb_ID_7);
                 break;
 
             case TextAttribute.lb_2_2_2:
@@ -1237,44 +1261,43 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
             case TextAttribute.lb_2_3_4:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Your fingerprint", "Fingerprint scanner",
-                    "None", "Identify patrons and allow them to check out books without presenting their library card");
+                    "None", "Not told");
                 DestroyCorrectWrongGO();
                 ChangeText("lb_2.3.5", MainTextContent.lb_ID_8[2]);
                 break;
 
             case TextAttribute.lb_2_3_5:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Your fingerprint", "Fingerprint scanner",
-                    "Until your library card expires", "Identify patrons and allow them to check out books without presenting their library card");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Your fingerprint", "Fingerprint scanner", "Not deleted");
                 ChangeText("lb_2.3.6", MainTextContent.lb_ID_8[3]);
-                CheckComfortableLevel(TextAttribute.lb_2_3_6);
+                CheckComfortableLevel(TextAttribute.lb_2_3_6, ScenarioCode.lb_ID_8);
                 break;
 
             case TextAttribute.lb_2_3_6:
                 ChangeText("lb_2.3.7", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_2_3_7);
+                CheckDecision(TextAttribute.lb_2_3_7, ScenarioCode.lb_ID_8);
                 break;
 
             case TextAttribute.lb_2_3_7:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Your fingerprint", "Fingerprint scanner", "Not deleted");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Your fingerprint", "Fingerprint scanner", 
+                    "Not deleted" , "Identify patrons and allow them to check out books without presenting their library card");
                 ChangeText("lb_2.4.1", MainTextContent.lb_ID_9[0]);
-                CheckComfortableLevel(TextAttribute.lb_2_4_1);
+                CheckComfortableLevel(TextAttribute.lb_2_4_1, ScenarioCode.lb_ID_9);
                 break;
 
             case TextAttribute.lb_2_4_1:
                 ChangeText("lb_2.4.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_2_4_2);
+                CheckDecision(TextAttribute.lb_2_4_2, ScenarioCode.lb_ID_9);
                 break;
 
             case TextAttribute.lb_2_4_2:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Your fingerprint", "Fingerprint scanner", 
-                    "Not deleted", "You are not told what the data is uesd for");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Your fingerprint", "Fingerprint scanner", "Until your library card expires");
                 ChangeText("lb_2.5.1", MainTextContent.lb_ID_10[0]);
-                CheckComfortableLevel(TextAttribute.lb_2_5_1);
+                CheckComfortableLevel(TextAttribute.lb_2_5_1, ScenarioCode.lb_ID_10);
                 break;
 
             case TextAttribute.lb_2_5_1:
                 ChangeText("lb_2.5.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_2_5_2);
+                CheckDecision(TextAttribute.lb_2_5_2, ScenarioCode.lb_ID_10);
                 break;
 
             case TextAttribute.lb_2_5_2:
@@ -1297,25 +1320,25 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Recording video", "Camera",
                 "Until it is reviewed at the end of the shift", "Get feedback on how to improve wait times for people");
                 ChangeText("lb_3.1.3", MainTextContent.lb_ID_11[1]);
-                CheckComfortableLevel(TextAttribute.lb_3_1_3);
+                CheckComfortableLevel(TextAttribute.lb_3_1_3, ScenarioCode.lb_ID_11);
                 // fade out
                 fade(false);
                 break;
 
             case TextAttribute.lb_3_1_3:
                 ChangeText("lb_3.1.4", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_3_1_4);
+                CheckDecision(TextAttribute.lb_3_1_4, ScenarioCode.lb_ID_11);
                 break;
 
             case TextAttribute.lb_3_1_4:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Recording video", "Camera", "One year");
                 ChangeText("lb_3.2.1", MainTextContent.lb_ID_12[0]);
-                CheckComfortableLevel(TextAttribute.lb_3_2_1);
+                CheckComfortableLevel(TextAttribute.lb_3_2_1, ScenarioCode.lb_ID_12);
                 break;
 
             case TextAttribute.lb_3_2_1:
                 ChangeText("lb_3.2.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_3_2_2);
+                CheckDecision(TextAttribute.lb_3_2_2, ScenarioCode.lb_ID_12);
                 break;
 
             case TextAttribute.lb_3_2_2:
@@ -1356,35 +1379,35 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor",
                 "Until it is reviewed at the end of the shift", "Determine whether they can reduce the number of staff at these times");
                 ChangeText("lb_3.3.5", MainTextContent.lb_ID_13[2]);
-                CheckComfortableLevel(TextAttribute.lb_3_3_5);
+                CheckComfortableLevel(TextAttribute.lb_3_3_5, ScenarioCode.lb_ID_13);
                 break;
 
             case TextAttribute.lb_3_3_5:
                 ChangeText("lb_3.3.6", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_3_3_6);
+                CheckDecision(TextAttribute.lb_3_3_6, ScenarioCode.lb_ID_13);
                 break;
 
             case TextAttribute.lb_3_3_6:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor",
                 "Until the room is no longer occupied", "Determine when to switch on and off the lights to reduce costs and save energy");
                 ChangeText("lb_3.4.1", MainTextContent.lb_ID_14[0]);
-                CheckComfortableLevel(TextAttribute.lb_3_4_1);
+                CheckComfortableLevel(TextAttribute.lb_3_4_1, ScenarioCode.lb_ID_14);
                 break;
 
             case TextAttribute.lb_3_4_1:
                 ChangeText("lb_3.4.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_3_4_2);
+                CheckDecision(TextAttribute.lb_3_4_2, ScenarioCode.lb_ID_14);
                 break;
 
             case TextAttribute.lb_3_4_2:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "One year");
                 ChangeText("lb_3.5.1", MainTextContent.lb_ID_15[0]);
-                CheckComfortableLevel(TextAttribute.lb_3_5_1);
+                CheckComfortableLevel(TextAttribute.lb_3_5_1, ScenarioCode.lb_ID_15);
                 break;
 
             case TextAttribute.lb_3_5_1:
                 ChangeText("lb_3.5.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.lb_3_5_2);
+                CheckDecision(TextAttribute.lb_3_5_2, ScenarioCode.lb_ID_15);
                 break;
 
             case TextAttribute.lb_3_5_2:
@@ -1432,36 +1455,36 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
             case TextAttribute.hm_1_1_5:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor",
-                "One week", "Determine when to switch on and off the lights to reduce costs and save energy");
+                "Not told", "Determine when to switch on and off the lights to reduce costs and save energy");
                 ChangeText("hm_1.1.6", MainTextContent.hm_ID_1[2]);
-                CheckComfortableLevel(TextAttribute.hm_1_1_6);
+                CheckComfortableLevel(TextAttribute.hm_1_1_6, ScenarioCode.hm_ID_1);
                 break;
 
             case TextAttribute.hm_1_1_6:
                 ChangeText("hm_1.1.7", MainTextContent.allow);
-                CheckDecision(TextAttribute.hm_1_1_7);
+                CheckDecision(TextAttribute.hm_1_1_7, ScenarioCode.hm_ID_1);
                 break;
 
             case TextAttribute.hm_1_1_7:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "One year");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "One week");
                 ChangeText("hm_1.2.1", MainTextContent.hm_ID_2[0]);
-                CheckComfortableLevel(TextAttribute.hm_1_2_1);
+                CheckComfortableLevel(TextAttribute.hm_1_2_1, ScenarioCode.hm_ID_2);
                 break;
 
             case TextAttribute.hm_1_2_1:
                 ChangeText("hm_1.2.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.hm_1_2_2);
+                CheckDecision(TextAttribute.hm_1_2_2, ScenarioCode.hm_ID_2);
                 break;
 
             case TextAttribute.hm_1_2_2:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "Not told");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "One year");
                 ChangeText("hm_1.3.1", MainTextContent.hm_ID_3[0]);
-                CheckComfortableLevel(TextAttribute.hm_1_3_1);
+                CheckComfortableLevel(TextAttribute.hm_1_3_1, ScenarioCode.hm_ID_3);
                 break;
 
             case TextAttribute.hm_1_3_1:
                 ChangeText("hm_1.3.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.hm_1_3_2);
+                CheckDecision(TextAttribute.hm_1_3_2, ScenarioCode.hm_ID_3);
                 break;
 
             case TextAttribute.hm_1_3_2:
@@ -1492,31 +1515,31 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.hm_1_4_3:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "None", "Improve public safety");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "None", "Improve public safety", "Law enforcement");
                 DestroyCorrectWrongGO();
                 ChangeText("hm_1.4.4", MainTextContent.hm_ID_4[1]);
                 break;
 
             case TextAttribute.hm_1_4_4:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not told", "Improve public safety");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not told");
                 ChangeText("hm_1.4.5", MainTextContent.hm_ID_4[2]);
-                CheckComfortableLevel(TextAttribute.hm_1_4_5);
+                CheckComfortableLevel(TextAttribute.hm_1_4_5, ScenarioCode.hm_ID_4);
                 break;
 
             case TextAttribute.hm_1_4_5:
                 ChangeText("hm_1.4.6", MainTextContent.allow);
-                CheckDecision(TextAttribute.hm_1_4_6);
+                CheckDecision(TextAttribute.hm_1_4_6, ScenarioCode.hm_ID_4);
                 break;
 
             case TextAttribute.hm_1_4_6:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "One week", "Improve public safety");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "One week");
                 ChangeText("hm_1.5.1", MainTextContent.hm_ID_5[0]);
-                CheckComfortableLevel(TextAttribute.hm_1_5_1);
+                CheckComfortableLevel(TextAttribute.hm_1_5_1, ScenarioCode.hm_ID_5);
                 break;
 
             case TextAttribute.hm_1_5_1:
                 ChangeText("hm_1.5.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.hm_1_5_2);
+                CheckDecision(TextAttribute.hm_1_5_2, ScenarioCode.hm_ID_5);
                 break;
 
             case TextAttribute.hm_1_5_2:
@@ -1528,51 +1551,56 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.hm_2_1_1:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Room temperature", "Temperature sensor",
-                    "One year", "Check for abnormal temperatures, which indicate potential hazards, e.g., fire");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Room temperature", "Temperature sensor", "None", "None", "Security company");
                 ChangeText("hm_2.1.2", MainTextContent.hm_ID_6[0]);
                 // fade in
                 fade(true);
                 break;
 
             case TextAttribute.hm_2_1_2:
-                ChangeText("hm_2_1_3", MainTextContent.comfortable);
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Room temperature", "Temperature sensor",
+                    "One year", "You are not told what the data is uesd for", "Security company");
+                ChangeText("hm_2_1_3", MainTextContent.hm_ID_6[1]);
                 // fade out
                 fade(false);
-                CheckComfortableLevel(TextAttribute.hm_2_1_3);
+                CheckComfortableLevel(TextAttribute.hm_2_1_3, ScenarioCode.hm_ID_6);
                 break;
 
             case TextAttribute.hm_2_1_3:
                 ChangeText("hm_2_1_4", MainTextContent.allow);
-                CheckDecision(TextAttribute.hm_2_1_4);
+                CheckDecision(TextAttribute.hm_2_1_4, ScenarioCode.hm_ID_6);
                 break;
 
             case TextAttribute.hm_2_1_4:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Room temperature", "Temperature sensor", "Not deleted");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Room temperature", "Temperature sensor", 
+                    "None", "Check for abnormal temperatures, which indicate potential hazards, e.g., fire", "Security company");
                 ChangeText("hm_2.2.1", MainTextContent.hm_ID_7[0]);
-                CheckComfortableLevel(TextAttribute.hm_2_2_1);
                 break;
 
             case TextAttribute.hm_2_2_1:
-                ChangeText("hm_2.2.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.hm_2_2_2);
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Room temperature", "Temperature sensor", "One year");
+                ChangeText("hm_2.2.2", MainTextContent.hm_ID_7[1]);
+                CheckComfortableLevel(TextAttribute.hm_2_2_2, ScenarioCode.hm_ID_7);
                 break;
 
             case TextAttribute.hm_2_2_2:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Room temperature", "Temperature sensor", "One week", "None");
+                ChangeText("hm_2.2.3", MainTextContent.allow);
+                CheckDecision(TextAttribute.hm_2_2_3, ScenarioCode.hm_ID_7);
+                break;
+
+            case TextAttribute.hm_2_2_3:
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Room temperature", "Temperature sensor", "Not deleted");
                 ChangeText("hm_2.3.1", MainTextContent.hm_ID_8[0]);
                 break;
 
             case TextAttribute.hm_2_3_1:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Room temperature", "Temperature sensor",
-                "One week", "You are not told what the data is uesd for");
-                ChangeText("hm_2.3.2", MainTextContent.hm_ID_8[1]);
-                CheckComfortableLevel(TextAttribute.hm_2_3_2);
+                ChangeText("hm_2.3.2", MainTextContent.comfortable);
+                CheckComfortableLevel(TextAttribute.hm_2_3_2, ScenarioCode.hm_ID_8);
                 break;
 
             case TextAttribute.hm_2_3_2:
                 ChangeText("hm_2.3.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.hm_2_3_3);
+                CheckDecision(TextAttribute.hm_2_3_3, ScenarioCode.hm_ID_8);
                 break;
 
             case TextAttribute.hm_2_3_3:
@@ -1595,23 +1623,23 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 ChangeText("fh_1.1.3", MainTextContent.comfortable);
                 // fade out
                 fade(false);
-                CheckComfortableLevel(TextAttribute.fh_1_1_3);
+                CheckComfortableLevel(TextAttribute.fh_1_1_3, ScenarioCode.fh_ID_1);
                 break;
 
             case TextAttribute.fh_1_1_3:
                 ChangeText("fh_1_1_4", MainTextContent.allow);
-                CheckDecision(TextAttribute.fh_1_1_4);
+                CheckDecision(TextAttribute.fh_1_1_4, ScenarioCode.fh_ID_1);
                 break;
 
             case TextAttribute.fh_1_1_4:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "One year");
                 ChangeText("fh_1.2.1", MainTextContent.fh_ID_2[0]);
-                CheckComfortableLevel(TextAttribute.fh_1_2_1);
+                CheckComfortableLevel(TextAttribute.fh_1_2_1, ScenarioCode.fh_ID_2);
                 break;
 
             case TextAttribute.fh_1_2_1:
                 ChangeText("fh_1_2_2", MainTextContent.allow);
-                CheckDecision(TextAttribute.fh_1_2_2);
+                CheckDecision(TextAttribute.fh_1_2_2, ScenarioCode.fh_ID_2);
                 break;
 
             case TextAttribute.fh_1_2_2:
@@ -1622,7 +1650,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.fh_1_3_1:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "One week", "Improve public safety");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not told", "Improve public safety", "Law enforcement");
                 ChangeText("fh_1.3.2", MainTextContent.fh_ID_3[1]);
                 // second fade out
                 fade(false, true);
@@ -1630,23 +1658,23 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
             case TextAttribute.fh_1_3_2:
                 ChangeText("fh_1.3.3", MainTextContent.comfortable);
-                CheckComfortableLevel(TextAttribute.fh_1_3_3);
+                CheckComfortableLevel(TextAttribute.fh_1_3_3, ScenarioCode.fh_ID_3);
                 break;
 
             case TextAttribute.fh_1_3_3:
                 ChangeText("fh_1.3.4", MainTextContent.allow);
-                CheckDecision(TextAttribute.fh_1_3_4);
+                CheckDecision(TextAttribute.fh_1_3_4, ScenarioCode.fh_ID_3);
                 break;
 
             case TextAttribute.fh_1_3_4:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not told");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "One week", "Law enforcement");
                 ChangeText("fh_1.4.1", MainTextContent.fh_ID_4[0]);
-                CheckComfortableLevel(TextAttribute.fh_1_4_1);
+                CheckComfortableLevel(TextAttribute.fh_1_4_1, ScenarioCode.fh_ID_4);
                 break;
 
             case TextAttribute.fh_1_4_1:
                 ChangeText("fh_1.4.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.fh_1_4_2);
+                CheckDecision(TextAttribute.fh_1_4_2, ScenarioCode.fh_ID_4);
                 break;
 
             case TextAttribute.fh_1_4_2:
@@ -1667,7 +1695,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.fh_2_1_3:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Your answer", "None", "None");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Your answer");
                 ChangeText("fh_2.1.4", MainTextContent.select);
                 SelectIcon("temperature sensor", TextAttribute.fh_2_1_4);
                 ShowTips(true, "fh_2.1");
@@ -1689,7 +1717,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.fh_2_1_5:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor", "None", "None");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor", "None", "None", "Security company");
                 ChangeText("fh_2.1.6", MainTextContent.fh_ID_5[2]);
                 break;
 
@@ -1697,41 +1725,40 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor", 
                     "Not told", "You are not told what the data is uesd for");
                 ChangeText("fh_2.1.7", MainTextContent.fh_ID_5[3]);
-                CheckComfortableLevel(TextAttribute.fh_2_1_7);
+                CheckComfortableLevel(TextAttribute.fh_2_1_7, ScenarioCode.fh_ID_5);
                 break;
 
             case TextAttribute.fh_2_1_7:
                 ChangeText("fh_2.1.8", MainTextContent.allow);
-                CheckDecision(TextAttribute.fh_2_1_8);
+                CheckDecision(TextAttribute.fh_2_1_8, ScenarioCode.fh_ID_5);
                 break;
 
             case TextAttribute.fh_2_1_8:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor",
-                    "None", "Check for abnormal temperatures, which indicate potential hazards, e.g., fire");
+                    "None", "Check for abnormal temperatures, which indicate potential hazards, e.g., fire", "Security company");
                 ChangeText("fh_2.2.1", MainTextContent.fh_ID_6[0]);
                 break;
 
             case TextAttribute.fh_2_2_1:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor", "Not told");
                 ChangeText("fh_2.2.2", MainTextContent.fh_ID_6[1]);
-                CheckComfortableLevel(TextAttribute.fh_2_2_2);
+                CheckComfortableLevel(TextAttribute.fh_2_2_2, ScenarioCode.fh_ID_6);
                 break;
 
             case TextAttribute.fh_2_2_2:
                 ChangeText("fh_2.2.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.fh_2_2_3);
+                CheckDecision(TextAttribute.fh_2_2_3, ScenarioCode.fh_ID_6);
                 break;
 
             case TextAttribute.fh_2_2_3:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor",
-                    "One year", "Check for abnormal temperatures, which indicate potential hazards, e.g., fire");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor", "One year");
                 ChangeText("fh_2.3.1", MainTextContent.fh_ID_7[0]);
-                CheckComfortableLevel(TextAttribute.fh_2_3_1);
+                CheckComfortableLevel(TextAttribute.fh_2_3_1, ScenarioCode.fh_ID_7);
                 break;
 
             case TextAttribute.fh_2_3_1:
                 ChangeText("fh_2.3.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.fh_2_3_2);
+                CheckDecision(TextAttribute.fh_2_3_2, ScenarioCode.fh_ID_7);
                 break;
 
             case TextAttribute.fh_2_3_2:
@@ -1749,77 +1776,77 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.wk_1_1_2:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "None", "Determine possible escape routes");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "None", "Determine possible escape routes", "Device manufacturer");
                 ChangeText("wk_1.1.3", MainTextContent.wk_ID_1[1]);
                 break;
 
             case TextAttribute.wk_1_1_3:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "One week", "Determine possible escape routes");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "One week");
                 ChangeText("wk_1.1.4", MainTextContent.wk_ID_1[2]);
-                CheckComfortableLevel(TextAttribute.wk_1_1_4);
+                CheckComfortableLevel(TextAttribute.wk_1_1_4, ScenarioCode.wk_ID_1);
                 break;
 
             case TextAttribute.wk_1_1_4:
                 ChangeText("wk_1.1.5", MainTextContent.allow);
-                CheckDecision(TextAttribute.wk_1_1_5);
+                CheckDecision(TextAttribute.wk_1_1_5, ScenarioCode.wk_ID_1);
                 break;
 
             case TextAttribute.wk_1_1_5:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "Not deleted");
                 ChangeText("wk_1.2.1", MainTextContent.wk_ID_2[0]);
-                CheckComfortableLevel(TextAttribute.wk_1_2_1);
+                CheckComfortableLevel(TextAttribute.wk_1_2_1, ScenarioCode.wk_ID_2);
                 break;
 
             case TextAttribute.wk_1_2_1:
                 ChangeText("wk_1.2.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.wk_1_2_2);
+                CheckDecision(TextAttribute.wk_1_2_2, ScenarioCode.wk_ID_2);
                 break;
 
             case TextAttribute.wk_1_2_2:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "None", "None", "None");
                 ChangeText("wk_1.3.1", MainTextContent.wk_ID_3[0]);
                 break;
 
             case TextAttribute.wk_1_3_1:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", 
-                    "One year", "Optimize heating and cooling to reduce energy costs");
+                    "Not told", "Optimize heating and cooling to reduce energy costs");
                 ChangeText("wk_1.3.2", MainTextContent.wk_ID_3[1]);
                 break;
 
             case TextAttribute.wk_1_3_2:
                 ChangeText("wk_1.3.3", MainTextContent.comfortable);
-                CheckComfortableLevel(TextAttribute.wk_1_3_3);
+                CheckComfortableLevel(TextAttribute.wk_1_3_3, ScenarioCode.wk_ID_3);
                 break;
 
             case TextAttribute.wk_1_3_3:
                 ChangeText("wk_1.3.4", MainTextContent.allow);
-                CheckDecision(TextAttribute.wk_1_3_4);
+                CheckDecision(TextAttribute.wk_1_3_4, ScenarioCode.wk_ID_3);
                 break;
 
             case TextAttribute.wk_1_3_4:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not told");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "One year");
                 ChangeText("wk_1.4.1", MainTextContent.wk_ID_4[0]);
-                CheckComfortableLevel(TextAttribute.wk_1_4_1);
+                CheckComfortableLevel(TextAttribute.wk_1_4_1, ScenarioCode.wk_ID_4);
                 break;
 
             case TextAttribute.wk_1_4_1:
                 ChangeText("wk_1.4.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.wk_1_4_2);
+                CheckDecision(TextAttribute.wk_1_4_2, ScenarioCode.wk_ID_4);
                 break;
 
             case TextAttribute.wk_1_4_2:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "One year", "Improve public safety");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "One year", "Improve public safety", "Law enforcement");
                 ChangeText("wk_1.5.1", MainTextContent.wk_ID_5[0]);
                 break;
 
             case TextAttribute.wk_1_5_1:
                 ChangeText("wk_1.5.2", MainTextContent.comfortable);
-                CheckComfortableLevel(TextAttribute.wk_1_5_2);
+                CheckComfortableLevel(TextAttribute.wk_1_5_2, ScenarioCode.wk_ID_5);
                 break;
 
             case TextAttribute.wk_1_5_2:
                 ChangeText("wk_1.5.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.wk_1_5_3);
+                CheckDecision(TextAttribute.wk_1_5_3, ScenarioCode.wk_ID_5);
                 break;
 
             case TextAttribute.wk_1_5_3:
@@ -1844,23 +1871,23 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 ChangeText("wk_2.1.3", MainTextContent.wk_ID_6[1]);
                 // fade out
                 fade(false);
-                CheckComfortableLevel(TextAttribute.wk_2_1_3);
+                CheckComfortableLevel(TextAttribute.wk_2_1_3, ScenarioCode.wk_ID_6);
                 break;
 
             case TextAttribute.wk_2_1_3:
                 ChangeText("wk_2.1.4", MainTextContent.allow);
-                CheckDecision(TextAttribute.wk_2_1_4);
+                CheckDecision(TextAttribute.wk_2_1_4, ScenarioCode.wk_ID_6);
                 break;
 
             case TextAttribute.wk_2_1_4:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "One year");
                 ChangeText("wk_2.2.1", MainTextContent.wk_ID_7[0]);
-                CheckComfortableLevel(TextAttribute.wk_2_2_1);
+                CheckComfortableLevel(TextAttribute.wk_2_2_1, ScenarioCode.wk_ID_7);
                 break;
 
             case TextAttribute.wk_2_2_1:
                 ChangeText("wk_2.2.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.wk_2_2_2);
+                CheckDecision(TextAttribute.wk_2_2_2, ScenarioCode.wk_ID_7);
                 break;
 
             case TextAttribute.wk_2_2_2:
@@ -1871,12 +1898,12 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
             case TextAttribute.wk_2_3_1:
                 ChangeText("wk_2.3.2", MainTextContent.comfortable);
-                CheckComfortableLevel(TextAttribute.wk_2_3_2);
+                CheckComfortableLevel(TextAttribute.wk_2_3_2, ScenarioCode.wk_ID_8);
                 break;
 
             case TextAttribute.wk_2_3_2:
                 ChangeText("wk_2.3.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.wk_2_3_3);
+                CheckDecision(TextAttribute.wk_2_3_3, ScenarioCode.wk_ID_8);
                 break;
 
             case TextAttribute.wk_2_3_3:
@@ -1918,24 +1945,24 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
             case TextAttribute.wk_2_4_5:
                 ChangeText("wk_2.4.6", MainTextContent.comfortable);
-                CheckComfortableLevel(TextAttribute.wk_2_4_6);
+                CheckComfortableLevel(TextAttribute.wk_2_4_6, ScenarioCode.wk_ID_9);
                 break;
 
             case TextAttribute.wk_2_4_6:
                 ChangeText("wk_2.4.7", MainTextContent.allow);
-                CheckDecision(TextAttribute.wk_2_4_7);
+                CheckDecision(TextAttribute.wk_2_4_7, ScenarioCode.wk_ID_9);
                 break;
 
             case TextAttribute.wk_2_4_7:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone",
                     "One year", "Determine possible escape routes in the case of an emergency or a hazard");
                 ChangeText("wk_2.5.1", MainTextContent.wk_ID_10[0]);
-                CheckComfortableLevel(TextAttribute.wk_2_5_1);
+                CheckComfortableLevel(TextAttribute.wk_2_5_1, ScenarioCode.wk_ID_10);
                 break;
 
             case TextAttribute.wk_2_5_1:
                 ChangeText("wk_2.5.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.wk_2_5_2);
+                CheckDecision(TextAttribute.wk_2_5_2, ScenarioCode.wk_ID_10);
                 break;
 
             case TextAttribute.wk_2_5_2:
@@ -1958,12 +1985,12 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 ChangeText("wk_3.1.3", MainTextContent.comfortable);
                 // fade out
                 fade(false);
-                CheckComfortableLevel(TextAttribute.wk_3_1_3);
+                CheckComfortableLevel(TextAttribute.wk_3_1_3, ScenarioCode.wk_ID_11);
                 break;
 
             case TextAttribute.wk_3_1_3:
                 ChangeText("wk_3.1.4", MainTextContent.allow);
-                CheckDecision(TextAttribute.wk_3_1_4);
+                CheckDecision(TextAttribute.wk_3_1_4, ScenarioCode.wk_ID_11);
                 break;
 
             case TextAttribute.wk_3_1_4:
@@ -1974,23 +2001,23 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
             case TextAttribute.wk_3_2_1:
                 ChangeText("wk_3.2.2", MainTextContent.wk_ID_12[1]);
-                CheckComfortableLevel(TextAttribute.wk_3_2_2);
+                CheckComfortableLevel(TextAttribute.wk_3_2_2, ScenarioCode.wk_ID_12);
                 break;
 
             case TextAttribute.wk_3_2_2:
                 ChangeText("wk_3.2.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.wk_3_2_3);
+                CheckDecision(TextAttribute.wk_3_2_3, ScenarioCode.wk_ID_12);
                 break;
 
             case TextAttribute.wk_3_2_3:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient Temperature", "Temperature sensor", "One week");
                 ChangeText("wk_3.3.1", MainTextContent.wk_ID_13[0]);
-                CheckComfortableLevel(TextAttribute.wk_3_3_1);
+                CheckComfortableLevel(TextAttribute.wk_3_3_1, ScenarioCode.wk_ID_13);
                 break;
 
             case TextAttribute.wk_3_3_1:
                 ChangeText("wk_3.3.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.wk_3_3_2);
+                CheckDecision(TextAttribute.wk_3_3_2, ScenarioCode.wk_ID_13);
                 break;
 
             case TextAttribute.wk_3_3_2:
@@ -2033,23 +2060,23 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Fingerprint", "Fingerprint scanner",
                     "Until you no longer work for this company", "Unlock certain rooms, like the supply closet or the kitchen");
                 ChangeText("wk_3.4.6", MainTextContent.wk_ID_14[3]);
-                CheckComfortableLevel(TextAttribute.wk_3_4_6);
+                CheckComfortableLevel(TextAttribute.wk_3_4_6, ScenarioCode.wk_ID_14);
                 break;
 
             case TextAttribute.wk_3_4_6:
                 ChangeText("wk_3.4.7", MainTextContent.allow);
-                CheckDecision(TextAttribute.wk_3_4_7);
+                CheckDecision(TextAttribute.wk_3_4_7, ScenarioCode.wk_ID_14);
                 break;
 
             case TextAttribute.wk_3_4_7:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Fingerprint", "Fingerprint scanner", "Not deleted");
                 ChangeText("wk_3.5.1", MainTextContent.wk_ID_15[0]);
-                CheckComfortableLevel(TextAttribute.wk_3_5_1);
+                CheckComfortableLevel(TextAttribute.wk_3_5_1, ScenarioCode.wk_ID_15);
                 break;
 
             case TextAttribute.wk_3_5_1:
                 ChangeText("wk_3.5.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.wk_3_5_2);
+                CheckDecision(TextAttribute.wk_3_5_2, ScenarioCode.wk_ID_15);
                 break;
 
             case TextAttribute.wk_3_5_2:
@@ -2062,7 +2089,8 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
             // this is the start of text for public restroom
             case TextAttribute.pr_1_1_1:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not told", "You are not told what the data is uesd for");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not told", 
+                    "You are not told what the data is uesd for", "Law enforcement");
                 ChangeText("pr_1.1.2", MainTextContent.pr_ID_1[0]);
                 // fade in
                 fade(true);
@@ -2072,47 +2100,47 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 ChangeText("pr_1.1.3", MainTextContent.comfortable);
                 // fade out
                 fade(false);
-                CheckComfortableLevel(TextAttribute.pr_1_1_3);
+                CheckComfortableLevel(TextAttribute.pr_1_1_3, ScenarioCode.pr_ID_1);
                 break;
 
             case TextAttribute.pr_1_1_3:
                 ChangeText("pr_1.1.4", MainTextContent.allow);
-                CheckDecision(TextAttribute.pr_1_1_4);
+                CheckDecision(TextAttribute.pr_1_1_4, ScenarioCode.pr_ID_1);
                 break;
 
             case TextAttribute.pr_1_1_4:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not told", "Improve public safety");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not told", "Improve public safety", "Law enforcement");
                 ChangeText("pr_1.2.1", MainTextContent.pr_ID_2[0]);
                 break;
 
             case TextAttribute.pr_1_2_1:
                 ChangeText("pr_1.2.2", MainTextContent.comfortable);
-                CheckComfortableLevel(TextAttribute.pr_1_2_2);
+                CheckComfortableLevel(TextAttribute.pr_1_2_2, ScenarioCode.pr_ID_2);
                 break;
 
             case TextAttribute.pr_1_2_2:
                 ChangeText("pr_1.2.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.pr_1_2_3);
+                CheckDecision(TextAttribute.pr_1_2_3, ScenarioCode.pr_ID_2);
                 break;
 
             case TextAttribute.pr_1_2_3:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not deleted", "Improve public safety");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Video", "Camera", "Not deleted", "Improve public safety", "Law enforcement");
                 ChangeText("pr_1.3.1", MainTextContent.pr_ID_3[0]);
                 break;
 
             case TextAttribute.pr_1_3_1:
                 ChangeText("pr_1.3.2", MainTextContent.comfortable);
-                CheckComfortableLevel(TextAttribute.pr_1_3_2);
+                CheckComfortableLevel(TextAttribute.pr_1_3_2, ScenarioCode.pr_ID_3);
                 break;
 
             case TextAttribute.pr_1_3_2:
                 ChangeText("pr_1.3.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.pr_1_3_3);
+                CheckDecision(TextAttribute.pr_1_3_3, ScenarioCode.pr_ID_3);
                 break;
 
             case TextAttribute.pr_1_3_3:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor",
-                    "None", "Determine when to switch on and off the lights to reduce costs and save energy");
+                    "None", "Determine when to switch on and off the lights to reduce costs and save energy", "None");
                 ChangeText("pr_1.4.1", MainTextContent.pr_ID_4[0]);
                 // second fade in
                 fade(true, true);
@@ -2120,25 +2148,25 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
             case TextAttribute.pr_1_4_1:
                 ChangeText("pr_1.4.2", MainTextContent.pr_ID_4[1]);
-                CheckComfortableLevel(TextAttribute.pr_1_4_2);
+                CheckComfortableLevel(TextAttribute.pr_1_4_2, ScenarioCode.pr_ID_4);
                 // second fade out
                 fade(false, true);
                 break;
 
             case TextAttribute.pr_1_4_2:
                 ChangeText("pr_1.4.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.pr_1_4_3);
+                CheckDecision(TextAttribute.pr_1_4_3, ScenarioCode.pr_ID_4);
                 break;
 
             case TextAttribute.pr_1_4_3:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "Not deleted");
                 ChangeText("pr_1.5.1", MainTextContent.pr_ID_5[0]);
-                CheckComfortableLevel(TextAttribute.pr_1_5_1);
+                CheckComfortableLevel(TextAttribute.pr_1_5_1, ScenarioCode.pr_ID_5);
                 break;
 
             case TextAttribute.pr_1_5_1:
                 ChangeText("pr_1.5.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.pr_1_5_2);
+                CheckDecision(TextAttribute.pr_1_5_2, ScenarioCode.pr_ID_5);
                 break;
 
             case TextAttribute.pr_1_5_2:
@@ -2150,39 +2178,39 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.pr_2_1_1:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "None", "Improve public safety");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "None", "Improve public safety", "Law enforcement");
                 ChangeText("pr_2.1.2", MainTextContent.pr_ID_6[0]);
                 // fade in
                 fade(true);
                 break;
 
             case TextAttribute.pr_2_1_2:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "Not told", "Improve public safety");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "Not told", "Improve public safety", "Law enforcement");
                 ChangeText("pr_2.1.3", MainTextContent.pr_ID_6[1]);
                 // fade out
                 fade(false);
-                CheckComfortableLevel(TextAttribute.pr_2_1_3);
+                CheckComfortableLevel(TextAttribute.pr_2_1_3, ScenarioCode.pr_ID_6);
                 break;
 
             case TextAttribute.pr_2_1_3:
                 ChangeText("pr_2.1.4", MainTextContent.allow);
-                CheckDecision(TextAttribute.pr_2_1_4);
+                CheckDecision(TextAttribute.pr_2_1_4, ScenarioCode.pr_ID_6);
                 break;
 
             case TextAttribute.pr_2_1_4:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "One week", "Improve public safety");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor", "One week", "Improve public safety", "Law enforcement");
                 ChangeText("pr_2.2.1", MainTextContent.pr_ID_7[0]);
-                CheckComfortableLevel(TextAttribute.pr_2_2_1);
+                CheckComfortableLevel(TextAttribute.pr_2_2_1, ScenarioCode.pr_ID_7);
                 break;
 
             case TextAttribute.pr_2_2_1:
                 ChangeText("pr_2.2.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.pr_2_2_2);
+                CheckDecision(TextAttribute.pr_2_2_2, ScenarioCode.pr_ID_7);
                 break;
 
             case TextAttribute.pr_2_2_2:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor",
-                    "Not told", "You are not told what the data is uesd for");
+                    "Not told", "You are not told what the data is uesd for", "None");
                 ChangeText("pr_2.3.1", MainTextContent.pr_ID_8[0]);
                 // second fade in
                 fade(true, true);
@@ -2190,14 +2218,14 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
             case TextAttribute.pr_2_3_1:
                 ChangeText("pr_2.3.2", MainTextContent.comfortable);
-                CheckComfortableLevel(TextAttribute.pr_2_3_2);
+                CheckComfortableLevel(TextAttribute.pr_2_3_2, ScenarioCode.pr_ID_8);
                 // second fade out
                 fade(false, true);
                 break;
 
             case TextAttribute.pr_2_3_2:
                 ChangeText("pr_2.3.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.pr_2_3_3);
+                CheckDecision(TextAttribute.pr_2_3_3, ScenarioCode.pr_ID_8);
                 break;
 
             case TextAttribute.pr_2_3_3:
@@ -2208,24 +2236,24 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
             case TextAttribute.pr_2_4_1:
                 ChangeText("pr_2.4.2", MainTextContent.comfortable);
-                CheckComfortableLevel(TextAttribute.pr_2_4_2);
+                CheckComfortableLevel(TextAttribute.pr_2_4_2, ScenarioCode.pr_ID_9);
                 break;
 
             case TextAttribute.pr_2_4_2:
                 ChangeText("pr_2.4.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.pr_2_4_3);
+                CheckDecision(TextAttribute.pr_2_4_3, ScenarioCode.pr_ID_9);
                 break;
 
             case TextAttribute.pr_2_4_3:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor",
                      "Not deleted", "Check for abnormal temperatures, which indicate potential hazards, e.g., fire");
                 ChangeText("pr_2.5.1", MainTextContent.pr_ID_10[0]);
-                CheckComfortableLevel(TextAttribute.pr_2_5_1);
+                CheckComfortableLevel(TextAttribute.pr_2_5_1, ScenarioCode.pr_ID_10);
                 break;
 
             case TextAttribute.pr_2_5_1:
                 ChangeText("pr_2.5.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.pr_2_5_2);
+                CheckDecision(TextAttribute.pr_2_5_2, ScenarioCode.pr_ID_10);
                 break;
 
             case TextAttribute.pr_2_5_2:
@@ -2237,76 +2265,75 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.pr_3_1_1:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "None", "Determine possible escape routes");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific location", "Smartphone", "None", "Determine possible escape routes");
                 ChangeText("pr_3.1.2", MainTextContent.pr_ID_11[0]);
                 break;
 
             case TextAttribute.pr_3_1_2:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "Until you leave");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific location", "Smartphone", "Until you leave");
                 ChangeText("pr_3.1.3", MainTextContent.pr_ID_11[1]);
-                CheckComfortableLevel(TextAttribute.pr_3_1_3);
+                CheckComfortableLevel(TextAttribute.pr_3_1_3, ScenarioCode.pr_ID_11);
                 break;
 
             case TextAttribute.pr_3_1_3:
                 ChangeText("pr_3.1.4", MainTextContent.allow);
-                CheckDecision(TextAttribute.pr_3_1_4);
+                CheckDecision(TextAttribute.pr_3_1_4, ScenarioCode.pr_ID_11);
                 break;
 
             case TextAttribute.pr_3_1_4:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch", "One week");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific location", "Smartphone", "Not deleted");
                 ChangeText("pr_3.2.1", MainTextContent.pr_ID_12[0]);
-                CheckComfortableLevel(TextAttribute.pr_3_2_1);
+                CheckComfortableLevel(TextAttribute.pr_3_2_1, ScenarioCode.pr_ID_12);
                 break;
 
             case TextAttribute.pr_3_2_1:
                 ChangeText("pr_3.2.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.pr_3_2_2);
+                CheckDecision(TextAttribute.pr_3_2_2, ScenarioCode.pr_ID_12);
                 break;
 
             case TextAttribute.pr_3_2_2:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartwatch",
-                    "One week", "You are not told what the data is uesd for");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific location", "Smartwatch",
+                    "None", "You are not told what the data is uesd for", "Device manufacturer");
                 ChangeText("pr_3.3.1", MainTextContent.pr_ID_13[0]);
                 break;
 
             case TextAttribute.pr_3_3_1:
-                ChangeText("pr_3.3.2", MainTextContent.comfortable);
-                CheckComfortableLevel(TextAttribute.pr_3_3_2);
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific location", "Smartwatch", "One week");
+                ChangeText("pr_3.3.2", MainTextContent.pr_ID_13[1]);
+                CheckComfortableLevel(TextAttribute.pr_3_3_2, ScenarioCode.pr_ID_13);
                 break;
 
             case TextAttribute.pr_3_3_2:
                 ChangeText("pr_3.3.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.pr_3_3_3);
+                CheckDecision(TextAttribute.pr_3_3_3, ScenarioCode.pr_ID_13);
                 break;
 
             case TextAttribute.pr_3_3_3:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone",
-                    "None", "Determine possible escape routes");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific location", "Smartwatch",
+                    "None", "Determine possible escape routes", "Law enforcement");
                 ChangeText("pr_3.4.1", MainTextContent.pr_ID_14[0]);
                 break;
 
             case TextAttribute.pr_3_4_1:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone",
-                    "Until you leave", "Determine possible escape routes");
-                ChangeText("lb_1.4.2", MainTextContent.pr_ID_14[1]);
-                CheckComfortableLevel(TextAttribute.pr_3_4_2);
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific location", "Smartwatch", "One week");
+                ChangeText("pr_3.4.2", MainTextContent.pr_ID_14[1]);
+                CheckComfortableLevel(TextAttribute.pr_3_4_2, ScenarioCode.pr_ID_14);
                 break;
 
             case TextAttribute.pr_3_4_2:
                 ChangeText("pr_3.4.3", MainTextContent.allow);
-                CheckDecision(TextAttribute.pr_3_4_3);
+                CheckDecision(TextAttribute.pr_3_4_3, ScenarioCode.pr_ID_14);
                 break;
 
             case TextAttribute.pr_3_4_3:
-                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone",
-                    "Cannot be deleted", "Determine possible escape routes");
+                EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific location", "Smartwatch", "One year");
                 ChangeText("pr_3.5.1", MainTextContent.pr_ID_15[0]);
-                CheckComfortableLevel(TextAttribute.pr_3_5_1);
+                CheckComfortableLevel(TextAttribute.pr_3_5_1, ScenarioCode.pr_ID_15);
                 break;
 
             case TextAttribute.pr_3_5_1:
                 ChangeText("pr_3.5.2", MainTextContent.allow);
-                CheckDecision(TextAttribute.pr_3_5_2);
+                CheckDecision(TextAttribute.pr_3_5_2, ScenarioCode.pr_ID_15);
                 break;
 
             case TextAttribute.pr_3_5_2:
@@ -2327,15 +2354,16 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
         if (!Player.questionFinished.Exists(questionState => questionState.questionId == qustionId)) Player.questionFinished.Add(questionState);
     }
 
-    private void AddAnswer(string questionId)
+    private void AddAnswer(string quizID)
     {
         GetCoins getCoins = new GetCoins();
-        getCoins.questionId = questionId;
+        getCoins.quizID = quizID;
         getCoins.get = true;
-        if (!Player.getCoins.Exists(getCoins => getCoins.questionId == questionId))
+        if (!Player.getCoins.Exists(getCoins => getCoins.quizID == quizID))
         {
             Player.getCoins.Add(getCoins);
             Player.AddCorrect();
+            Save.SaveByJSON();
             GameObject coin = root.transform.parent.parent.Find("Coin").gameObject;
             if (!coin.GetComponent<AudioSource>()) coin.AddComponent<AudioSource>();
             coin.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("SE/coin");
@@ -2417,7 +2445,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
         nextTextTF.gameObject.SetActive(true);
     }
 
-    private void CheckComfortableLevel(TextAttribute textIndex)
+    private void CheckComfortableLevel(TextAttribute textIndex, string scenarioID)
     {
         GameObject[] comfortableBtns = new GameObject[5];
         string[] comfortableNames = { "Very Uncomfortable", "Uncomfortable", "Neither comfortable nor uncomfortable", "Comfortable", "Very Comfortable" };
@@ -2466,6 +2494,18 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
             int temp = i;
             comfortableBtns[i].GetComponent<GeneralIconButton>().onClick.AddListener(() =>
             {
+                PrivacyQuestion privacyQuestion = new PrivacyQuestion();
+                privacyQuestion.scenarioID = scenarioID;
+                privacyQuestion.comfortable = temp;
+                if (!Player.answers.Exists(PrivacyQuestion => PrivacyQuestion.scenarioID == scenarioID))
+                {
+                    Player.answers.Add(privacyQuestion);
+                }
+                else
+                {
+                    Player.answers.Find(PrivacyQuestion => PrivacyQuestion.scenarioID == scenarioID).comfortable = temp;
+                }
+                Save.SaveByJSON();
                 // 必须先add再换下一个text，否则的话下一个text的backlog会出现在add之前
                 Backlog.backlog.Add("You chose: " + "<color=purple>" + comfortableBtns[temp].name + "</color>");
                 MainText(textIndex);
@@ -2477,7 +2517,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
     }
 
-    private void CheckDecision(TextAttribute textIndex)
+    private void CheckDecision(TextAttribute textIndex, string scenarioID)
     {
         // set btn
         GameObject decision = new GameObject("decision");
@@ -2500,6 +2540,8 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
         allow.GetComponent<GeneralIconButton>().onClick.AddListener(()=>
         {
+            Player.answers.Find(PrivacyQuestion => PrivacyQuestion.scenarioID == scenarioID).decision = 1;
+            Save.SaveByJSON();
             Backlog.backlog.Add("You chose: <color=green>Allow data collection</color>");
             MainText(textIndex);
             GameObject.Destroy(decision);
@@ -2518,6 +2560,8 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
         deny.GetComponent<GeneralIconButton>().onClick.AddListener(() =>
         {
+            Player.answers.Find(PrivacyQuestion => PrivacyQuestion.scenarioID == scenarioID).decision = 0;
+            Save.SaveByJSON();
             Backlog.backlog.Add("You chose: <color=red>Deny data collection</color>");
             MainText(textIndex);
             GameObject.Destroy(decision);

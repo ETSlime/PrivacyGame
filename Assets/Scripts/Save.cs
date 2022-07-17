@@ -26,6 +26,9 @@ public class Save
         playerInfo.smartphone = Player.smartphone;
         playerInfo.tablet = Player.tablet;
         playerInfo.tipStates = Player.tipStates;
+        playerInfo.answers = Player.answers;
+
+        playerInfo.results = Player.results;
         return playerInfo;
     }
 
@@ -117,5 +120,6 @@ public class Save
         Player.questionFinished = playerInfo.questionFinished;
         Player.getCoins = playerInfo.getCoins;
         Player.tipStates = playerInfo.tipStates;
+        Player.answers = playerInfo.answers;
     }
 }

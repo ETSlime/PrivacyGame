@@ -24,6 +24,10 @@ public class Player
     static public List<GetCoins> getCoins;
     // tips bought for each pop up quiz
     static public List<TipState> tipStates;
+    // answers for each privacy question
+    static public List<PrivacyQuestion> answers;
+
+    static public double[] results;
 
     static public void AddCorrect()
     {
@@ -43,7 +47,7 @@ public class Player
         questionFinished = new List<QuestionState>();
         getCoins = new List<GetCoins>();
         tipStates = new List<TipState>();
-
+        answers = new List<PrivacyQuestion>();
     }
 }
 
@@ -62,6 +66,9 @@ public class PlayerInfo
     public List<QuestionState> questionFinished;
     public List<GetCoins> getCoins;
     public List<TipState> tipStates;
+    public List<PrivacyQuestion> answers;
+
+    public double[] results;
 }
 
 [System.Serializable]
@@ -74,7 +81,7 @@ public class QuestionState
 [System.Serializable]
 public class GetCoins
 {
-    public string questionId;
+    public string quizID;
     public bool get;
 }
 
@@ -83,4 +90,12 @@ public class TipState
 {
     public string quizID;
     public bool[] tips = new bool[2] { false, false };
+}
+
+[System.Serializable]
+public class PrivacyQuestion
+{
+    public string scenarioID;
+    public double comfortable;
+    public double decision;
 }

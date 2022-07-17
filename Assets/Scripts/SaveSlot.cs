@@ -16,8 +16,12 @@ public class SaveSlot : MonoBehaviour
     private Transform root;
     private void Start()
     {
-        List<string> userList = Save.GetUserName();
-        Init(userList);
+        if (Directory.Exists(Application.dataPath + "/Save/"))
+        {
+            List<string> userList = Save.GetUserName();
+            if (userList != null) Init(userList);
+        }
+
     }
     public void Init(List<string> userList)
     {
