@@ -2,7 +2,7 @@
     "userName": "123",
     "points": 15000.0,
     "finished": false,
-    "correct": 5,
+    "correct": 6,
     "tips": 0,
     "tipsBought": 16,
     "smartphone": false,
@@ -68,27 +68,35 @@
         {
             "questionId": "pr_3",
             "answered": true
+        },
+        {
+            "questionId": "cs_3",
+            "answered": true
         }
     ],
     "getCoins": [
         {
-            "questionId": "cs_2.1",
+            "quizID": "",
             "get": true
         },
         {
-            "questionId": "hm_1.1",
+            "quizID": "",
             "get": true
         },
         {
-            "questionId": "hm_1.4",
+            "quizID": "",
             "get": true
         },
         {
-            "questionId": "lb_2.3",
+            "quizID": "",
             "get": true
         },
         {
-            "questionId": "wk_2.4",
+            "quizID": "",
+            "get": true
+        },
+        {
+            "quizID": "cs_3.4",
             "get": true
         }
     ],
@@ -163,5 +171,33 @@
                 true
             ]
         }
-    ]
+    ],
+    "answers": [
+        {
+            "scenarioID": "cs_ID_11",
+            "comfortable": 4.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "cs_ID_12",
+            "comfortable": 3.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "cs_ID_13",
+            "comfortable": 2.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "cs_ID_14",
+            "comfortable": 4.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "cs_ID_15",
+            "comfortable": 4.0,
+            "decision": 1.0
+        }
+    ],
+    "results": []
 }

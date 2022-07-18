@@ -180,7 +180,10 @@ public class SaveSlot : MonoBehaviour
             test.AddComponent<Text>();
             test.transform.SetParent(slot.transform);
             Text testText = test.GetComponent<Text>();
-            testText.text = "Finish test: " + playerInfo.finished;
+            if (playerInfo.finished)
+                testText.text = "Finish test: " + "<color=red>" + playerInfo.finished + "</color>";
+            else
+                testText.text = "Finish test: " + playerInfo.finished;
             testText.color = Color.black;
             testText.fontSize = 25;
             testText.font = Resources.Load<Font>("Fonts/Electronic Highway Sign");

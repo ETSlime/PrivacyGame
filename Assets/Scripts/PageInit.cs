@@ -199,7 +199,12 @@ public class PageInit : MonoBehaviour
 
             // enable results page btn
             if (numFinished == 6)
+            {
                 result.SetActive(true);
+                Player.finished = true;
+                Save.SaveByJSON();
+            }
+                
         }
 
     }

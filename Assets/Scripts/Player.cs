@@ -27,7 +27,7 @@ public class Player
     // answers for each privacy question
     static public List<PrivacyQuestion> answers;
 
-    static public double[] results;
+    static public string results;
 
     static public void AddCorrect()
     {
@@ -68,7 +68,7 @@ public class PlayerInfo
     public List<TipState> tipStates;
     public List<PrivacyQuestion> answers;
 
-    public double[] results;
+    public string results;
 }
 
 [System.Serializable]

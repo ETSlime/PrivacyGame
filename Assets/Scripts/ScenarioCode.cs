@@ -7,6 +7,7 @@ using UnityEngine;
 /// </summary>
 public class ScenarioCode
 {
+    // define scenario ID
     static public string cs_ID_1 = "cs_ID_1";
     static public string cs_ID_2 = "cs_ID_2";
     static public string cs_ID_3 = "cs_ID_3";
@@ -87,10 +88,18 @@ public class ScenarioCode
     static public string pr_ID_13 = "pr_ID_13";
     static public string pr_ID_14 = "pr_ID_14";
     static public string pr_ID_15 = "pr_ID_15";
-
+    
+    // define data dimention
     static public int x_dim = 6;
     static public int y_dim = 2;
+    // define factor name
+    static public string[] factors = {"location", "device type", "purpose", "retention time", "shared", "benefit" };
+    // define color
+    static public Color purple = new Color(131f/255f, 7f/255f, 131f/255f);
+    static public Color[] colors = { Color.red, Color.blue, Color.grey, purple, Color.magenta, Color.yellow};
+    static public string[] colorsString = { "red", "blue", "grey", "purple", "magenta", "yellow" };
 
+    // define data code
     static public Dictionary<string, List<double>> scenarios = new Dictionary<string, List<double>>
     {
         // key: scenarioID     value:  location, device, purpose, retention, shared, benefit
@@ -185,18 +194,4 @@ public class ScenarioCode
         {pr_ID_14, new List<double>{0.6, 0.5, 0.9, 0.2, 1, 1}},
         {pr_ID_15, new List<double>{0.6, 0.5, 0.9, 0.4, 1, 1}},
     };
-
-    static public void Print(double[] array)
-
-    {
-
-        for (int x = 0; x < array.GetLength(0); x++)
-
-        {
-
-            Debug.Log(array[x]);
-
-        }
-
-    }
 }

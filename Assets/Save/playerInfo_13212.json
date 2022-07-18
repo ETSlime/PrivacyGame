@@ -1,0 +1,470 @@
+{
+    "userName": "13212",
+    "points": 0.0,
+    "finished": true,
+    "correct": 3,
+    "tips": 0,
+    "tipsBought": 0,
+    "smartphone": false,
+    "smartwatch": false,
+    "tablet": false,
+    "questionFinished": [
+        {
+            "questionId": "cs_1",
+            "answered": true
+        },
+        {
+            "questionId": "cs_2",
+            "answered": true
+        },
+        {
+            "questionId": "cs_3",
+            "answered": true
+        },
+        {
+            "questionId": "pr_1",
+            "answered": true
+        },
+        {
+            "questionId": "pr_2",
+            "answered": true
+        },
+        {
+            "questionId": "lb_1",
+            "answered": true
+        },
+        {
+            "questionId": "pr_3",
+            "answered": true
+        },
+        {
+            "questionId": "hm_1",
+            "answered": true
+        },
+        {
+            "questionId": "hm_2",
+            "answered": true
+        },
+        {
+            "questionId": "wk_1",
+            "answered": true
+        },
+        {
+            "questionId": "wk_2",
+            "answered": true
+        },
+        {
+            "questionId": "wk_3",
+            "answered": true
+        },
+        {
+            "questionId": "fh_1",
+            "answered": true
+        },
+        {
+            "questionId": "fh_2",
+            "answered": true
+        },
+        {
+            "questionId": "lb_2",
+            "answered": true
+        },
+        {
+            "questionId": "lb_3",
+            "answered": true
+        }
+    ],
+    "getCoins": [
+        {
+            "quizID": "hm_1.1",
+            "get": true
+        },
+        {
+            "quizID": "wk_2.4",
+            "get": true
+        },
+        {
+            "quizID": "lb_3.3",
+            "get": true
+        }
+    ],
+    "tipStates": [],
+    "answers": [
+        {
+            "scenarioID": "cs_ID_1",
+            "comfortable": 0.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "cs_ID_2",
+            "comfortable": 0.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "cs_ID_3",
+            "comfortable": 0.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "cs_ID_4",
+            "comfortable": 2.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "cs_ID_5",
+            "comfortable": 1.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "cs_ID_6",
+            "comfortable": 4.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "cs_ID_7",
+            "comfortable": 3.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "cs_ID_8",
+            "comfortable": 0.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "cs_ID_9",
+            "comfortable": 3.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "cs_ID_10",
+            "comfortable": 2.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "cs_ID_11",
+            "comfortable": 3.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "cs_ID_12",
+            "comfortable": 2.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "cs_ID_13",
+            "comfortable": 1.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "cs_ID_14",
+            "comfortable": 3.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "cs_ID_15",
+            "comfortable": 1.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "pr_ID_1",
+            "comfortable": 4.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "pr_ID_2",
+            "comfortable": 2.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "pr_ID_3",
+            "comfortable": 0.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "pr_ID_4",
+            "comfortable": 2.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "pr_ID_5",
+            "comfortable": 1.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "pr_ID_6",
+            "comfortable": 4.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "pr_ID_7",
+            "comfortable": 3.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "pr_ID_8",
+            "comfortable": 1.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "pr_ID_9",
+            "comfortable": 2.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "pr_ID_10",
+            "comfortable": 1.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "pr_ID_11",
+            "comfortable": 0.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "pr_ID_12",
+            "comfortable": 2.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "pr_ID_13",
+            "comfortable": 1.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "pr_ID_14",
+            "comfortable": 3.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "lb_ID_4",
+            "comfortable": 4.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "lb_ID_5",
+            "comfortable": 1.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "pr_ID_15",
+            "comfortable": 2.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "hm_ID_1",
+            "comfortable": 0.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "hm_ID_2",
+            "comfortable": 3.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "hm_ID_3",
+            "comfortable": 2.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "hm_ID_4",
+            "comfortable": 4.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "hm_ID_5",
+            "comfortable": 2.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "hm_ID_6",
+            "comfortable": 3.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "hm_ID_7",
+            "comfortable": 0.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "hm_ID_8",
+            "comfortable": 3.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "wk_ID_1",
+            "comfortable": 4.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "wk_ID_2",
+            "comfortable": 2.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "wk_ID_3",
+            "comfortable": 4.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "wk_ID_4",
+            "comfortable": 1.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "wk_ID_5",
+            "comfortable": 2.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "wk_ID_6",
+            "comfortable": 0.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "wk_ID_7",
+            "comfortable": 3.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "wk_ID_8",
+            "comfortable": 2.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "wk_ID_9",
+            "comfortable": 4.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "wk_ID_10",
+            "comfortable": 2.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "wk_ID_11",
+            "comfortable": 2.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "wk_ID_12",
+            "comfortable": 3.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "wk_ID_13",
+            "comfortable": 3.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "wk_ID_14",
+            "comfortable": 4.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "wk_ID_15",
+            "comfortable": 3.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "fh_ID_1",
+            "comfortable": 4.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "fh_ID_2",
+            "comfortable": 1.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "fh_ID_3",
+            "comfortable": 2.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "fh_ID_4",
+            "comfortable": 1.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "fh_ID_5",
+            "comfortable": 4.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "fh_ID_6",
+            "comfortable": 2.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "fh_ID_7",
+            "comfortable": 3.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "lb_ID_1",
+            "comfortable": 0.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "lb_ID_2",
+            "comfortable": 3.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "lb_ID_3",
+            "comfortable": 2.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "lb_ID_6",
+            "comfortable": 3.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "lb_ID_7",
+            "comfortable": 2.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "lb_ID_8",
+            "comfortable": 4.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "lb_ID_9",
+            "comfortable": 2.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "lb_ID_10",
+            "comfortable": 1.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "lb_ID_11",
+            "comfortable": 4.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "lb_ID_12",
+            "comfortable": 3.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "lb_ID_13",
+            "comfortable": 4.0,
+            "decision": 0.0
+        },
+        {
+            "scenarioID": "lb_ID_14",
+            "comfortable": 2.0,
+            "decision": 1.0
+        },
+        {
+            "scenarioID": "lb_ID_15",
+            "comfortable": 4.0,
+            "decision": 0.0
+        }
+    ],
+    "results": ""
+}
