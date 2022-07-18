@@ -77,14 +77,17 @@
     "getCoins": [
         {
             "quizID": "hm_1.1",
+            "device": "presence sensor",
             "get": true
         },
         {
             "quizID": "wk_2.4",
+            "device": "smartphone",
             "get": true
         },
         {
             "quizID": "lb_3.3",
+            "device": "presence sensor",
             "get": true
         }
     ],

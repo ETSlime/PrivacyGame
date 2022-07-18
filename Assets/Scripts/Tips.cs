@@ -111,6 +111,7 @@ public class Tips : MonoBehaviour
             TipState tipState = new TipState();
             tipState.quizID = quizID;
             tipState.tips[tipsLevel] = true;
+            tipState.device = DeviceName();
             Player.tipStates.Add(tipState);
             Player.tips--;
             ShowTipsContent();
@@ -302,6 +303,35 @@ public class Tips : MonoBehaviour
     public void ResetLevel()
     {
         tipsLevel = 0;
+    }
+
+    private string DeviceName()
+    {
+        switch(this.quizID)
+        {
+            case "cs_2.1":
+                return "facial recognition";
+            case "cs_3.4":
+                return "presence sensor";
+            case "lb_1.1":
+                return "iris scanner";
+            case "lb_2.3":
+                return "fingerprint scanner";
+            case "lb_3.3":
+                return "presence sensor";
+            case "hm_1.1":
+                return "presence sensor";
+            case "hm_1.4":
+                return "camera";
+            case "fh_2.1":
+                return "temperature sensor";
+            case "wk_2.4":
+                return "smartphone";
+            case "wk_3.4":
+                return "fingerprint scanner";
+            default:
+                return null;
+        }
     }
 
 }

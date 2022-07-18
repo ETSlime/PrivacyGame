@@ -82,6 +82,7 @@ public class QuestionState
 public class GetCoins
 {
     public string quizID;
+    public string device;
     public bool get;
 }
 
@@ -89,6 +90,7 @@ public class GetCoins
 public class TipState
 {
     public string quizID;
+    public string device;
     public bool[] tips = new bool[2] { false, false };
 }
 

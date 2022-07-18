@@ -867,7 +867,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Facial information", "Facial recognition system");
                 if (answerCorrect)
                 {
-                    AddAnswer("cs_2.1");
+                    AddAnswer("cs_2.1", "facial recognition");
                     textContent = MainTextContent.correct + "<color=green>facial recognition</color>.";
                 }
                 else
@@ -1029,7 +1029,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor");
                 if (answerCorrect)
                 {
-                    AddAnswer("cs_3.4");
+                    AddAnswer("cs_3.4", "presence sensor");
                     textContent = MainTextContent.correct + "<color=green>presence sensor</color>.";
                 }
                 else
@@ -1100,7 +1100,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Biometric data", "Iris scanner");
                 if (answerCorrect)
                 {
-                    AddAnswer("lb_1.1");
+                    AddAnswer("lb_1.1", "iris scanner");
                     textContent = MainTextContent.correct + "<color=green>iris scanner</color>.";
                 }
                 else
@@ -1248,7 +1248,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Fingerprint", "Fingerprint scanner");
                 if (answerCorrect)
                 {
-                    AddAnswer("lb_2.3");
+                    AddAnswer("lb_2.3", "fingerprint scanner");
                     textContent = MainTextContent.correct + "<color=green>fingerprint scanner</color>.";
                 }
                 else
@@ -1357,7 +1357,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor");
                 if (answerCorrect)
                 {
-                    AddAnswer("lb_3.3");
+                    AddAnswer("lb_3.3", "presence sensor");
                     textContent = MainTextContent.correct + "<color=green>presence sensor</color>.";
                 }
                 else
@@ -1434,7 +1434,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "None", "Presence sensor");
                 if (answerCorrect)
                 {
-                    AddAnswer("hm_1.1");
+                    AddAnswer("hm_1.1", "presence sensor");
                     textContent = MainTextContent.correct + "<color=green>presence sensor</color>.";
                 }
                 else
@@ -1503,7 +1503,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "None", "Camera");
                 if (answerCorrect)
                 {
-                    AddAnswer("hm_1.4");
+                    AddAnswer("hm_1.4", "camera");
                     textContent = MainTextContent.correct + "<color=green>camera</color>.";
                 }
                 else
@@ -1705,7 +1705,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor");
                 if (answerCorrect)
                 {
-                    AddAnswer("hm_1.4");
+                    AddAnswer("hm_1.4", "temperature sensor");
                     textContent = MainTextContent.correct + "<color=green>temperature sensor</color>.";
                 }
                 else
@@ -1921,7 +1921,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "None", "Smartphone");
                 if (answerCorrect)
                 {
-                    AddAnswer("wk_2.4");
+                    AddAnswer("wk_2.4", "smartphone");
                     textContent = MainTextContent.correct + "<color=green>smartphone</color>.";
                 }
                 else
@@ -2039,7 +2039,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Biometric data", "Fingerprint scanner");
                 if (answerCorrect)
                 {
-                    AddAnswer("wk_2.4");
+                    AddAnswer("wk_2.4", "fingerprint scanner");
                     textContent = MainTextContent.correct + "<color=green>fingerprint scanner</color>.";
                 }
                 else
@@ -2354,11 +2354,12 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
         if (!Player.questionFinished.Exists(questionState => questionState.questionId == qustionId)) Player.questionFinished.Add(questionState);
     }
 
-    private void AddAnswer(string quizID)
+    private void AddAnswer(string quizID, string device)
     {
         GetCoins getCoins = new GetCoins();
         getCoins.quizID = quizID;
         getCoins.get = true;
+        getCoins.device = device;
         if (!Player.getCoins.Exists(getCoins => getCoins.quizID == quizID))
         {
             Player.getCoins.Add(getCoins);
