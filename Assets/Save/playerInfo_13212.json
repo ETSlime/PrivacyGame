@@ -4,7 +4,7 @@
     "finished": true,
     "correct": 8,
     "tips": 6,
-    "tipsBought": 0,
+    "tipsBought": 10,
     "smartphone": false,
     "smartwatch": false,
     "tablet": false,
@@ -112,12 +112,6 @@
             "get": true
         },
         {
-            "quizID": "hm_1.4",
-            "device": "temperature sensor",
-            "numOfTry": 1,
-            "get": true
-        },
-        {
             "quizID": "wk_2.4",
             "device": "smartphone",
             "numOfTry": 1,
@@ -132,6 +126,12 @@
         {
             "quizID": "fh_2.1",
             "device": "temperature sensor",
+            "numOfTry": 1,
+            "get": true
+        },
+        {
+            "quizID": "hm_1.4",
+            "device": "camera",
             "numOfTry": 1,
             "get": true
         }
@@ -341,17 +341,17 @@
         },
         {
             "scenarioID": "hm_ID_1",
-            "comfortable": 0.0,
-            "decision": 0.0
+            "comfortable": 3.0,
+            "decision": 1.0
         },
         {
             "scenarioID": "hm_ID_2",
-            "comfortable": 2.0,
-            "decision": 0.0
+            "comfortable": 1.0,
+            "decision": 1.0
         },
         {
             "scenarioID": "hm_ID_3",
-            "comfortable": 2.0,
+            "comfortable": 3.0,
             "decision": 1.0
         },
         {

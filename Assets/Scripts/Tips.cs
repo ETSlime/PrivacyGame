@@ -119,10 +119,7 @@ public class Tips : MonoBehaviour
 
             }           
             tipState.tips[tipsLevel] = true;
-            
-            
-            //Player.tips--;
-
+            Player.tips--;
             Save.SaveByJSON();
             ShowTipsContent();
         }

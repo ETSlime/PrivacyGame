@@ -59,8 +59,6 @@ public class PreferenceModel : MonoBehaviour {
             double[] decision = dataMatrix.Column(7).ToArray();
             Matrix<double> coefficientMatrix = Correlation.SpearmanMatrix(location, device, purpose, retention, shared, benefit, comfortable, decision);
 
-            Debug.Log(coefficientMatrix.ToString("N04"));
-
 
             int comfortableIdx = 6;
             int decisionIdx = 7;
@@ -85,7 +83,6 @@ public class PreferenceModel : MonoBehaviour {
             coefficientMatrix[2, 6] = -coefficientMatrix[2, 6];
             coefficientMatrix[2, 7] = -coefficientMatrix[2, 7];
 
-            Debug.Log(coefficientMatrix.ToString("N04"));
             for (int idx = 0; idx < coefficientMatrix.RowCount - 2; idx++)
             {
                 // add comfortable/decision factor to a vector
@@ -123,16 +120,16 @@ public class PreferenceModel : MonoBehaviour {
             // text of analyzing results
             Text text1 = resultRoot.Find("Text1").GetComponent<Text>();
             text1.text = "The factors that most impacts your <size=65>comfortable level</size> is:\n" + 
-                "<color=" + ScenarioCode.colorsString[mostComfortableIdx] + "><size=68>" + ScenarioCode.factors[mostComfortableIdx] +
+                "<color=" + ScenarioCode.colorsString[mostComfortableIdx] + "><size=50>" + ScenarioCode.factors[mostComfortableIdx] +
                 " (" + comfortableFactors[mostComfortableIdx].ToString("N03") + ")" + "</size></color>\n" +
                 "The factors that least impacts your <size=65>comfortable level</size> is:\n" +
-                "<color=" + ScenarioCode.colorsString[leastComfortableIdx] + "><size=68>" + ScenarioCode.factors[leastComfortableIdx] +
+                "<color=" + ScenarioCode.colorsString[leastComfortableIdx] + "><size=50>" + ScenarioCode.factors[leastComfortableIdx] +
                 " (" + comfortableFactors[leastComfortableIdx].ToString("N03") + ")" + "</size></color>\n" +
                 "The factors that most impacts your <size=65>decision</size> is:\n" +
-                "<color=" + ScenarioCode.colorsString[mostDecisionIdx] + "><size=68>" + ScenarioCode.factors[mostDecisionIdx] +
+                "<color=" + ScenarioCode.colorsString[mostDecisionIdx] + "><size=50>" + ScenarioCode.factors[mostDecisionIdx] +
                 " (" + decisionFactors[mostDecisionIdx].ToString("N03") + ")" + "</size></color>\n" +
                 "The factors that least impacts your <size=65>decision</size> is:\n" +
-                "<color=" + ScenarioCode.colorsString[leastDecisionIdx] + "><size=68>" + ScenarioCode.factors[leastDecisionIdx] +
+                "<color=" + ScenarioCode.colorsString[leastDecisionIdx] + "><size=50>" + ScenarioCode.factors[leastDecisionIdx] +
                 " (" + decisionFactors[leastDecisionIdx].ToString("N03") + ")" + "</size></color>";
 
         }
