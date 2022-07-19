@@ -303,8 +303,8 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
             str = tex.text;
             tex.text = "";
         }
-        max_speed = 4;
-        speed = 4;
+        max_speed = 3;
+        speed = 3;
     }
 
     // Update is called once per frame
@@ -861,21 +861,24 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 ChangeText("cs_2.1.2", MainTextContent.select);
                 SelectIcon("facial recognition", TextAttribute.cs_2_1_2);
                 ShowTips(true, "cs_2.1");
+                ShowQuizID(true, "cs_2.1", "store_1");
                 break;
 
             case TextAttribute.cs_2_1_2:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Facial information", "Facial recognition system");
                 if (answerCorrect)
                 {
-                    AddAnswer("cs_2.1", "facial recognition");
+                    AddAnswer("cs_2.1", "facial recognition", true);
                     textContent = MainTextContent.correct + "<color=green>facial recognition</color>.";
                 }
                 else
                 {
+                    AddAnswer("cs_2.1", "facial recognition", false);
                     textContent = MainTextContent.wrong + "<color=green>facial recognition</color>.";
                 }
                 ChangeText("cs_2.1.3", textContent);
                 ShowTips(false);
+                ShowQuizID(false);
                 break;
 
             case TextAttribute.cs_2_1_3:
@@ -1023,21 +1026,24 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 ChangeText("cs_3.4.2", MainTextContent.select);
                 SelectIcon("presence sensor", TextAttribute.cs_3_4_2);
                 ShowTips(true, "cs_3.4");
+                ShowQuizID(true, "cs_3.4", "store_2");
                 break;
 
             case TextAttribute.cs_3_4_2:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor");
                 if (answerCorrect)
                 {
-                    AddAnswer("cs_3.4", "presence sensor");
+                    AddAnswer("cs_3.4", "presence sensor", true);
                     textContent = MainTextContent.correct + "<color=green>presence sensor</color>.";
                 }
                 else
                 {
+                    AddAnswer("cs_3.4", "presence sensor", false);
                     textContent = MainTextContent.wrong + "<color=green>presence sensor</color>.";
                 }
                 ChangeText("cs_3.4.3", textContent);
                 ShowTips(false);
+                ShowQuizID(false);
                 break;
 
             case TextAttribute.cs_3_4_3:
@@ -1094,21 +1100,24 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 ChangeText("lb_1.1.3", MainTextContent.select);
                 SelectIcon("iris scanner", TextAttribute.lb_1_1_3);
                 ShowTips(true, "lb_1.1");
+                ShowQuizID(true, "lb_1.1", "library_1");
                 break;
 
             case TextAttribute.lb_1_1_3:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Biometric data", "Iris scanner");
                 if (answerCorrect)
                 {
-                    AddAnswer("lb_1.1", "iris scanner");
+                    AddAnswer("lb_1.1", "iris scanner", true);
                     textContent = MainTextContent.correct + "<color=green>iris scanner</color>.";
                 }
                 else
                 {
+                    AddAnswer("lb_1.1", "iris scanner", false);
                     textContent = MainTextContent.wrong + "<color=green>iris scanner</color>.";
                 }
                 ChangeText("lb_1.1.4", textContent);
                 ShowTips(false);
+                ShowQuizID(false);
                 break;
 
             case TextAttribute.lb_1_1_4:
@@ -1242,21 +1251,24 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 ChangeText("lb_2.3.3", MainTextContent.select);
                 SelectIcon("fingerprint scanner", TextAttribute.lb_2_3_3);
                 ShowTips(true, "lb_2.3");
+                ShowQuizID(true, "lb_2.3", "library_2");
                 break;
 
             case TextAttribute.lb_2_3_3:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Fingerprint", "Fingerprint scanner");
                 if (answerCorrect)
                 {
-                    AddAnswer("lb_2.3", "fingerprint scanner");
+                    AddAnswer("lb_2.3", "fingerprint scanner", true);
                     textContent = MainTextContent.correct + "<color=green>fingerprint scanner</color>.";
                 }
                 else
                 {
+                    AddAnswer("lb_2.3", "fingerprint scanner", false);
                     textContent = MainTextContent.wrong + "<color=green>fingerprint scanner</color>.";
                 }
                 ChangeText("lb_2.3.4", textContent);
                 ShowTips(false);
+                ShowQuizID(false);
                 break;
 
             case TextAttribute.lb_2_3_4:
@@ -1351,21 +1363,24 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 ChangeText("lb_3.3.2", MainTextContent.select);
                 SelectIcon("presence sensor", TextAttribute.lb_3_3_2);
                 ShowTips(true, "lb_3.3");
+                ShowQuizID(true, "lb_3.3", "library_3");
                 break;
 
             case TextAttribute.lb_3_3_2:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Presence", "Presence sensor");
                 if (answerCorrect)
                 {
-                    AddAnswer("lb_3.3", "presence sensor");
+                    AddAnswer("lb_3.3", "presence sensor", true);
                     textContent = MainTextContent.correct + "<color=green>presence sensor</color>.";
                 }
                 else
                 {
+                    AddAnswer("lb_3.3", "presence sensor", false);
                     textContent = MainTextContent.wrong + "<color=green>presence sensor</color>.";
                 }
                 ChangeText("lb_3.3.3", textContent);
                 ShowTips(false);
+                ShowQuizID(false);
                 break;
 
             case TextAttribute.lb_3_3_3:
@@ -1428,21 +1443,25 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 ChangeText("hm_1.1.3", MainTextContent.select);
                 SelectIcon("presence sensor", TextAttribute.hm_1_1_3);
                 ShowTips(true, "hm_1.1");
+                ShowQuizID(true, "hm_1.1", "home_1");
                 break;
 
             case TextAttribute.hm_1_1_3:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "None", "Presence sensor");
                 if (answerCorrect)
                 {
-                    AddAnswer("hm_1.1", "presence sensor");
+                    AddAnswer("hm_1.1", "presence sensor", true);
                     textContent = MainTextContent.correct + "<color=green>presence sensor</color>.";
                 }
                 else
                 {
+                    AddAnswer("hm_1.1", "presence sensor", false);
                     textContent = MainTextContent.wrong + "<color=green>presence sensor</color>.";
                 }
                 ChangeText("hm_1.1.4", textContent);
                 ShowTips(false);
+                ShowQuizID(false);
+                // reset tips level because there are two tips on the same scene
                 ResetTip();
                 break;
 
@@ -1497,21 +1516,24 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 ChangeText("hm_1.4.2", MainTextContent.select);
                 SelectIcon("camera", TextAttribute.hm_1_4_2);
                 ShowTips(true, "hm_1.4");
+                ShowQuizID(true, "hm_1.4", "home_2");
                 break;
 
             case TextAttribute.hm_1_4_2:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "None", "Camera");
                 if (answerCorrect)
                 {
-                    AddAnswer("hm_1.4", "camera");
+                    AddAnswer("hm_1.4", "camera", true);
                     textContent = MainTextContent.correct + "<color=green>camera</color>.";
                 }
                 else
                 {
+                    AddAnswer("hm_1.4", "camera", false);
                     textContent = MainTextContent.wrong + "<color=green>camera</color>.";
                 }
                 ChangeText("hm_1.4.3", textContent);
                 ShowTips(false);
+                ShowQuizID(false);
                 break;
 
             case TextAttribute.hm_1_4_3:
@@ -1699,21 +1721,24 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 ChangeText("fh_2.1.4", MainTextContent.select);
                 SelectIcon("temperature sensor", TextAttribute.fh_2_1_4);
                 ShowTips(true, "fh_2.1");
+                ShowQuizID(true, "fh_2.1", "friend's home_1");
                 break;
 
             case TextAttribute.fh_2_1_4:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Ambient temperature", "Temperature sensor");
                 if (answerCorrect)
                 {
-                    AddAnswer("hm_1.4", "temperature sensor");
+                    AddAnswer("fh_2.1", "temperature sensor", true);
                     textContent = MainTextContent.correct + "<color=green>temperature sensor</color>.";
                 }
                 else
                 {
+                    AddAnswer("fh_2.1", "temperature sensor", false);
                     textContent = MainTextContent.wrong + "<color=green>temperature sensor</color>.";
                 }
                 ChangeText("fh_2.1.5", textContent);
                 ShowTips(false);
+                ShowQuizID(false);
                 break;
 
             case TextAttribute.fh_2_1_5:
@@ -1915,21 +1940,24 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 ChangeText("wk_2.4.2", MainTextContent.select);
                 SelectIcon("smartphone", TextAttribute.wk_2_4_2);
                 ShowTips(true, "wk_2.4");
+                ShowQuizID(true, "wk_2.4", "work_1");
                 break;
 
             case TextAttribute.wk_2_4_2:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "None", "Smartphone");
                 if (answerCorrect)
                 {
-                    AddAnswer("wk_2.4", "smartphone");
+                    AddAnswer("wk_2.4", "smartphone", true);
                     textContent = MainTextContent.correct + "<color=green>smartphone</color>.";
                 }
                 else
                 {
+                    AddAnswer("wk_2.4", "smartphone", false);
                     textContent = MainTextContent.wrong + "<color=green>smartphone</color>.";
                 }
                 ChangeText("wk_2.4.3", textContent);
                 ShowTips(false);
+                ShowQuizID(false);
                 break;
 
             case TextAttribute.wk_2_4_3:
@@ -2033,21 +2061,24 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 ChangeText("wk_3.4.3", MainTextContent.select);
                 SelectIcon("fingerprint scanner", TextAttribute.wk_3_4_3);
                 ShowTips(true, "wk_3.4");
+                ShowQuizID(true, "wk_3.4", "work_2");
                 break;
 
             case TextAttribute.wk_3_4_3:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Biometric data", "Fingerprint scanner");
                 if (answerCorrect)
                 {
-                    AddAnswer("wk_2.4", "fingerprint scanner");
+                    AddAnswer("wk_3.4", "fingerprint scanner", true);
                     textContent = MainTextContent.correct + "<color=green>fingerprint scanner</color>.";
                 }
                 else
                 {
+                    AddAnswer("wk_3.4", "fingerprint scanner", false);
                     textContent = MainTextContent.wrong + "<color=green>fingerprint scanner</color>.";
                 }
                 ChangeText("wk_3.4.4", textContent);
                 ShowTips(false);
+                ShowQuizID(false);
                 break;
 
             case TextAttribute.wk_3_4_4:
@@ -2354,15 +2385,53 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
         if (!Player.questionFinished.Exists(questionState => questionState.questionId == qustionId)) Player.questionFinished.Add(questionState);
     }
 
-    private void AddAnswer(string quizID, string device)
+    private void AddAnswer(string quizID, string device, bool correct)
     {
-        GetCoins getCoins = new GetCoins();
-        getCoins.quizID = quizID;
-        getCoins.get = true;
-        getCoins.device = device;
+        // first time for the quiz
         if (!Player.getCoins.Exists(getCoins => getCoins.quizID == quizID))
         {
+            GetCoins getCoins = new GetCoins();
+            getCoins.quizID = quizID;
+            getCoins.device = device;
+            getCoins.numOfTry = 1;
+            if (correct)
+            {
+                getCoins.get = true;
+                firstCorrect();
+            } 
+            else
+            {
+                Save.SaveByJSON();
+                getCoins.get = false;
+            }
+                
+
             Player.getCoins.Add(getCoins);
+            
+
+        }
+        // later time
+        else
+        {
+            GetCoins getCoins = Player.getCoins.Find(getCoints => getCoints.quizID == quizID);
+            // if player didn't correct in the past
+            if (getCoins.get == false)
+            {
+                getCoins.numOfTry++;
+                // if player correct this time
+                if (correct)
+                {
+                    getCoins.get = true;
+                    firstCorrect();
+                }
+
+            }
+            // do nothing if player correct in the past
+        }
+
+        // define the behavior if player firstly get correct in the quiz
+        void firstCorrect()
+        {
             Player.AddCorrect();
             Save.SaveByJSON();
             GameObject coin = root.transform.parent.parent.Find("Coin").gameObject;
@@ -2373,6 +2442,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
         }
 
     }
+
 
     private void DestroyCorrectWrongGO()
     {
@@ -2678,15 +2748,39 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
     private void ShowTips(bool enable, string quizID = null)
     {
         Transform tipsTF = root.transform.parent.parent.Find("Tips");
-        if(tipsTF)
+        if (tipsTF)
         {
             if (enable)
             {
                 tipsTF.gameObject.SetActive(true);
                 tipsTF.GetComponent<Tips>().SetEvent(quizID);
             }
-            else tipsTF.gameObject.SetActive(false);
+            else 
+                tipsTF.gameObject.SetActive(false);
         }
+    }
+
+    private void ShowQuizID(bool enable, string quizID = null, string fullQuizID = null)
+    {
+        Transform quizStateTF = root.transform.parent.parent.Find("Quizstate");
+        if (quizStateTF)
+        {
+            if (enable)
+            {
+                string yourAnswer;
+                if (Player.getCoins.Exists(getcoins => getcoins.quizID == quizID && getcoins.get == true))
+                    yourAnswer = "Your answer: <color=green>corrrect</color>";
+                else if (Player.getCoins.Exists(getcoins => getcoins.quizID == quizID && getcoins.get == false))
+                    yourAnswer = "Your answer: <color=red>wrong</color>";
+                else
+                    yourAnswer = "Your answer: None";
+                quizStateTF.GetChild(0).GetComponent<Text>().text = "Quiz ID: " + fullQuizID + "\n" + yourAnswer;
+                quizStateTF.gameObject.SetActive(true);
+            }
+            else
+                quizStateTF.gameObject.SetActive(false);
+        }
+
     }
 
     private void ResetTip()

@@ -107,12 +107,19 @@ public class JumpSceneBtn : GeneralIconButton
             Transform pointerTF2 = imageGO.transform.Find("Pointer2");
             Transform coinTF = imageGO.transform.Find("Coin");
             Transform tipsTF = imageGO.transform.Find("Tips");
+            Transform quizStateTF = imageGO.transform.Find("Quizstate");
             if (circleTF) circleTF.gameObject.SetActive(false);
             if (pointerTF) pointerTF.gameObject.SetActive(false);
             if (circleTF2) circleTF2.gameObject.SetActive(false);
             if (pointerTF2) pointerTF2.gameObject.SetActive(false);
             if (coinTF) coinTF.gameObject.SetActive(false);
-            if (tipsTF) tipsTF.gameObject.SetActive(false);
+            if (tipsTF)
+            {
+                tipsTF.gameObject.SetActive(false);
+                // reset tips level
+                tipsTF.GetComponent<Tips>().ResetLevel();
+            }
+            if (quizStateTF) quizStateTF.gameObject.SetActive(false);
 
 
             // destroy correct/wrong game object

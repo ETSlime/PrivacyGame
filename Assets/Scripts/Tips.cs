@@ -94,6 +94,7 @@ public class Tips : MonoBehaviour
                         Player.points -= curPrice;
                         Player.tipsBought++;
                         Player.tips++;
+                        Save.SaveByJSON();
                         warningText.transform.GetChild(0).GetComponent<Text>().text = "Nice! Now you get one tip chance. Come on and have a try!";
                     }
                 }
@@ -108,12 +109,21 @@ public class Tips : MonoBehaviour
         else
         {
             // add tip to player
-            TipState tipState = new TipState();
-            tipState.quizID = quizID;
+            TipState tipState = Player.tipStates.Find(tipState => tipState.quizID == quizID);
+            if (tipState == null)
+            {
+                tipState = new TipState();
+                tipState.quizID = quizID;
+                tipState.device = DeviceName();
+                Player.tipStates.Add(tipState);
+
+            }           
             tipState.tips[tipsLevel] = true;
-            tipState.device = DeviceName();
-            Player.tipStates.Add(tipState);
-            Player.tips--;
+            
+            
+            //Player.tips--;
+
+            Save.SaveByJSON();
             ShowTipsContent();
         }
 

@@ -55,7 +55,8 @@ public class ResultInit : MonoBehaviour
             });
 
             // quizzes feedback
-            int tipsUsed = Player.tipsBought - Player.tips;
+            // initially 2 tips
+            int tipsUsed = Player.tipsBought - Player.tips - 2;
             int numOfQuestion = 10;
             // device count of quizzes
             int num_fr = 1, num_ps = 3, num_is = 1, num_fs = 2, num_c = 1, num_ts = 1, num_sp = 1;
@@ -91,6 +92,30 @@ public class ResultInit : MonoBehaviour
                 c_correctness = num_c_c / num_c,
                 ts_correctness = num_ts_c / num_ts,
                 sp_correctness = num_sp_c / num_sp;
+
+            // correctness with tips
+            Dictionary<string, string> oneCorrect = new Dictionary<string, string>();
+            Dictionary<string, string> twoCorrect = new Dictionary<string, string>();
+            Dictionary<string, string> oneIncorrect = new Dictionary<string, string>();
+            foreach (var item in Player.tipStates)
+            {
+                string device = item.device;
+                string id = item.quizID;
+                // use the second tip
+                if(item.tips[1])
+                {
+                    twoCorrect.Add(id, device);
+                }
+                // use the first tip
+                else if(item.tips[0])
+                {
+                    // correct
+                    if (Player.getCoins.Exists(getcoins => getcoins.quizID == id))
+                        oneCorrect.Add(id, device);
+                    else
+                        oneIncorrect.Add(id, device);
+                }
+            }
         }
     }
 }

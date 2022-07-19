@@ -36,10 +36,10 @@ public class Player
 
     static public void Init()
     {
-        points = 0;
+        points = 15000;
         finished = false;
         correct = 0;
-        tips = 0;
+        tips = 2;
         tipsBought = 0;
         smartphone = false;
         smartwatch = false;
@@ -83,6 +83,7 @@ public class GetCoins
 {
     public string quizID;
     public string device;
+    public int numOfTry;
     public bool get;
 }
 

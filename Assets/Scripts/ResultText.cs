@@ -30,8 +30,8 @@ public class ResultText : MonoBehaviour, IPointerClickHandler
             str = tex.text;
             tex.text = "";
         }
-        max_speed = 4;
-        speed = 4;
+        max_speed = 3;
+        speed = 3;
     }
 
     private void Update()

@@ -9,6 +9,11 @@ using System.IO;
 /// </summary>
 public class StartGame : MonoBehaviour
 {
+    private void Awake()
+    {
+        // set frame rate
+        Application.targetFrameRate = 500;
+    }
     private void Start()
     {
         if (!Directory.Exists(Application.dataPath + "/Save/"))
