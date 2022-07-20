@@ -16,6 +16,13 @@ public class SaveSlot : MonoBehaviour
     private Transform root;
     private void Start()
     {
+        // delete children first, if exist
+        Image[] texts = this.GetComponentsInChildren<Image>();
+        foreach (Image text in texts)
+        {
+            GameObject.Destroy(text.gameObject);
+        }
+        // initialize
         if (Directory.Exists(Application.dataPath + "/Save/"))
         {
             List<string> userList = Save.GetUserName();
@@ -44,7 +51,8 @@ public class SaveSlot : MonoBehaviour
         }
         RectTransform contentRTF = this.GetComponent<RectTransform>();
         // sizeDelta = (n-1)*(Spacing X+CellSize X)
-        float size = (count - 0) * (50 + 200);
+        float bottom = 50;
+        float size = (count - 0) * (50 + 200) + bottom;
         contentRTF.sizeDelta = new Vector2(0, size);
     }
     private void CreateSaveBtn(string userName)

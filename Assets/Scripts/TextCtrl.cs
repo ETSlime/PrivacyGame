@@ -672,24 +672,9 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
             if (this.transform.Find("warning2")) GameObject.Destroy(this.transform.Find("warning2").gameObject);
             if (this.transform.Find("warning3")) GameObject.Destroy(this.transform.Find("warning3").gameObject);
             Player.userName = name;
-            GameObject text = root.transform.Find("Text2").gameObject;
-            Text tex = text.GetComponent<Text>();
-            tex.text = "Nice to meet you, " + name + "! Welcom to the world of <color=red>Privacy Context Game</color>. " +
-                "Throughout the game, you will explore some of the IoT devices that we usually used in our daily life " +
-                ",as well as the potential privacy issues they bring to us.";
 
-            ChangeTextNew("Text2", "Text1");
+            ChangeText("Text2", MainTextContent.introduction, false);
         }
-
-        //Player.userName = name;
-        //GameObject text = root.transform.Find("Text2").gameObject;
-        //Text tex = text.GetComponent<Text>();
-        //tex.text = "Nice to meet you, " + name + "! Welcom to the world of <color=red>Privacy Context Game</color>. " +
-        //    "Throughout the game, you will explore some of the IoT devices that we usually used in our daily life " +
-        //    ",as well as the potential privacy issues they bring to us.";
-
-        //ChangeTextNew("Text2", "Text1");
-
     }
 
     private void WarningText(string warningName)
@@ -747,19 +732,11 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.Text2:
-                curText = root.transform.Find("Text3").gameObject;
-                tex = curText.GetComponent<Text>();
-                tex.text = "this is page3this is page3this is page3this is page3this is page3this is page3" +
-                    "this is page3this is page3this is page3this is page3this is page3this is page3this is page3" +
-                    "this is page3this is page3this is page3this is page3this is page3this is page3this is page3";
-                ChangeTextNew("Text3", "Text2");
+                ChangeText("Text3", "this is page3this is page3this is page3this is page3this is page3this is page3", false);
                 break;
 
             case TextAttribute.Text3:
-                curText = root.transform.Find("StageSelection").gameObject;
-                tex = curText.GetComponent<Text>();
-                tex.text = "this is page4";
-                ChangeTextNew("StageSelection", "Text3");
+                ChangeText("StageSelection", "asfasf", false);
                 break;
 
             case TextAttribute.StageSelection:
@@ -769,7 +746,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 LoadGame.LoadScene("Select Location");
                 break;
 
-            // this is the start of text for department store
+                // this is the start of text for department store
             case TextAttribute.cs_1_1_1:
                 EventDispatcher.instance.DispatchEvent(Checklist.CHECKLIST_UPDATE, "Specific position", "Smartphone", "None" ,"Determine possible escape routes");
                 ChangeText("cs_1.1.2", MainTextContent.cs_ID_1[0]);
@@ -2494,7 +2471,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
 
     /// <param name="newText"></param> next text to show up
     /// <param name="textContent"></param> string to show and put in the backlog
-    private void ChangeText(string newText, string textContent)
+    private void ChangeText(string newText, string textContent, bool backlog = true)
     {
         curText.SetActive(false);
         nextTextTF = root.transform.Find(newText);
@@ -2505,15 +2482,8 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
         curText.SetActive(true);
         tex = curText.GetComponent<Text>();
         tex.text = textContent;
-        Backlog.backlog.Add(textContent);
-    }
-
-    private void ChangeTextNew(string textIn, string textOut)
-    {
-        curText = root.transform.Find(textOut).gameObject;
-        nextTextTF = root.transform.Find(textIn);
-        curText.SetActive(false);
-        nextTextTF.gameObject.SetActive(true);
+        if (backlog)
+            Backlog.backlog.Add(textContent);
     }
 
     private void CheckComfortableLevel(TextAttribute textIndex, string scenarioID)

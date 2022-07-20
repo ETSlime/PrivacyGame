@@ -1,9 +1,9 @@
 {
-    "userName": "dsffd",
-    "points": 0.0,
+    "userName": "sffs",
+    "points": 15000.0,
     "finished": false,
     "correct": 0,
-    "tips": 0,
+    "tips": 2,
     "tipsBought": 0,
     "smartphone": false,
     "smartwatch": false,
@@ -12,5 +12,5 @@
     "getCoins": [],
     "tipStates": [],
     "answers": [],
-    "results": []
+    "results": ""
 }

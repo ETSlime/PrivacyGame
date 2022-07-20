@@ -219,11 +219,11 @@ public class ResultInit : MonoBehaviour
             string familiar = null, unfamiliar = null;
             foreach (var item in familiarList)
             {
-                familiar += "<i>" + item + "</i>" + ", ";
+                familiar += "<i><color=green>" + item + "</color></i>" + ", ";
             }
             foreach (var item in unfamiliarList)
             {
-                unfamiliar += "<i>" + item + "</i>" + ", ";
+                unfamiliar += "<i><color=red>" + item + "</color></i>" + ", ";
             }
             if (familiar == null)
                 familiar = "You are not familiar with any IoT device, so sad.";
@@ -296,12 +296,12 @@ public class ResultInit : MonoBehaviour
             foreach (var item in oneIncorrect)
             {
                 string quizID = item.Key, device = item.Value;
-                oneIncorrectText += "<color=green>" + convert(quizID) + "</color>" + ", ";
+                oneIncorrectText += "<color=red>" + convert(quizID) + "</color>" + ", ";
             }
             foreach (var item in twoIncorrect)
             {
                 string quizID = item.Key, device = item.Value;
-                twoIncorrectText += "<color=green>" + convert(quizID) + "</color>" + ", ";
+                twoIncorrectText += "<color=red>" + convert(quizID) + "</color>" + ", ";
             }
 
 

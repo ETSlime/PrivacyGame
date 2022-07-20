@@ -181,13 +181,13 @@
     "answers": [
         {
             "scenarioID": "cs_ID_1",
-            "comfortable": 0.0,
+            "comfortable": 2.0,
             "decision": 1.0
         },
         {
             "scenarioID": "cs_ID_2",
             "comfortable": 0.0,
-            "decision": 1.0
+            "decision": 0.0
         },
         {
             "scenarioID": "cs_ID_3",

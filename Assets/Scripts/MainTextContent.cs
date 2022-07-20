@@ -8,6 +8,10 @@ using UnityEngine;
 /// </summary>
 public class MainTextContent
 {
+    public static string introduction = "Nice to meet you, " + Player.userName + "! Welcom to the world of <color=red>Privacy Context Game</color>. " +
+                "Throughout the game, you will explore some of the IoT devices that we usually used in our daily life, " +
+                "as well as the potential privacy issues they bring to us.";
+
     public static string comfortable = "How would you feel about the data collection in this scenario?";
     public static string allow = "If you had the choice, would you allow or deny this data collection?";
     public static string finishScene = "Nice! You have finished every question in this scene. Press the button on the right to head to the next scene.";
