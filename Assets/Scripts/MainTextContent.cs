@@ -1,16 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-
 /// <summary>
 ///
 /// </summary>
 public class MainTextContent
 {
-    public static string introduction = "Nice to meet you, " + Player.userName + "! Welcom to the world of <color=red>Privacy Context Game</color>. " +
-                "Throughout the game, you will explore some of the IoT devices that we usually used in our daily life, " +
-                "as well as the potential privacy issues they bring to us.";
+    public static string[] introduction =
+    { "Nice to meet you, ",
+
+        "! Welcom to the world of <b><i>Privacy Context Game</i></b>. " +
+                "Throughout the game, you will explore some of the IoT devices that we usually used in our daily life. " +
+                "You will be asked about your feeling and decisions when you encounter cases of data collection requested by those devices under different situations.",
+
+        "There are totally <size=65>75</size> privacy questions for six different locations, which are <i>departmen store</i>, <i>library</i>, <i>home</i>, <i>friend's home</i>, <i>work</i>, and <i>restroom</i>. " +
+            "Each location has 7 to 15 questions.\nIn each question, you will be asked to select how you feel regarding the data collection from 5 comfortable levels, and whether you allow or deny this data collection.",
+
+            "Furthermore, there are also totally <size=65>10</size> pop-up quizzes distributed in these locations.\nThose pop-up quizzes aim to test your basic knowledge of IoT devices. " +
+            "When you finish all the privacy questions and pop-up quizzes, we will provide you with your personalized feedback.\nHope you enjoy this game!"
+    };
 
     public static string comfortable = "How would you feel about the data collection in this scenario?";
     public static string allow = "If you had the choice, would you allow or deny this data collection?";

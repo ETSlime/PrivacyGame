@@ -53,6 +53,10 @@ public class ResultText : MonoBehaviour, IPointerClickHandler
                 speed = max_speed;
             }
         }
+
+        // keyboard event
+        if (Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.Space))
+            SpeedUp();
     }
 
     public void OnPointerClick(PointerEventData eventData)

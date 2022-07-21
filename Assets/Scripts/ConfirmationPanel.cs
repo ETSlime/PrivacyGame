@@ -11,7 +11,7 @@ public class ConfirmationPanel
     // the function that being called when Yes button is pressed
     public delegate void MyDelegate();
 
-    static public void CreatePanel(Transform parent, string content, MyDelegate fun, int[] imageSize = null, int[] textSize = null)
+    static public void CreatePanel(Transform parent, string content, MyDelegate fun, int[] imageSize = null, int[] textSize = null, MyDelegate fun2 = null)
     {
         if (imageSize == null)
         {
@@ -110,6 +110,8 @@ public class ConfirmationPanel
         {
             confirmBtnNoGO.GetComponent<AudioSource>().Play();
             GameObject.Destroy(confirmImageGO);
+            if (fun2 != null)
+                fun2();
         });
     }
 }

@@ -55,6 +55,11 @@ public class ReturnStageBtn : MyButton, IPointerClickHandler
             case "Shop":
                 content = "Do you want to return to the location selection stage? Your data will be autosaved.";
                 break;
+            case "Main Tutorial":
+            case "Game Tutorial":
+            case "Result Page":
+                content = "Do you want to return to the location selection stage?";
+                break;
             default:
                 content = "Do you want to return to the location selection stage? All answers will be saved automatically.";
                 break;

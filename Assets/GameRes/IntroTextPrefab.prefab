@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8143974184580075576
+--- !u!1 &1182288851364257341
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4947970785589546080}
-  - component: {fileID: 1325245422086683860}
-  - component: {fileID: 1063418087864412393}
-  - component: {fileID: 7856632023325264539}
+  - component: {fileID: 6141949428261933632}
+  - component: {fileID: 8747751382914998766}
+  - component: {fileID: 3722797920984906139}
+  - component: {fileID: 7601898326317042000}
   m_Layer: 5
   m_Name: IntroTextPrefab
   m_TagString: Untagged
@@ -19,13 +19,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4947970785589546080
+--- !u!224 &6141949428261933632
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8143974184580075576}
+  m_GameObject: {fileID: 1182288851364257341}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -38,21 +38,21 @@ RectTransform:
   m_AnchoredPosition: {x: 75, y: -48}
   m_SizeDelta: {x: 1250, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1325245422086683860
+--- !u!222 &8747751382914998766
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8143974184580075576}
+  m_GameObject: {fileID: 1182288851364257341}
   m_CullTransparentMesh: 1
---- !u!114 &1063418087864412393
+--- !u!114 &3722797920984906139
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8143974184580075576}
+  m_GameObject: {fileID: 1182288851364257341}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -79,27 +79,29 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Nice to meet you, ! Welcom to the world of <color=red>Privacy Context Game</color>.
-    Throughout the game, you will explore some of the IoT devices that we usually
-    used in our daily life ,as well as the potential privacy issues they bring to
-    us.
---- !u!114 &7856632023325264539
+  m_Text: Nice to meet you, dfsfdsf! Welcom to the world of <b><i>Privacy Context
+    Game</i></b>. Throughout the game, you will explore some of the IoT devices that
+    we usually used in our daily life. You will be asked about your feeling and decisions
+    when you encounter cases of data collection requested by those devices under
+    different situations.
+--- !u!114 &7601898326317042000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8143974184580075576}
+  m_GameObject: {fileID: 1182288851364257341}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8bcf7c6026fbff4882cb4449359fff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextPrefab: {fileID: 8143974184580075576}
-  str: Nice to meet you, ! Welcom to the world of <color=red>Privacy Context Game</color>.
+  TextPrefab: {fileID: 1182288851364257341}
+  str: Nice to meet you, dfsfdsf! Welcom to the world of <b><i>Privacy Context Game</i></b>.
     Throughout the game, you will explore some of the IoT devices that we usually
-    used in our daily life ,as well as the potential privacy issues they bring to
-    us.
-  curText: {fileID: 8143974184580075576}
+    used in our daily life. You will be asked about your feeling and decisions when
+    you encounter cases of data collection requested by those devices under different
+    situations.
+  curText: {fileID: 1182288851364257341}
   curTextIndex: 2
   finished: 0

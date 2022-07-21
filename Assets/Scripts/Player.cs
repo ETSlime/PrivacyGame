@@ -18,6 +18,7 @@ public class Player
     static public bool smartphone;
     static public bool smartwatch;
     static public bool tablet;
+    static public bool mainTutorial;
     // question state for each scene
     static public List<QuestionState> questionFinished;
     // correctness for each pop up quiz
@@ -26,8 +27,6 @@ public class Player
     static public List<TipState> tipStates;
     // answers for each privacy question
     static public List<PrivacyQuestion> answers;
-
-    static public string results;
 
     static public void AddCorrect()
     {
@@ -63,12 +62,11 @@ public class PlayerInfo
     public bool smartphone;
     public bool smartwatch;
     public bool tablet;
+    public bool mainTutorial;
     public List<QuestionState> questionFinished;
     public List<GetCoins> getCoins;
     public List<TipState> tipStates;
     public List<PrivacyQuestion> answers;
-
-    public string results;
 }
 
 [System.Serializable]

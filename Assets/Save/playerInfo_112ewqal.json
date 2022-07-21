@@ -1,5 +1,5 @@
 {
-    "userName": "sffs",
+    "userName": "123123123",
     "points": 15000.0,
     "finished": false,
     "correct": 0,
@@ -8,9 +8,9 @@
     "smartphone": false,
     "smartwatch": false,
     "tablet": false,
+    "mainTutorial": false,
     "questionFinished": [],
     "getCoins": [],
     "tipStates": [],
-    "answers": [],
-    "results": ""
+    "answers": []
 }

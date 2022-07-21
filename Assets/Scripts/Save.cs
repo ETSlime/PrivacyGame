@@ -27,8 +27,7 @@ public class Save
         playerInfo.tablet = Player.tablet;
         playerInfo.tipStates = Player.tipStates;
         playerInfo.answers = Player.answers;
-
-        playerInfo.results = Player.results;
+        playerInfo.mainTutorial = Player.mainTutorial;
         return playerInfo;
     }
 
@@ -121,5 +120,6 @@ public class Save
         Player.getCoins = playerInfo.getCoins;
         Player.tipStates = playerInfo.tipStates;
         Player.answers = playerInfo.answers;
+        Player.mainTutorial = playerInfo.mainTutorial;
     }
 }

@@ -46,6 +46,10 @@ public class PageInit : MonoBehaviour
             GameObject result = root.Find("Check Results").gameObject;
             result.AddComponent<GeneralIconButton>();
 
+            // add btn for tutorial
+            GameObject tutorial = root.Find("Tutorial").gameObject;
+            tutorial.AddComponent<GeneralIconButton>();
+
             this.gameObject.AddComponent<AudioSource>();
             AudioSource audio = this.GetComponent<AudioSource>();
             audio.clip = Resources.Load<AudioClip>("SE/Btn_SE4");
@@ -160,6 +164,18 @@ public class PageInit : MonoBehaviour
                 void load()
                 {
                     LoadGame.LoadScene("Result Page");
+                }
+                DisableBtn();
+                ConfirmationPanel.CreatePanel(root, content, load);
+            });
+
+            tutorial.GetComponent<GeneralIconButton>().onClick.AddListener(() =>
+            {
+                audio.Play();
+                string content = "Do you want to read the tutorial?";
+                void load()
+                {
+                    LoadGame.LoadScene("Main Tutorial");
                 }
                 DisableBtn();
                 ConfirmationPanel.CreatePanel(root, content, load);

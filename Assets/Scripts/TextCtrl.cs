@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
+using DG.Tweening;
 
 public class TextCtrl : MonoBehaviour, IPointerClickHandler
 {
@@ -613,21 +614,37 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 speed = max_speed;
             }
         }
+
+        // keyboard event
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
+        {
+            // delay
+            if (this.name != "Text_Base")
+                MouseAndKeyboardEvent();
+        }
+
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        MouseAndKeyboardEvent();
+    }
+
+    /// <summary>
+    /// change text for each text game object
+    /// </summary>
+    private void MouseAndKeyboardEvent()
+    {
         Text[] temp = root.GetComponentsInChildren<Text>();
         if (temp.Length > 1) curText = temp[1].gameObject;
         else curText = temp[0].gameObject;
-        //curText = root.GetComponentsInChildren<Text>()[1].gameObject;
         TextCtrl textCtrl = curText.GetComponent<TextCtrl>();
-        
+
         if (textCtrl.ison)
         {
             textCtrl.SpeedUp();
         }
-        
+
         MainText(textCtrl.curTextIndex);
     }
 
@@ -673,7 +690,7 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
             if (this.transform.Find("warning3")) GameObject.Destroy(this.transform.Find("warning3").gameObject);
             Player.userName = name;
 
-            ChangeText("Text2", MainTextContent.introduction, false);
+            ChangeText("Text2", MainTextContent.introduction[0] + Player.userName + MainTextContent.introduction[1], false);
         }
     }
 
@@ -732,18 +749,34 @@ public class TextCtrl : MonoBehaviour, IPointerClickHandler
                 break;
 
             case TextAttribute.Text2:
-                ChangeText("Text3", "this is page3this is page3this is page3this is page3this is page3this is page3", false);
+                ChangeText("Text3", MainTextContent.introduction[2], false);
                 break;
 
             case TextAttribute.Text3:
-                ChangeText("StageSelection", "asfasf", false);
+                ChangeText("StageSelection", MainTextContent.introduction[3], false);
                 break;
 
             case TextAttribute.StageSelection:
-                // initialize player info
-                Player.Init();
-                Save.SaveByJSON();
-                LoadGame.LoadScene("Select Location");
+                string content = "Do you want to read the tutorial? You can read it later in the game.";
+                int[] imageSize = { 750, 300 };
+                int[] textSize = { 650, 100 };
+                void tutorial()
+                {
+                    Player.mainTutorial = true;
+                    // initialize player info
+                    Player.Init();
+                    Save.SaveByJSON();
+                    LoadGame.LoadScene("Main Tutorial");
+                }
+                void initPlayerInfo()
+                {
+                    // initialize player info
+                    Player.Init();
+                    Save.SaveByJSON();
+                    LoadGame.LoadScene("Select Location");
+                }
+                if (!root.transform.Find("ConfirmImage"))
+                    ConfirmationPanel.CreatePanel(root.transform, content, tutorial, imageSize, textSize, initPlayerInfo);
                 break;
 
                 // this is the start of text for department store

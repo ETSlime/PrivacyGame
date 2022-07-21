@@ -14,6 +14,7 @@ public class GameInit : MonoBehaviour
     private GeneralIconButton homeBtn;
     private GeneralIconButton pauseBtn;
     private GeneralIconButton continueBtn;
+    private GeneralIconButton tutorialBtn;
     [SerializeField]
     private GameObject smartphonePrefab;
     [SerializeField]
@@ -44,11 +45,13 @@ public class GameInit : MonoBehaviour
         canvas = this.transform.parent;
         Transform homeBtnTF = canvas.GetChild(0).Find("HomeButton");
         Transform pauseTF = canvas.GetChild(0).Find("Pause");
+        Transform tutorialTF = canvas.GetChild(0).Find("Tutorial");
         Transform continueTF = canvas.GetChild(0).Find("Continue");
         Transform mask = canvas.GetChild(0).Find("Mask");
         homeBtn = homeBtnTF.gameObject.AddComponent<GeneralIconButton>();
         pauseBtn = pauseTF.gameObject.AddComponent<GeneralIconButton>();
         continueBtn = continueTF.gameObject.AddComponent<GeneralIconButton>();
+        tutorialBtn = tutorialTF.gameObject.AddComponent<GeneralIconButton>();
 
         this.gameObject.AddComponent<AudioSource>();
         AudioSource audio = this.GetComponent<AudioSource>();
@@ -66,9 +69,21 @@ public class GameInit : MonoBehaviour
             }
             int[] imageSize = { 600, 300 };
             int[] textSize = { 500, 150 };
-            ConfirmationPanel.CreatePanel(canvas, content, Load, imageSize, textSize);
-            homeBtn.interactable = false;
-            pauseBtn.interactable = false;
+            if (!canvas.transform.Find("ConfirmImage"))
+                ConfirmationPanel.CreatePanel(canvas, content, Load, imageSize, textSize);
+        });
+
+        // tutorial btn listener func.
+        tutorialBtn.onClick.AddListener(() =>
+        {
+            audio.Play();
+            string content = "Do you want to read the game tutorial?";
+            void Load()
+            {
+                LoadGame.LoadScene("Game Tutorial");
+            }
+            if (!canvas.transform.Find("ConfirmImage"))
+                ConfirmationPanel.CreatePanel(canvas, content, Load);
         });
 
         // pause btn listener func.
@@ -185,6 +200,7 @@ public class GameInit : MonoBehaviour
             {
                 homeBtn.interactable = true;
                 pauseBtn.interactable = true;
+                tutorialBtn.interactable = true;
             }
         }
     }

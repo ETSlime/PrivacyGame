@@ -54,7 +54,7 @@ public class BtnBehavior : MonoBehaviour
 
         // 用dotween不用invoke做延迟的原因是，invoke只能在start或者update里调用
         Sequence seq = DOTween.Sequence();
-        seq.AppendInterval(0);
+        seq.AppendInterval(0.1f);
         seq.AppendCallback(delay);
     }
 
@@ -153,15 +153,8 @@ public class BtnBehavior : MonoBehaviour
         seq.AppendCallback(delay);
     }
 
-    public void game()
+    public void LoadStageSelect()
     {
-        LoadGame.LoadScene("Game");
-    }
-
-    public void save()
-    {
-        Save.SaveByJSON();
-        Text text = this.transform.parent.GetChild(1).GetComponent<Text>();
-        text.text = Player.results.ToString();
+        LoadGame.LoadScene("Select Location");
     }
 }

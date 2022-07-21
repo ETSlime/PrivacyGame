@@ -1,13 +1,14 @@
 {
-    "userName": "13212",
-    "points": 15000.0,
+    "userName": "tutorial",
+    "points": 81000.0,
     "finished": true,
     "correct": 8,
-    "tips": 6,
-    "tipsBought": 10,
-    "smartphone": false,
-    "smartwatch": false,
-    "tablet": false,
+    "tips": 8,
+    "tipsBought": 12,
+    "smartphone": true,
+    "smartwatch": true,
+    "tablet": true,
+    "mainTutorial": false,
     "questionFinished": [
         {
             "questionId": "cs_1",
@@ -181,7 +182,7 @@
     "answers": [
         {
             "scenarioID": "cs_ID_1",
-            "comfortable": 2.0,
+            "comfortable": 1.0,
             "decision": 1.0
         },
         {
@@ -257,7 +258,7 @@
         {
             "scenarioID": "pr_ID_1",
             "comfortable": 4.0,
-            "decision": 1.0
+            "decision": 0.0
         },
         {
             "scenarioID": "pr_ID_2",
@@ -381,23 +382,23 @@
         },
         {
             "scenarioID": "wk_ID_1",
-            "comfortable": 3.0,
-            "decision": 1.0
+            "comfortable": 4.0,
+            "decision": 0.0
         },
         {
             "scenarioID": "wk_ID_2",
-            "comfortable": 4.0,
-            "decision": 1.0
+            "comfortable": 0.0,
+            "decision": 0.0
         },
         {
             "scenarioID": "wk_ID_3",
-            "comfortable": 4.0,
-            "decision": 0.0
+            "comfortable": 1.0,
+            "decision": 1.0
         },
         {
             "scenarioID": "wk_ID_4",
-            "comfortable": 3.0,
-            "decision": 0.0
+            "comfortable": 1.0,
+            "decision": 1.0
         },
         {
             "scenarioID": "wk_ID_5",
@@ -406,17 +407,17 @@
         },
         {
             "scenarioID": "wk_ID_6",
-            "comfortable": 3.0,
+            "comfortable": 2.0,
             "decision": 1.0
         },
         {
             "scenarioID": "wk_ID_7",
-            "comfortable": 1.0,
+            "comfortable": 3.0,
             "decision": 0.0
         },
         {
             "scenarioID": "wk_ID_8",
-            "comfortable": 2.0,
+            "comfortable": 0.0,
             "decision": 0.0
         },
         {
@@ -554,6 +555,5 @@
             "comfortable": 3.0,
             "decision": 0.0
         }
-    ],
-    "results": ""
+    ]
 }
