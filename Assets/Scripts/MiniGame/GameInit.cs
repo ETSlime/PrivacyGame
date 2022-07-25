@@ -150,10 +150,28 @@ public class GameInit : MonoBehaviour
             smartphone.GetComponent<Image>().fillAmount = 0;
             GamePanel.smartphoneEnergy = 0;
 
+            GameObject scoreUp = canvas.Find("Score Up").gameObject;
+            GameObject scoreDown = canvas.Find("Score Down").gameObject;
+            // show score up text
+            scoreUp.SetActive(false);
+            if (!scoreUp.GetComponent<AudioSource>()) scoreUp.AddComponent<AudioSource>();
+            scoreUp.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("SE/success");
+            scoreUp.SetActive(true);
+            scoreUp.GetComponent<Image>().CrossFadeAlpha(0, 2.0f, false);
+            scoreUp.transform.GetChild(0).GetComponent<Image>().CrossFadeAlpha(0, 2.0f, false);
+
             // callback func. for score adjust after 15s
             void scoreAdjust()
             {
                 GlobalDef.SCORE /= 3;
+
+                // show score down text
+                scoreDown.SetActive(false);
+                if (!scoreDown.GetComponent<AudioSource>()) scoreDown.AddComponent<AudioSource>();
+                scoreDown.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("SE/disappear");
+                scoreDown.SetActive(true);
+                scoreDown.GetComponent<Image>().CrossFadeAlpha(0, 2.0f, false);
+                scoreDown.transform.GetChild(0).GetComponent<Image>().CrossFadeAlpha(0, 2.0f, false);
             }
             Sequence seq = DOTween.Sequence();
             seq.AppendInterval(15f);
@@ -167,10 +185,30 @@ public class GameInit : MonoBehaviour
             smartwatchBtn.GetComponent<Image>().fillAmount = 0;
             GamePanel.smartwatchEnergy = 0;
 
+            
+            GameObject timeUnfreeze = canvas.Find("Time Unfreeze").gameObject;
+            GameObject timeFreeze = canvas.Find("Time Freeze").gameObject;
+
+            // show time freeze text
+            timeFreeze.SetActive(false);
+            if (!timeFreeze.GetComponent<AudioSource>()) timeFreeze.AddComponent<AudioSource>();
+            timeFreeze.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("SE/success");
+            timeFreeze.SetActive(true);
+            timeFreeze.GetComponent<Image>().CrossFadeAlpha(0, 2.0f, false);
+            timeFreeze.transform.GetChild(0).GetComponent<Image>().CrossFadeAlpha(0, 2.0f, false);
+
             // callback func. for time continue after 10s
             void timeContinue()
             {
                 Timer.stop = false;
+
+                // show time unfreeze text
+                timeUnfreeze.SetActive(false);
+                if (!timeUnfreeze.GetComponent<AudioSource>()) timeUnfreeze.AddComponent<AudioSource>();
+                timeUnfreeze.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("SE/disappear");
+                timeUnfreeze.SetActive(true);
+                timeUnfreeze.GetComponent<Image>().CrossFadeAlpha(0, 2.0f, false);
+                timeUnfreeze.transform.GetChild(0).GetComponent<Image>().CrossFadeAlpha(0, 2.0f, false);
             }
             Sequence seq = DOTween.Sequence();
             seq.AppendInterval(10f);

@@ -28,9 +28,14 @@ public class FruitItem : MonoBehaviour
 
     private Transform m_selfTransform;
 
+    private AudioSource audioSource;
+
     private void Awake()
     {
         m_selfTransform = transform;
+        audioSource = this.gameObject.AddComponent<AudioSource>();
+        audioSource.volume = 0.5f;
+        audioSource.clip = Resources.Load<AudioClip>("SE/fruit_disappear");
     }
 
     /// <summary>
@@ -87,5 +92,7 @@ public class FruitItem : MonoBehaviour
         EventDispatcher.instance.DispatchEvent(EventDef.EVENT_FRUIT_DISAPPEAR, m_selfTransform.position);
         // 加分事件，每个水果10分
         EventDispatcher.instance.DispatchEvent(EventDef.EVENT_ADD_SCORE, GlobalDef.SCORE);
+        // 水果消除时播放声音
+        audioSource.Play();
     }
 }

@@ -27,6 +27,7 @@ public class EffectSpawner : MonoBehaviour
 
     private Transform m_effectRoot;
 
+
     private void Awake()
     {
         m_effectRoot = transform;
