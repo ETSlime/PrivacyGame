@@ -1828,8 +1828,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: This is the log button where you can check text history in case you forgot
-    the context. It also logs the choice you have made on the comfortable level and
-    decison.
+    the context. It also logs the choice you have made on the comfort level and decison.
 --- !u!222 &741974432
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -212,8 +212,8 @@
         },
         {
             "scenarioID": "cs_ID_7",
-            "comfortable": 3.0,
-            "decision": 0.0
+            "comfortable": 0.0,
+            "decision": 1.0
         },
         {
             "scenarioID": "cs_ID_8",

@@ -3966,8 +3966,7 @@ MonoBehaviour:
   m_RadiusAxes: []
   m_Titles:
   - m_Show: 1
-    m_Text: <color=black>Factors impacting your</color> <color=green>comfortable
-      level</color>
+    m_Text: <color=black>Factors impacting your</color> <color=green>comfort level</color>
     m_SubText: 
     m_LabelStyle:
       m_Show: 1
@@ -16048,7 +16047,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: This is the section of feedbacks for your <color=red>pop-up quizzez</color>.
+  m_Text: This is the section of feedbacks for your <color=red>pop-up quizzes</color>.
     answers. You will be graded based on the overall correctness of the quiz and
     the number of tries you have made on each question, as well as the situation
     of hints you have used.
@@ -30280,8 +30279,7 @@ MonoBehaviour:
   m_RadiusAxes: []
   m_Titles:
   - m_Show: 1
-    m_Text: <color=black>Factors impacting your</color> <color=green>comfortable
-      level</color>
+    m_Text: <color=black>Factors impacting your</color> <color=green>comfort level</color>
     m_SubText: 
     m_LabelStyle:
       m_Show: 1
